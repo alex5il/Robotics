@@ -8,6 +8,8 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Plans/subdir.mk
+-include Behaviours/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -43,7 +45,7 @@ all: RoboticsProject
 RoboticsProject: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++  -o"RoboticsProject" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "RoboticsProject" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
