@@ -12,14 +12,20 @@
 #include "Map/Map.h"
 int main()
 {
-	Robot robot("localhost",6665);
+	//Robot robot("localhost",6665);
 
 
-	Map map(&robot);
-	map.printMap();
 
-	PlnObstacleAvoid plnOA(&robot);
-	Manager manager(&robot, &plnOA);
+	Map* map = new Map();
 
-	manager.run();
+	map->createGridFromImage();
+
+	map->printMap();
+
+
+
+	//PlnObstacleAvoid plnOA(&robot);
+	//Manager manager(&robot, &plnOA);
+
+	//manager.run();
 }

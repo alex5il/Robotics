@@ -37,6 +37,8 @@ private:
 	const string robotSize = "robotSize";
 
 public:
+	ConfigurationManager();
+	~ConfigurationManager();
 
 	void getMapPath(string &mapPath);
 	void getMapResolutionCMKey(double resolution);

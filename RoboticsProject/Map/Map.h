@@ -1,31 +1,45 @@
 #include "../Configurations/Consts.h"
 #include <iostream>
-#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <vector>
+
 #include "../Robot.h"
+
+#include "../PngUtilities/lodepng.h"
+#include "../PngUtilities/pngUtil.h"
 
 #ifndef MAP_H_
 #define MAP_H_
 
-enum Cell { FREE = ' ' , OCCUPIED = '*', UNKNOWN = '?' };
+enum Cell { FREE_CELL = ' ' , OCCUPIED_CELL = '#', UNKNOWN_CELL = '?', CURRENT_CELL = 'R' };
 
 class Map {
 
 
-private:
+public:
+	// Map/ image coordinates and stuff
+	static const unsigned int COLOR_WHITE = 255;
 
-double _posX;
-double _posY;
-double _yaw;
-Robot* rob;
-Cell map[MAP_ROWS][MAP_COLS];
+	static int mapWidth;
+	static int mapHeight;
+
+	static double mapResolution;
+	static std::string mapPath;
+
+private:
+	std::vector<unsigned char> image;
+	std::vector<std::vector<Cell> > map;
+
+
 
 public:
 	Map();
-	Map(Robot *robot);
 	virtual ~Map();
 	void updateCell(int x, int y, Cell cell);
 	Cell getCell(int x, int y);
 	void printMap(void);
+	void createGridFromImage();
 };
 
 #endif /* MAP_H_ */

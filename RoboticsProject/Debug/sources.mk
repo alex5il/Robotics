@@ -27,5 +27,6 @@ SUBDIRS := \
 PngUtilities \
 Plans \
 Map \
+Configurations \
 Behaviours \
 
