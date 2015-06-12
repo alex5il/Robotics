@@ -1,0 +1,4 @@
+*.o
+*.o
+RoboticsProject/Debug/main.d
+*.d
