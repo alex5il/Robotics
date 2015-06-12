@@ -2,3 +2,7 @@
 *.o
 RoboticsProject/Debug/main.d
 *.d
+*.o
+*.o
+RoboticsProject/Debug/ConfigurationManager.o
+*.o
