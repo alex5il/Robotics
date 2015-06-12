@@ -15,4 +15,7 @@ int main()
 	Manager manager(&robot, &plnOA);
 	manager.run();
 
+
+	// Oded
+
 }
