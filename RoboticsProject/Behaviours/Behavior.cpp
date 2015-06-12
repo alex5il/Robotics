@@ -9,7 +9,6 @@
 
 Behavior::Behavior(Robot* robot) {
 	_robot = robot;
-
 }
 
 Behavior::~Behavior() {
