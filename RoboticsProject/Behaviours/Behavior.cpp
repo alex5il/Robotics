@@ -1,10 +1,3 @@
-/*
- * Behavior.cpp
- *
- *  Created on: Dec 14, 2014
- *      Author: user
- */
-
 #include "Behavior.h"
 
 Behavior::Behavior(Robot* robot) {
@@ -12,5 +5,6 @@ Behavior::Behavior(Robot* robot) {
 }
 
 Behavior::~Behavior() {
-	// TODO Auto-generated destructor stub
+	for (iterator it = _behVect.begin(); it != _behVect.end(); ++it)
+		delete (*it);
 }

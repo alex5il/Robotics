@@ -28,6 +28,12 @@ public:
 		else
 			return false;
 	}
+	bool isLeftFree() {
+			if ((*_lp)[50] > 0.5)
+				return true;
+			else
+				return false;
+		}
 	bool isForwardFree() {
 		if ((*_lp)[332] > 0.5)
 			return true;

@@ -1,16 +1,25 @@
-/*
- * MoveForward.h
- *
- *  Created on: Jun 12, 2015
- *      Author: colman
- */
-
 #ifndef MOVEFORWARD_H_
 #define MOVEFORWARD_H_
 
-class MoveForward {
+#include "Behavior.h"
+
+class MoveForward: public Behavior {
+
 public:
-	MoveForward();
+	MoveForward(Robot* robot);
+
+	bool startCond() {
+		return _robot->isForwardFree();
+	}
+
+	bool stopCond() {
+		return !(_robot->isForwardFree());
+	}
+
+	void action() {
+		_robot->setSpeed(0.3, 0.0);
+	}
+
 	virtual ~MoveForward();
 };
 

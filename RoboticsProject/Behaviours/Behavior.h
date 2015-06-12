@@ -21,16 +21,14 @@ public:
 	virtual bool stopCond() = 0;
 	virtual void action() = 0;
 
-	void addBeh(Behavior* next)
-	{
+	void addBeh(Behavior* next) {
 		_behVect.push_back(next);
 	}
 
-	Behavior* selectNext()
-	{
+	Behavior* selectNext() {
 		//Run over vector and return first true
 		//startCond of the first behavior
-		for(unsigned int i=0; i < _behVect.size(); i++)
+		for (unsigned int i = 0; i < _behVect.size(); i++)
 			if (_behVect[i]->startCond())
 				return _behVect[i];
 

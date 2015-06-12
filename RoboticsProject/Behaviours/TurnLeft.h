@@ -1,16 +1,25 @@
-/*
- * TurnLeft.h
- *
- *  Created on: Jun 12, 2015
- *      Author: colman
- */
-
 #ifndef TURNLEFT_H_
 #define TURNLEFT_H_
 
-class TurnLeft {
+#include "Behavior.h"
+
+class TurnLeft: public Behavior {
+
 public:
-	TurnLeft();
+	TurnLeft(Robot* robot);
+
+	bool startCond() {
+		return _robot->isLeftFree();
+	}
+
+	bool stopCond() {
+		return _robot->isForwardFree();
+	}
+
+	void action() {
+		_robot->setSpeed(0.0, -0.3);
+	}
+
 	virtual ~TurnLeft();
 };
 
