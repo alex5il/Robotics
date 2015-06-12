@@ -1,12 +1,5 @@
-/*
- * Common.h
- *
- *  Created on: Dec 5, 2014
- *      Author: user
- */
-
-#ifndef COMMON_H_
-#define COMMON_H_
+#ifndef CONFIG_H_
+#define CONFIG_H_
 
 #define WORLD_WIDTH 20
 #define WORLD_HEIGHT 20
@@ -26,4 +19,4 @@
 
 #define MAP_ROWS ((int) (WORLD_HEIGHT/MAP_RESOLUTION))
 #define MAP_COLS ((int) (WORLD_WIDTH/MAP_RESOLUTION))
-#endif /* COMMON_H_ */
+#endif /* CONFIG_H_ */

@@ -1,10 +1,4 @@
-/*
- * Map.h
- *
- *  Created on: Jun 12, 2015
- *      Author: colman
- */
-#include "Config.h"
+#include "../Configurations/Consts.h"
 #include <iostream>
 #include <math.h>
 #include "../Robot.h"

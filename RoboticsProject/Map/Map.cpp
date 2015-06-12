@@ -1,10 +1,3 @@
-/*
- * Map.cpp
- *
- *  Created on: Jun 12, 2015
- *      Author: colman
- */
-
 #include "Map.h"
 #include "Config.h"
 
