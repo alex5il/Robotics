@@ -26,17 +26,16 @@ public:
 	static int mapHeight;
 
 	static double mapResolution;
+	static double gridResolution;
 	static std::string mapPath;
 
-private:
-	std::vector<unsigned char> image;
-	std::vector<std::vector<Cell> > grid;
-
-
+	std::vector<unsigned char> originalImage;
 	std::vector<unsigned char > inflatedImage;
 
+	std::vector<unsigned char > testImage;
 
-
+private:
+	std::vector<std::vector<Cell> > grid;
 
 public:
 	Map();
@@ -44,8 +43,9 @@ public:
 	void updateCell(int x, int y, Cell cell);
 	Cell getCell(int x, int y);
 	void printMap();
-	void createGridFromImage();
+	void createGridFromImage(std::vector<unsigned char> image);
 	void inflateImage();
+	void createGridWithResolutionFromImage(std::vector<unsigned char> image);
 };
 
 #endif /* MAP_H_ */
