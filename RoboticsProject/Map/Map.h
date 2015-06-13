@@ -9,6 +9,8 @@
 #include "../PngUtilities/lodepng.h"
 #include "../PngUtilities/pngUtil.h"
 
+#include "../Configurations/Consts.h"
+
 #ifndef MAP_H_
 #define MAP_H_
 
@@ -19,7 +21,6 @@ class Map {
 
 public:
 	// Map/ image coordinates and stuff
-	static const unsigned int COLOR_WHITE = 255;
 
 	static int mapWidth;
 	static int mapHeight;
@@ -29,7 +30,11 @@ public:
 
 private:
 	std::vector<unsigned char> image;
-	std::vector<std::vector<Cell> > map;
+	std::vector<std::vector<Cell> > grid;
+
+
+	std::vector<unsigned char > inflatedImage;
+
 
 
 
@@ -38,8 +43,9 @@ public:
 	virtual ~Map();
 	void updateCell(int x, int y, Cell cell);
 	Cell getCell(int x, int y);
-	void printMap(void);
+	void printMap();
 	void createGridFromImage();
+	void inflateImage();
 };
 
 #endif /* MAP_H_ */

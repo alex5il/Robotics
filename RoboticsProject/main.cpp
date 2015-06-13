@@ -19,8 +19,12 @@ int main()
 	Map* map = new Map();
 
 	map->createGridFromImage();
+	map->inflateImage();
 
 	map->printMap();
+
+	std::cout << "\n\n\n ============================================== \n\n\n";
+
 
 
 
