@@ -1,45 +1,31 @@
-/*
- * main.cpp
- *
- *  Created on: May 22, 2015
- *      Author: user
- */
-
 #include "Robot.h"
 #include "Manager.h"
 #include "Plans/PlnObstacleAvoid.h"
 
 #include "Map/Map.h"
-int main()
-{
+
+int main() {
 	//Robot robot("localhost",6665);
 
+//	Map* map = new Map();
+//
+//	map->createGridFromImage(map->originalImage);
+//	map->printMap();
+//
+//	std::cout << "\n\n\n ============================================== \n\n\n";
+//	std::cout << "\n\n\n ============================================== \n\n\n";
+//	std::cout << "\n\n\n ============================================== \n\n\n";
+//	std::cout << "\n\n\n ============================================== \n\n\n";
+//
+//	map->inflateImage();
+//	map->createGridFromImage(map->inflatedImage);
+//	map->printMap();
+//
+//
+//	map->createGridWithResolutionFromImage(map->inflatedImage);
 
+//PlnObstacleAvoid plnOA(&robot);
+//Manager manager(&robot, &plnOA);
 
-	Map* map = new Map();
-
-	map->createGridFromImage(map->originalImage);
-	map->printMap();
-
-	std::cout << "\n\n\n ============================================== \n\n\n";
-	std::cout << "\n\n\n ============================================== \n\n\n";
-	std::cout << "\n\n\n ============================================== \n\n\n";
-	std::cout << "\n\n\n ============================================== \n\n\n";
-
-	map->inflateImage();
-	map->createGridFromImage(map->inflatedImage);
-	map->printMap();
-
-
-	map->createGridWithResolutionFromImage(map->inflatedImage);
-
-
-
-
-
-
-	//PlnObstacleAvoid plnOA(&robot);
-	//Manager manager(&robot, &plnOA);
-
-	//manager.run();
+//manager.run();
 }

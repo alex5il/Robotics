@@ -4,27 +4,21 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../LocalizationManager.cpp \
 ../Manager.cpp \
-../Particle.cpp \
 ../PathPlanner.cpp \
 ../Robot.cpp \
 ../WaypointsManager.cpp \
 ../main.cpp 
 
 OBJS += \
-./LocalizationManager.o \
 ./Manager.o \
-./Particle.o \
 ./PathPlanner.o \
 ./Robot.o \
 ./WaypointsManager.o \
 ./main.o 
 
 CPP_DEPS += \
-./LocalizationManager.d \
 ./Manager.d \
-./Particle.d \
 ./PathPlanner.d \
 ./Robot.d \
 ./WaypointsManager.d \

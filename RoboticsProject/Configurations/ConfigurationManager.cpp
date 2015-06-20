@@ -1,18 +1,32 @@
-/*
- * ConfigurationManager.cpp
- *
- *  Created on: Jun 12, 2015
- *      Author: colman
- */
-
 #include "ConfigurationManager.h"
 
 ConfigurationManager::ConfigurationManager() {
-	// TODO Auto-generated constructor stub
+	readParameters();
+}
 
+void ConfigurationManager::readParameters() {
+	ifstream paramFile(filePath.c_str());
+	string paramName, paramVal;
+
+	if (paramFile.is_open()) {
+		while (paramFile >> paramName) {
+			if (paramName == mapKey)
+				paramFile >> map;
+			else if (paramName == mapResolutionCMKey)
+				paramFile >> mapResolutionCM;
+			else if (paramName == gridResolutionCMKey)
+				paramFile >> gridResolutionCM;
+			else if (paramName == startLocationKey)
+				paramFile >> xStartLocation >> yStartLocation
+						>> yawStartLocation;
+			else if (paramName == goalKey)
+				paramFile >> xGoal >> yGoal;
+			else if (paramName == robotSizeKey)
+				paramFile >> xSize >> ySize;
+		}
+		paramFile.close();
+	}
 }
 
 ConfigurationManager::~ConfigurationManager() {
-	// TODO Auto-generated destructor stub
 }
-
