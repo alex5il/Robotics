@@ -6,18 +6,18 @@
 class Particle {
 
 public:
-	double x;
-	double y;
-	double yaw;
-	double belief;
+	float x;
+	float y;
+	float yaw;
+	float belief;
 
-	double calcProbability(double delX, double delY, double delYaw);
-	double updateMap(double laserScan[]);
+	float calcProbability(float delX, float delY, float delYaw);
+	float updateMap(float laserScan[]);
 
-	Particle(double x, double y, double yaw);
-	void update(double delX, double delY, double delYaw, double laserScan[]);
+	Particle(float x, float y, float yaw);
+	void update(float delX, float delY, float delYaw, float laserScan[]);
 
-	double getBelief() {
+	float getBelief() {
 		return belief;
 	}
 

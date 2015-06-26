@@ -1,23 +1,23 @@
 #include "Particle.h"
 
-Particle::Particle(double x, double y, double yaw) {
+Particle::Particle(float x, float y, float yaw) {
 	this->x = x;
 	this->y = y;
 	this->yaw = yaw;
 	this->belief = 1.0;
 }
 
-void Particle::update(double delX, double delY, double delYaw, double laserScan[]) {
+void Particle::update(float delX, float delY, float delYaw, float laserScan[]) {
 	x += (delX * 100);
 	y += (delY * 100);
 	yaw += delYaw;
 
-	double predictBelief = belief * calcProbability(delX, delY, delYaw);
+	float predictBelief = belief * calcProbability(delX, delY, delYaw);
 	belief = predictBelief * updateMap(laserScan);
 }
 
-double Particle::calcProbability(double delX, double delY, double delYaw) {
-	double distance = sqrt(pow(delX, 2) + pow(delY, 2));
+float Particle::calcProbability(float delX, float delY, float delYaw) {
+	float distance = sqrt(pow(delX, 2) + pow(delY, 2));
 
 	if ((delYaw < 0.5/*normal accurate angle*/) && (delYaw > -0.5)) {
 		if (distance <= 0.3/*Safe distance to move*/)
@@ -34,7 +34,7 @@ double Particle::calcProbability(double delX, double delY, double delYaw) {
 	return 1.0;
 }
 
-double Particle::updateMap(double laserScan[]) {
+float Particle::updateMap(float laserScan[]) {
 	return 1.0;
 }
 

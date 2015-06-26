@@ -11,7 +11,7 @@ class ConfigurationManager {
 private:
 	// Hold variables that we got from the parameters file
 	string map;
-	double mapResolutionCM;
+	float mapResolutionCM;
 	int gridResolutionCM;
 	int xStartLocation;
 	int yStartLocation;
@@ -39,7 +39,7 @@ public:
 		mapPath = map;
 	}
 
-	void getMapResolutionCMKey(double resolution) {
+	void getMapResolutionCMKey(float resolution) {
 		resolution = mapResolutionCM;
 	}
 

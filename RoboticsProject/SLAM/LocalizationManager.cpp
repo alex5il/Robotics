@@ -1,17 +1,19 @@
 #include "LocalizationManager.h"
 
-LocalizationManager::LocalizationManager(double yaw) {
+LocalizationManager::LocalizationManager(float yaw) {
 	srand(time(NULL));
+}
 
-	for (int particle = 0; particle < particlesNum; particle++) {
+void LocalizationManager::init(float yaw) {
+	for (unsigned int particle = 0; particle < particlesNum; particle++) {
 		Particle newParticle((1 + rand() % 10) + 100 / 2,
 				(1 + rand() % 10) + 100 / 2, yaw);
 		particles.push_back(newParticle);
 	}
 }
 
-void LocalizationManager::update(double delX, double delY, double delYaw,
-		double laserScan[]) {
+void LocalizationManager::update(float delX, float delY, float delYaw,
+		float laserScan[]) {
 	for (vector<Particle>::iterator particle = particles.begin();
 			particle != particles.end(); ++particle) {
 
