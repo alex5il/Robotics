@@ -1,5 +1,7 @@
 #include "ConfigurationManager.h"
 
+ConfigurationManager ConfigurationManager::confMng;
+
 ConfigurationManager::ConfigurationManager() {
 	readParameters();
 }
@@ -11,7 +13,7 @@ void ConfigurationManager::readParameters() {
 	if (paramFile.is_open()) {
 		while (paramFile >> paramName) {
 			if (paramName == mapKey)
-				paramFile >> map;
+				paramFile >> mapPath;
 			else if (paramName == mapResolutionCMKey)
 				paramFile >> mapResolutionCM;
 			else if (paramName == gridResolutionCMKey)

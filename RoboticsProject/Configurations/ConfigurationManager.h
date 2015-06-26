@@ -8,9 +8,12 @@
 using namespace std;
 
 class ConfigurationManager {
+
 private:
+	static ConfigurationManager confMng;
+
 	// Hold variables that we got from the parameters file
-	string map;
+	string mapPath;
 	float mapResolutionCM;
 	int gridResolutionCM;
 	int xStartLocation;
@@ -22,7 +25,7 @@ private:
 	int ySize;
 
 	// Parameters file strings to search
-	const string filePath = "/home/colman/Desktop/parameters.txt";
+	const string filePath = "Configurations/parameters/parameters.txt";
 	const string mapKey = "map:";
 	const string mapResolutionCMKey = "MapResolutionCM:";
 	const string gridResolutionCMKey = "GridResolutionCM:";
@@ -30,40 +33,60 @@ private:
 	const string goalKey = "goal:";
 	const string robotSizeKey = "robotSize:";
 
+	ConfigurationManager();
 	void readParameters();
+	~ConfigurationManager();
 
 public:
-	ConfigurationManager();
-
-	void getMapPath(string &mapPath) {
-		mapPath = map;
+	static string getMapPath() {
+//		return mapPath;
+		return confMng.mapPath;
 	}
 
-	void getMapResolutionCMKey(float resolution) {
-		resolution = mapResolutionCM;
+	static float getMapResolutionCM() {
+//		return mapResolutionCM;
+		return confMng.mapResolutionCM;
 	}
 
-	void getGridResolutionCMKey(int resolution) {
-		resolution = gridResolutionCM;
+	static int getGridResolutionCM() {
+//		return gridResolutionCM;
+		return confMng.gridResolutionCM;
 	}
 
-	void getStartLocation(int x, int y, int yaw) {
-		x = xStartLocation;
-		y = yStartLocation;
-		yaw = yawStartLocation;
+	static int getStartLocationX() {
+//		return xStartLocation;
+		return confMng.xStartLocation;
 	}
 
-	void getGoal(int x, int y) {
-		x = xGoal;
-		y = yGoal;
+	static int getStartLocationY() {
+//		return yStartLocation;
+		return confMng.yStartLocation;
 	}
 
-	void getRobotSize(int x, int y) {
-		x = xSize;
-		y = ySize;
+	static int getStartLocationYaw() {
+//		return yawStartLocation;
+		return confMng.yawStartLocation;
 	}
 
-	~ConfigurationManager();
+	static int getGoalX() {
+//		return xGoal;
+		return confMng.xGoal;
+	}
+
+	static int getGoalY() {
+//		return yGoal;
+		return confMng.yGoal;
+	}
+
+	static int getRobotSizeX() {
+//		return xSize;
+		return confMng.xSize;
+	}
+
+	static int getRobotSizeY() {
+//		return ySize;
+		return confMng.ySize;
+	}
 };
 
 #endif /* CONFIGURATIONMANAGER_H_ */

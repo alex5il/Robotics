@@ -2,6 +2,7 @@
 #define LOCALIZATIONMANAGER_H_
 
 #include "Particle.h"
+#include "../Map/Map.h"
 #include <stdlib.h>
 #include <time.h>
 #include <vector>
