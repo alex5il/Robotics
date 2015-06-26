@@ -22,7 +22,7 @@ private:
 	int ySize;
 
 	// Parameters file strings to search
-	const string filePath = "/home/colman/Desktop/parameters.txt";
+	const string filePath = "Configurations/parameters/parameters.txt";
 	const string mapKey = "map:";
 	const string mapResolutionCMKey = "MapResolutionCM:";
 	const string gridResolutionCMKey = "GridResolutionCM:";

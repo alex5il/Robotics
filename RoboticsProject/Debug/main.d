@@ -15,8 +15,9 @@ main.d: ../main.cpp ../Robot.h \
  ../Plans/PlnObstacleAvoid.h ../Plans/../Behaviours/TurnRight.h \
  ../Plans/../Behaviours/Behavior.h ../Plans/../Behaviours/../Robot.h \
  ../Plans/Plan.h ../Plans/../Behaviours/Behavior.h ../Plans/../Robot.h \
- ../Map/Map.h ../Map/../Configurations/Consts.h ../Map/../Robot.h \
- ../Map/../PngUtilities/lodepng.h ../Map/../PngUtilities/pngUtil.h
+ ../Map/Map.h ../Map/../Robot.h ../Map/../PngUtilities/lodepng.h \
+ ../Map/../PngUtilities/pngUtil.h ../Map/../Configurations/Consts.h \
+ ../Map/../Configurations/ConfigurationManager.h
 
 ../Robot.h:
 
@@ -64,10 +65,12 @@ main.d: ../main.cpp ../Robot.h \
 
 ../Map/Map.h:
 
-../Map/../Configurations/Consts.h:
-
 ../Map/../Robot.h:
 
 ../Map/../PngUtilities/lodepng.h:
 
 ../Map/../PngUtilities/pngUtil.h:
+
+../Map/../Configurations/Consts.h:
+
+../Map/../Configurations/ConfigurationManager.h:
