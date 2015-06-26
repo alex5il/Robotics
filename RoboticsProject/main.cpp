@@ -6,8 +6,17 @@
 #include "Configurations/ConfigurationManager.h"
 #include <iostream>
 
-int main() {
-//	cout << x;
+using namespace std;
 
+int main() {
+	Map map;
+
+	map.createGrid();
 //Robot robot("localhost",6665);
+
+//	string path = ConfigurationManager::getMapPath();
+
+//	Map map;
+//
+//	map.createGrid();
 }
