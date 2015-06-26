@@ -135,8 +135,6 @@ void Map::createGridWithResolutionFromImage(std::vector<unsigned char> image) {
 	int gridRes = (int) (gridResolution / mapResolution) / 2;
 	int resolutionCap = ((int) (gridRes * gridRes) / 2);
 
-	testImage.resize(mapHeight * mapWidth * 4);
-
 	int counter = 0;
 
 	// We are going to run through the map, in the grid resolution, and create our new grid
