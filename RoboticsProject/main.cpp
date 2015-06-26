@@ -7,8 +7,7 @@
 #include <iostream>
 
 int main() {
+//	cout << x;
 
-	Map* map = new Map();
-	map->createGrid();
-
+//Robot robot("localhost",6665);
 }
