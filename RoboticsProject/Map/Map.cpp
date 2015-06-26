@@ -1,8 +1,11 @@
 #include "Map.h"
 
 // TODO get from parameters
-double Map::mapResolution = 2.5;
-double Map::gridResolution = 10;
+/*float Map::mapResolution = ConfigurationManager::getMapResolutionCM();
+float Map::gridResolution = ConfigurationManager::getGridResolutionCM();*/
+
+float Map::mapResolution = 2.5;
+float Map::gridResolution = 10;
 
 std::string Map::mapPath = "/usr/robotics/PcBotWorld/hospital_section.png";
 //std::string Map::mapPath = "roboticLabMap.png";
@@ -10,6 +13,8 @@ int Map::mapHeight = 0;
 int Map::mapWidth = 0;
 
 Map::Map() {
+
+	//mapPath = ConfigurationManager::getMapPath();
 
 
 	// Init basic data of the map
