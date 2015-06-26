@@ -1,26 +1,19 @@
 #include "Map.h"
 #include "../Configurations/ConfigurationManager.h"
 
-// TODO get from parameters
-//float Map::mapResolution = 2.5;
-//float Map::gridResolution = 10;
+Map* Map::mapInstance = NULL;
 
-//std::string Map::mapPath = "/usr/robotics/PcBotWorld/hospital_section.png";
-//int Map::mapHeight = 0;
-//int Map::mapWidth = 0;
 Map::Map() {
 
 	mapResolution = ConfigurationManager::getMapResolutionCM();
 	gridResolution = ConfigurationManager::getGridResolutionCM();
-
 	mapPath = ConfigurationManager::getMapPath();
 
 	mapHeight = 0;
 	mapWidth = 0;
 
-	//mapPath = ConfigurationManager::getMapPath();
-
 	// Init basic data of the map
+
 
 	unsigned int height, width;
 
@@ -192,9 +185,9 @@ void Map::inflateImage() {
 	// We will inflate each obstacle by half of the robots size
 	// The robot is 30x30 cm so convert to our pixel size and then cut in half
 	xInflation = (int) ((ConfigurationManager::getRobotSizeX() / mapResolution)
-			/ 2); // TODO get from parameters
+			/ 2);
 	yInflation = (int) ((ConfigurationManager::getRobotSizeY() / mapResolution)
-			/ 2); // TODO get from parameters
+			/ 2);
 
 	inflatedImage.resize(mapWidth * mapHeight * 4);
 
@@ -247,6 +240,8 @@ void Map::inflateImage() {
 	encodeOneStep("inflatedImage.png", inflatedImage, mapWidth, mapHeight);
 }
 
+// PUBLIC METHODS
+
 void Map::createGrid() {
 	inflateImage();
 	createGridWithResolutionFromImage(inflatedImage);
@@ -255,6 +250,24 @@ void Map::createGrid() {
 
 std::vector<std::vector<Cell> > Map::getGrid() {
 	return grid;
+}
+
+int Map::getMapHeight() {
+	return mapHeight;
+}
+
+int Map::getMapWidth() {
+	return mapWidth;
+}
+
+Map* Map::getInstance() {
+	if (Map::mapInstance != NULL) {
+		return Map::mapInstance;
+	}
+
+	Map* mapInstance = new Map();
+
+	return mapInstance;
 }
 
 Map::~Map() {

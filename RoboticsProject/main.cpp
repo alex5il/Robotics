@@ -9,8 +9,10 @@
 using namespace std;
 
 int main() {
-	Map map;
 
-	map.createGrid();
+	//Map map = Map::getInstance();
+
+	Map* map = Map::getInstance();
+	map->createGrid();
 
 }

@@ -19,8 +19,9 @@ enum Cell { FREE_CELL = ' ' , OCCUPIED_CELL = '#', UNKNOWN_CELL = '?', CURRENT_C
 
 class Map {
 
+private:
+	std::vector<std::vector<Cell> > grid;
 
-public:
 	// Map/ image coordinates and stuff
 
 	int mapWidth;
@@ -34,12 +35,8 @@ public:
 	std::vector<unsigned char > inflatedImage;
 	std::vector<unsigned char > testImage;
 
-private:
-	std::vector<std::vector<Cell> > grid;
+	static Map* mapInstance;
 
-public:
-	Map();
-	virtual ~Map();
 	void updateCell(int x, int y, Cell cell);
 	Cell getCell(int x, int y);
 	void printMap();
@@ -48,8 +45,18 @@ public:
 	void createImageWithResolutionFromImage(std::vector<unsigned char> image);
 	void createGridWithResolutionFromImage(std::vector<unsigned char> image);
 
+	Map();
+	virtual ~Map();
+
+public:
+
 	void createGrid();
 	std::vector<std::vector<Cell> > getGrid();
+	int getMapWidth();
+	int getMapHeight();
+
+
+	static Map* getInstance();
 };
 
 #endif /* MAP_H_ */
