@@ -7,19 +7,35 @@
 #include <iostream>
 
 int main() {
-	int x = ConfigurationManager::getGridResolutionCM();
-
-
 //	cout << x;
 
+<<<<<<< HEAD
+//Robot robot("localhost",6665);
+
+//	Map* map = new Map();
+//
+//	map->createGridFromImage(map->originalImage);
+//	map->printMap();
+//
+//	std::cout << "\n\n\n ============================================== \n\n\n";
+//	std::cout << "\n\n\n ============================================== \n\n\n";
+//	std::cout << "\n\n\n ============================================== \n\n\n";
+//	std::cout << "\n\n\n ============================================== \n\n\n";
+//
+//	map->inflateImage();
+//	map->createGridFromImage(map->inflatedImage);
+//	map->printMap();
+//
+//
+//	map->createGridWithResolutionFromImage(map->inflatedImage);
+=======
 	//Robot robot("localhost",6665);
 
 	Map* map = new Map();
 
 	map->createGrid();
+>>>>>>> origin/Branch_1
 
 //PlnObstacleAvoid plnOA(&robot);
-//Manager manager(&robot, &plnOA);
-
-//manager.run();
+//Manager manager(&robot, &
 }
