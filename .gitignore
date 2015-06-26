@@ -1,3 +1,4 @@
 *.d
 *.o
 RoboticsProject/Debug/*
+RoboticsProject/Configurations/parameters/console
