@@ -1,9 +1,3 @@
-*.o
-*.o
-RoboticsProject/Debug/main.d
 *.d
 *.o
-*.o
-RoboticsProject/Debug/ConfigurationManager.o
-*.o
-RoboticsProject/Debug/RoboticsProject
+RoboticsProject/Debug/*
