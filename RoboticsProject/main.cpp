@@ -7,9 +7,11 @@
 #include <iostream>
 
 int main() {
+
+	Map* map = new Map();
+	map->createGrid();
 //	cout << x;
 
-<<<<<<< HEAD
 //Robot robot("localhost",6665);
 
 //	Map* map = new Map();
@@ -28,13 +30,6 @@ int main() {
 //
 //
 //	map->createGridWithResolutionFromImage(map->inflatedImage);
-=======
-	//Robot robot("localhost",6665);
-
-	Map* map = new Map();
-
-	map->createGrid();
->>>>>>> origin/Branch_1
 
 //PlnObstacleAvoid plnOA(&robot);
 //Manager manager(&robot, &

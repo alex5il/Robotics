@@ -17,6 +17,7 @@ Map::Map() {
 	//mapPath = ConfigurationManager::getMapPath();
 
 
+
 	// Init basic data of the map
 
 	unsigned int height, width;
@@ -259,12 +260,14 @@ void Map::inflateImage()
 
 
 void Map::createGrid() {
+	inflateImage();
+	createGridWithResolutionFromImage(inflatedImage);
 }
 
 std::vector<std::vector<Cell> > Map::getGrid() {
 	return grid;
 }
 
-Robot::~Robot() {
+Map::~Map() {
 }
 
