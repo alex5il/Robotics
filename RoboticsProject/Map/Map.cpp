@@ -2,23 +2,10 @@
 #include "../Configurations/ConfigurationManager.h"
 
 // TODO get from parameters
-<<<<<<< HEAD
-
 //float Map::mapResolution = 2.5;
 //float Map::gridResolution = 10;
 
-std::string Map::mapPath = "/usr/robotics/PcBotWorld/hospital_section.png";
-
-=======
-/*float Map::mapResolution = ConfigurationManager::getMapResolutionCM();
- float Map::gridResolution = ConfigurationManager::getGridResolutionCM();*/
-
-//float Map::mapResolution = ConfigurationManager::getMapResolutionCM();
-//float Map::gridResolution = ConfigurationManager::getGridResolutionCM();
-//
-//std::string Map::mapPath = ConfigurationManager::getMapPath();
->>>>>>> origin/Branch_1
-//std::string Map::mapPath = "roboticLabMap.png";
+//std::string Map::mapPath = "/usr/robotics/PcBotWorld/hospital_section.png";
 //int Map::mapHeight = 0;
 //int Map::mapWidth = 0;
 Map::Map() {

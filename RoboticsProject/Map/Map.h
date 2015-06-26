@@ -1,3 +1,7 @@
+#ifndef MAP_H_
+#define MAP_H_
+
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,14 +15,10 @@
 #include "../Configurations/Consts.h"
 #include "../Configurations/ConfigurationManager.h"
 
-#ifndef MAP_H_
-#define MAP_H_
-
-enum Cell {
-	FREE_CELL = ' ', OCCUPIED_CELL = '#', UNKNOWN_CELL = '?', CURRENT_CELL = 'R'
-};
+enum Cell { FREE_CELL = ' ' , OCCUPIED_CELL = '#', UNKNOWN_CELL = '?', CURRENT_CELL = 'R' };
 
 class Map {
+
 
 public:
 	// Map/ image coordinates and stuff
@@ -31,8 +31,8 @@ public:
 	std::string mapPath;
 
 	std::vector<unsigned char> originalImage;
-	std::vector<unsigned char> inflatedImage;
-	std::vector<unsigned char> testImage;
+	std::vector<unsigned char > inflatedImage;
+	std::vector<unsigned char > testImage;
 
 private:
 	std::vector<std::vector<Cell> > grid;
