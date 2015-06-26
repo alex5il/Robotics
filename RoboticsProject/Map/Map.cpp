@@ -262,6 +262,7 @@ void Map::inflateImage()
 void Map::createGrid() {
 	inflateImage();
 	createGridWithResolutionFromImage(inflatedImage);
+	printMap();
 }
 
 std::vector<std::vector<Cell> > Map::getGrid() {
