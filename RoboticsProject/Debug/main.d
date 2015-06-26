@@ -15,9 +15,15 @@ main.d: ../main.cpp ../Robot.h \
  ../Plans/PlnObstacleAvoid.h ../Plans/../Behaviours/TurnRight.h \
  ../Plans/../Behaviours/Behavior.h ../Plans/../Behaviours/../Robot.h \
  ../Plans/Plan.h ../Plans/../Behaviours/Behavior.h ../Plans/../Robot.h \
+<<<<<<< HEAD
+ ../Map/Map.h ../Map/../Robot.h ../Map/../PngUtilities/lodepng.h \
+ ../Map/../PngUtilities/pngUtil.h ../Map/../Configurations/Consts.h \
+ ../Map/../Configurations/ConfigurationManager.h
+=======
  ../Map/Map.h ../Map/../Configurations/Consts.h ../Map/../Robot.h \
  ../Map/../PngUtilities/lodepng.h ../Map/../PngUtilities/pngUtil.h \
  ../Configurations/ConfigurationManager.h
+>>>>>>> origin/Branch_1
 
 ../Robot.h:
 
@@ -65,12 +71,16 @@ main.d: ../main.cpp ../Robot.h \
 
 ../Map/Map.h:
 
-../Map/../Configurations/Consts.h:
-
 ../Map/../Robot.h:
 
 ../Map/../PngUtilities/lodepng.h:
 
 ../Map/../PngUtilities/pngUtil.h:
 
+<<<<<<< HEAD
+../Map/../Configurations/Consts.h:
+
+../Map/../Configurations/ConfigurationManager.h:
+=======
 ../Configurations/ConfigurationManager.h:
+>>>>>>> origin/Branch_1

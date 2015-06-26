@@ -1,4 +1,3 @@
-#include "../Configurations/Consts.h"
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,6 +9,7 @@
 #include "../PngUtilities/pngUtil.h"
 
 #include "../Configurations/Consts.h"
+#include "../Configurations/ConfigurationManager.h"
 
 #ifndef MAP_H_
 #define MAP_H_
@@ -31,7 +31,6 @@ public:
 
 	std::vector<unsigned char> originalImage;
 	std::vector<unsigned char > inflatedImage;
-
 	std::vector<unsigned char > testImage;
 
 private:
@@ -45,7 +44,11 @@ public:
 	void printMap();
 	void createGridFromImage(std::vector<unsigned char> image);
 	void inflateImage();
+	void createImageWithResolutionFromImage(std::vector<unsigned char> image);
 	void createGridWithResolutionFromImage(std::vector<unsigned char> image);
+
+	void createGrid();
+	std::vector<std::vector<Cell> > getGrid();
 };
 
 #endif /* MAP_H_ */
