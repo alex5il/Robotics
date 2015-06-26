@@ -9,20 +9,7 @@ int main() {
 
 	Map* map = new Map();
 
-	map->createGridFromImage(map->originalImage);
-	map->printMap();
-
-	std::cout << "\n\n\n ============================================== \n\n\n";
-	std::cout << "\n\n\n ============================================== \n\n\n";
-	std::cout << "\n\n\n ============================================== \n\n\n";
-	std::cout << "\n\n\n ============================================== \n\n\n";
-
-	map->inflateImage();
-	map->createGridFromImage(map->inflatedImage);
-	map->printMap();
-
-
-	map->createGridWithResolutionFromImage(map->inflatedImage);
+	map->createGrid();
 
 //PlnObstacleAvoid plnOA(&robot);
 //Manager manager(&robot, &plnOA);
