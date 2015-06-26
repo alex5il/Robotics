@@ -5,11 +5,11 @@ LocalizationManager::LocalizationManager(float yaw) {
 }
 
 void LocalizationManager::init(float yaw) {
-	for (unsigned int particle = 0; particle < particlesNum; particle++) {
-		Particle newParticle((1 + rand() % 10) + Map::mapHeight / 2,
-				(1 + rand() % 10) + Map::mapWidth / 2, yaw);
-		particles.push_back(newParticle);
-	}
+//	for (unsigned int particle = 0; particle < particlesNum; particle++) {
+//		Particle newParticle((1 + rand() % 10) + Map::mapHeight / 2,
+//				(1 + rand() % 10) + Map::mapWidth / 2, yaw);
+//		particles.push_back(newParticle);
+//	}
 }
 
 void LocalizationManager::update(float delX, float delY, float delYaw,
