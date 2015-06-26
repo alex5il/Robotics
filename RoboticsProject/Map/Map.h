@@ -25,8 +25,8 @@ public:
 	static int mapWidth;
 	static int mapHeight;
 
-	static float mapResolution;
-	static float gridResolution;
+	static double mapResolution;
+	static double gridResolution;
 	static std::string mapPath;
 
 	std::vector<unsigned char> originalImage;
