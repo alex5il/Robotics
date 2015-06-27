@@ -27,6 +27,7 @@ SUBDIRS := \
 SLAM \
 PngUtilities \
 Plans \
+PathFinder \
 Map \
 Configurations \
 Behaviours \

@@ -15,17 +15,110 @@
 #include "../Configurations/Consts.h"
 #include "../Configurations/ConfigurationManager.h"
 
-enum Cell { FREE_CELL = ' ' , OCCUPIED_CELL = '#', UNKNOWN_CELL = '?', CURRENT_CELL = 'R' };
+using namespace std;
+
+enum Cell { FREE_CELL = ' ' , OCCUPIED_CELL = '#', UNKNOWN_CELL = '?', CURRENT_CELL = '@', END_GOAL = 'E' };
+
+struct Location {
+
+	int posX;
+	int posY;
+
+	Cell cellType;
+
+	// In order to check if the location is a valid one we need some constraint on the current grid
+	int rowGridCap;
+	int colGridCap;
+
+	bool isValid(int xOffset, int yOffset)
+	{
+		return (posY + yOffset) >= 0  && (posX + xOffset) >= 0 && (posY + yOffset) < rowGridCap && (posX + xOffset) < colGridCap;
+	}
+
+	bool operator==(const Location& a) const
+	{
+	    return (posX == a.posX && posY == a.posY);
+	}
+
+	bool operator!=(const Location& a) const
+	{
+		return (posX != a.posX || posY != a.posY);
+	}
+
+	bool operator <(const Location &rhs) const {
+	    return (posY < rhs.posY || (posY == rhs.posY && posX < rhs.posX));
+	}
+
+	bool operator >(const Location &lhs) const {
+		return posY > lhs.posY;
+	    //return (posY > lhs.posY || (posY == lhs.posY && posX > lhs.posX));
+	}
+
+//	bool operator<(const Location& lhs, const Location& rhs)
+//	{
+//	    //return lhs.xi < rhs.xi;
+//	    return (lhs.posY < rhs.posY || (lhs.posY == rhs.posY && lhs.posX < rhs.posX));
+//	}
+};
+
+struct Graph {
+
+	Location location;
+	vector<Location>::iterator iterator;
+
+	vector< vector<Location> > edges;
+
+	vector<Location> neighbors(Location current)
+	{
+	  vector<Location> result;
+	  for( int drow = -1; drow <= 1; ++drow )
+	  {
+	    for( int dcol = -1; dcol <= 1; ++dcol )
+	    {
+	    	Location neighbor = edges[current.posY][current.posX];
+
+
+			if( neighbor.isValid(dcol,drow) )
+			{
+				neighbor = edges[current.posY + drow][current.posX + dcol];
+				result.push_back(neighbor);
+			}
+
+
+	    }
+	  }
+	  return result;
+	}
+
+    int Cost(Location a, Location b)
+    {
+    	if (edges[b.posY][b.posX].cellType == OCCUPIED_CELL)
+    	{
+    		return 99;
+    	}
+
+    	return 1;
+
+    }
+
+};
+
+
 
 class Map {
 
 private:
 	std::vector<std::vector<Cell> > grid;
 
+	Graph graph;
+
 	// Map/ image coordinates and stuff
 
 	int mapWidth;
 	int mapHeight;
+
+	Location startLocation;
+	Location endLocation;
 
 	float mapResolution;
 	float gridResolution;
@@ -39,7 +132,7 @@ private:
 
 	void updateCell(int x, int y, Cell cell);
 	Cell getCell(int x, int y);
-	void printMap();
+
 	void createGridFromImage(std::vector<unsigned char> image);
 	void inflateImage();
 	void createImageWithResolutionFromImage(std::vector<unsigned char> image);
@@ -50,11 +143,18 @@ private:
 
 public:
 
+	void printMap();
+	void printMap2(Graph graph);
+
 	void createGrid();
 	std::vector<std::vector<Cell> > getGrid();
 	int getMapWidth();
 	int getMapHeight();
 
+	Location getStartLocation();
+	Location getEndLocation();
+
+	Graph* getGraph();
 
 	static Map* getInstance();
 };

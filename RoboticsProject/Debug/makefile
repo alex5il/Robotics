@@ -11,6 +11,7 @@ RM := rm -rf
 -include SLAM/subdir.mk
 -include PngUtilities/subdir.mk
 -include Plans/subdir.mk
+-include PathFinder/subdir.mk
 -include Map/subdir.mk
 -include Configurations/subdir.mk
 -include Behaviours/subdir.mk

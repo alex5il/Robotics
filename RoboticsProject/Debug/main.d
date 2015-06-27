@@ -17,8 +17,8 @@ main.d: ../main.cpp ../Robot.h \
  ../Plans/Plan.h ../Plans/../Behaviours/Behavior.h ../Plans/../Robot.h \
  ../Map/Map.h ../Map/../Robot.h ../Map/../PngUtilities/lodepng.h \
  ../Map/../PngUtilities/pngUtil.h ../Map/../Configurations/Consts.h \
- ../Map/../Configurations/ConfigurationManager.h \
- ../Configurations/ConfigurationManager.h
+ ../Map/../Configurations/ConfigurationManager.h ../PathFinder/AStar.h \
+ ../PathFinder/../Map/Map.h ../Configurations/ConfigurationManager.h
 
 ../Robot.h:
 
@@ -75,5 +75,9 @@ main.d: ../main.cpp ../Robot.h \
 ../Map/../Configurations/Consts.h:
 
 ../Map/../Configurations/ConfigurationManager.h:
+
+../PathFinder/AStar.h:
+
+../PathFinder/../Map/Map.h:
 
 ../Configurations/ConfigurationManager.h:

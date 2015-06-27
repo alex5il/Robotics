@@ -23,21 +23,52 @@ Map::Map() {
 	mapWidth = width;
 	mapHeight = height;
 
-	grid.resize(mapHeight);
+	graph.edges.resize(mapHeight);
+
+
+	//grid.resize(mapHeight);
 
 	for (int i = 0; i < mapHeight; i++) {
-		grid[i].resize(mapWidth);
+		graph.edges[i].resize(mapWidth);
+		//grid[i].resize(mapWidth);
 		for (int j = 0; j < mapWidth; j++) {
-			grid[i][j] = UNKNOWN_CELL;
+			//grid[i][j] = UNKNOWN_CELL;
+			graph.edges[i][j].cellType = UNKNOWN_CELL;
+			graph.edges[i][j].posX = j;
+			graph.edges[i][j].posY = i;
+			graph.edges[i][j].rowGridCap = mapHeight;
+			graph.edges[i][j].colGridCap = mapWidth;
 		}
 	}
+
+	// Start and end location fgor testing
+	Location start;
+	start.posX = 50;
+	start.posY = 50;
+	start.cellType = CURRENT_CELL;
+	start.rowGridCap = mapHeight;
+	start.colGridCap = mapWidth;
+
+	Location end;
+	//end.posX = 144;
+	//end.posY = 137;
+	end.posX = 763;
+	end.posY = 70;
+	end.cellType = END_GOAL;
+	start.rowGridCap = mapHeight;
+	end.colGridCap = mapWidth;
+
+	startLocation = start;
+	endLocation = end;
+
 }
 
 void Map::printMap() {
 	char ch;
 	for (int i = 0; i < mapHeight; i++) {
 		for (int j = 0; j < mapWidth; j++) {
-			ch = grid[i][j];
+			//ch = grid[i][j];
+			ch = graph.edges[i][j].cellType;
 			std::cout << ch;
 
 		}
@@ -45,8 +76,26 @@ void Map::printMap() {
 	}
 }
 
+void Map::printMap2(Graph graph) {
+	char ch;
+	for (int i = 0; i < mapHeight; i++) {
+		for (int j = 0; j < mapWidth; j++) {
+			//ch = grid[i][j];
+			ch = graph.edges[i][j].cellType;
+			std::cout << ch;
+
+			if (graph.edges[i][j].cellType == CURRENT_CELL) {
+				std::cout << "@";
+			}
+
+		}
+		std::cout << "\n";
+	}
+}
+
 void Map::updateCell(int x, int y, Cell cell) {
-	grid[x][y] = cell;
+	//grid[x][y] = cell;
+	graph.edges[x][y].cellType= cell;
 }
 
 Cell Map::getCell(int x, int y) {
@@ -243,6 +292,12 @@ void Map::inflateImage() {
 void Map::createGrid() {
 	inflateImage();
 	createGridWithResolutionFromImage(inflatedImage);
+
+
+
+	graph.edges[startLocation.posY][startLocation.posX] = startLocation;
+	graph.edges[endLocation.posY][endLocation.posX] = endLocation;
+
 	printMap();
 }
 
@@ -266,6 +321,19 @@ Map* Map::getInstance() {
 	Map* mapInstance = new Map();
 
 	return mapInstance;
+}
+
+
+Location Map::getStartLocation() {
+	return startLocation;
+}
+
+Location Map::getEndLocation() {
+	return endLocation;
+}
+
+Graph* Map::getGraph() {
+	return &graph;
 }
 
 Map::~Map() {
