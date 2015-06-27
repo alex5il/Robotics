@@ -43,8 +43,10 @@ Map::Map() {
 
 	// Start and end location fgor testing
 	Location start;
-	start.posX = 50;
-	start.posY = 50;
+	//start.posX = 50;
+	//start.posY = 50;
+	start.posX = ConfigurationManager::getStartLocationX();
+	start.posY = ConfigurationManager::getStartLocationY();
 	start.cellType = CURRENT_CELL;
 	start.rowGridCap = mapHeight;
 	start.colGridCap = mapWidth;
@@ -52,8 +54,10 @@ Map::Map() {
 	Location end;
 	//end.posX = 144;
 	//end.posY = 137;
-	end.posX = 763;
-	end.posY = 70;
+	//end.posX = 763;
+	//end.posY = 70;
+	end.posX = ConfigurationManager::getGoalX();
+	end.posY = ConfigurationManager::getGoalY();
 	end.cellType = END_GOAL;
 	start.rowGridCap = mapHeight;
 	end.colGridCap = mapWidth;
