@@ -5,11 +5,17 @@ LocalizationManager::LocalizationManager(float yaw) {
 }
 
 void LocalizationManager::init(float yaw) {
-//	for (unsigned int particle = 0; particle < particlesNum; particle++) {
-//		Particle newParticle((1 + rand() % 10) + Map::mapHeight / 2,
-//				(1 + rand() % 10) + Map::mapWidth / 2, yaw);
-//		particles.push_back(newParticle);
-//	}
+	for (unsigned int particle = 0; particle < particlesNum; particle++) {
+		int x = rand() % Map::getInstance()->getMapWidth() + 1;
+		int y = rand() % Map::getInstance()->getMapHeight() + 1;
+		int yaw = DTOR(rand() % 360);
+
+		Particle newParticle(x, y, yaw);
+		particles.push_back(newParticle);
+
+		cout << "New particle created at: (" << x << ", " << y << ", " << yaw
+				<< ")";
+	}
 }
 
 void LocalizationManager::update(float delX, float delY, float delYaw,
@@ -19,7 +25,7 @@ void LocalizationManager::update(float delX, float delY, float delYaw,
 
 		particle->update(delX, delY, delYaw, laserScan);
 
-		if (particle->getBelief() < beliefThreshold) {
+		if (particle->getBelief() < minBelief) {
 			particles.erase(particle);
 		}
 

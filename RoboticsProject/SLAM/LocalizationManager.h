@@ -15,7 +15,7 @@ private:
 	vector<Particle> particles;
 
 	static const unsigned int particlesNum = 100;
-	static const float beliefThreshold = 0.5;
+	static const float minBelief = 0.5;
 	static const float distance = 5;
 
 	void init(float yaw);
