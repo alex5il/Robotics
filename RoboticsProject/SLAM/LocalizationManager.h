@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <vector>
+#include <algorithm>
+#include <math.h>
 
 using namespace std;
 
@@ -14,14 +16,13 @@ class LocalizationManager {
 private:
 	vector<Particle> particles;
 
-	static const unsigned int particlesNum = 100;
-	static const float minBelief = 0.5;
-	static const float distance = 5;
+	static const unsigned int particlesNum = 200;
+	static const float minBelief = 0.4;
 
-	void init(float yaw);
+	void init();
 
 public:
-	LocalizationManager(float yaw);
+	LocalizationManager();
 
 	void update(float delX, float delY, float delYaw, float laserScan[]);
 
