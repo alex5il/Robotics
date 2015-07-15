@@ -21,9 +21,14 @@ void Particle::update(float delX, float delY, float delYaw, float laserScan[]) {
 }
 
 Particle Particle::createChild() {
-	return Particle(this->x + (rand() % childRadius),
-			this->x + (rand() % childRadius),
-			this->yaw + DTOR(rand() % childlYawRange));
+	return Particle(this->x + childRadius - (rand() % (2 * childRadius)),
+			this->x + childRadius - (rand() % (2 * childRadius)),
+			fmod(
+					this->yaw
+							+ DTOR(
+									childlYawRange
+											- rand() % (2 * childlYawRange)),
+					2 * M_PI));
 }
 
 float Particle::probabilityByMove(float delX, float delY, float delYaw) {
