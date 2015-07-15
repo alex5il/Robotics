@@ -51,14 +51,8 @@ struct Location {
 
 	bool operator >(const Location &lhs) const {
 		return posY > lhs.posY;
-	    //return (posY > lhs.posY || (posY == lhs.posY && posX > lhs.posX));
 	}
 
-//	bool operator<(const Location& lhs, const Location& rhs)
-//	{
-//	    //return lhs.xi < rhs.xi;
-//	    return (lhs.posY < rhs.posY || (lhs.posY == rhs.posY && lhs.posX < rhs.posX));
-//	}
 };
 
 struct Graph {
@@ -83,20 +77,38 @@ struct Graph {
 				neighbor = edges[current.posY + drow][current.posX + dcol];
 				result.push_back(neighbor);
 			}
-
-
 	    }
 	  }
 	  return result;
 	}
 
-    int Cost(Location a, Location b)
+	// Check between 2 cells if they are in a diagonal path
+	bool isDiagonal(Location a, Location b) {
+		if (edges[a.posY + 1][a.posX + 1] == b ||
+			edges[a.posY - 1][a.posX - 1] == b ||
+			edges[a.posY + 1][a.posX - 1] == b ||
+			edges[a.posY - 1][a.posX + 1] == b) {
+			return true;
+		}
+		return false;
+	}
+
+	// Calculate cost between a and b locations
+    float Cost(Location a, Location b)
     {
+    	// If the next cell (b) is occupied return 99(max cost)
     	if (edges[b.posY][b.posX].cellType == OCCUPIED_CELL)
     	{
     		return 99;
     	}
 
+    	// Check if the path is diagonal (if its is then return sqrt(2))
+    	if(isDiagonal(a, b))
+    	{
+    		return 1.4;
+    	}
+
+    	// Otherwise its vertical/horizontal - return cost 1
     	return 1;
 
     }

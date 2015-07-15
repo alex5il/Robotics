@@ -22,7 +22,7 @@ int main() {
 	AStar* astr = new AStar();
 
 	std::map<Location, Location> came_from;
-	std::map<Location, int> cost_so_far;
+	std::map<Location, float> cost_so_far;
 
 	vector<Location> path = astr->runAstar(map->getGraph(), map->getStartLocation(), map->getEndLocation(), came_from, cost_so_far);
 

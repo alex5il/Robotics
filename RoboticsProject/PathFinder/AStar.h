@@ -25,7 +25,7 @@ class AStar {
 
 public:
 
-	pair<int, Location> element;
+	pair<float, Location> element;
 
 	AStar();
 	virtual ~AStar();
@@ -34,7 +34,7 @@ public:
 			   Location start,
 			   Location goal,
 			   map<Location, Location>& came_from,
-			   map<Location, int>& cost_so_far);
+			   map<Location, float>& cost_so_far);
 };
 
 #endif /* ASTAR_H_ */
