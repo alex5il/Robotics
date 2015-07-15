@@ -54,11 +54,11 @@ struct PriorityQueue {
 };
 
 // heuristic method (the whole point of a*)
-int heuristic(Location a, Location b) {
+float heuristic(Location a, Location b) {
   return abs(a.posX - b.posX) + abs(a.posY - b.posY);
 }
 
-// REconstruct the path via the 'came_from' parameters and the start end goals
+// Reconstruct the path via the 'came_from' parameters and the start end goals
 vector<Location> reconstruct_path(
    Location start,
    Location goal,
@@ -87,10 +87,10 @@ void a_star_search
    Location start,
    Location goal,
    map<Location, Location>& came_from,
-   map<Location, int>& cost_so_far)
+   map<Location, float>& cost_so_far)
 {
 
-	// Set up the parametrs , and our priority queue
+	// Set up the parameters , and our priority queue
   PriorityQueue frontier;
   frontier.put(start, 0);
 
@@ -112,11 +112,11 @@ void a_star_search
     for(int i = 0; i<neighbors.size(); i++) {
 
     	Location next = neighbors[i];
-    	int new_cost = cost_so_far[current] + graph->Cost(current, next);
+    	float new_cost = cost_so_far[current] + graph->Cost(current, next);
 
     	if (!cost_so_far.count(next) || new_cost < cost_so_far[next]) {
     		cost_so_far[next] = new_cost;
-    		int priority = new_cost + heuristic(next, goal);
+    		float priority = new_cost + heuristic(next, goal);
 
     		frontier.put(next, priority);
     		came_from[next] = current;
@@ -139,7 +139,7 @@ vector<Location> AStar::runAstar(Graph* graph,
 		   Location start,
 		   Location goal,
 		   map<Location, Location>& came_from,
-		   map<Location, int>& cost_so_far) {
+		   map<Location, float>& cost_so_far) {
 
 	// Find path via the alghorithm
 	a_star_search(graph, start, goal, came_from, cost_so_far);

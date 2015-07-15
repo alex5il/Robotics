@@ -10,7 +10,7 @@ WaypointsManager::WaypointsManager(vector<Location> path) {
 
 	// Checking for every location of the path if the delta
 	// (yaw of the robot advancement) is different from the previous delta.
-	for (int i = 3; i < path.size() - 1; i++) {
+	for (unsigned int i = 3; i < path.size() - 1; i++) {
 		currDelta.posX = path[i].posX - path[i - 1].posX;
 		currDelta.posY = path[i].posY - path[i - 1].posY;
 
