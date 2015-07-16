@@ -18,15 +18,34 @@ WaypointsManager::WaypointsManager(vector<Location> path) {
 		if (currDelta.posX != lastDelta.posX
 				|| currDelta.posY != lastDelta.posY) {
 
-			waypoints.push_back(Waypoint(path[i - 1].posX, path[i - 1].posY));
+			waypoints.push_back(
+					Waypoint(path[i - 1].posX, path[i - 1].posY,
+							Waypoint::waypointRadius));
 		}
 	}
 
-	// Adding the latest location as a waypoint.
+	// Adding the latest location as a waypoint with radius 0.
 	waypoints.push_back(
-			Waypoint(path[path.size() - 1].posX, path[path.size() - 1].posY));
+			Waypoint(path[path.size() - 1].posX, path[path.size() - 1].posY,
+					0));
 
 	this->currWaypoint = 0;
+}
+
+Waypoint* WaypointsManager::getFirst() {
+	this->currWaypoint = 0;
+
+	return &waypoints[0];
+}
+
+Waypoint* WaypointsManager::getNext() {
+	if (currWaypoint < (waypoints.size() - 1)) {
+
+		this->currWaypoint++;
+		return &waypoints[currWaypoint];
+	}
+
+	return NULL;
 }
 
 WaypointsManager::~WaypointsManager() {

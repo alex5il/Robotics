@@ -2,14 +2,20 @@
 #define WAYPOINT_H_
 
 #include "../Map/Map.h"
+#include <math.h>
 
 class Waypoint: private Location {
 
 private:
-	static const unsigned int radius = 5;
+	short radius;
 
 public:
-	Waypoint(int x, int y);
+	static const unsigned short waypointRadius = 10;
+
+	Waypoint(short x, short y, short radius);
+
+	bool withinRadius(short x, short y);
+
 	virtual ~Waypoint();
 };
 

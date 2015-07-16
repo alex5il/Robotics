@@ -11,11 +11,15 @@ class WaypointsManager {
 
 private:
 	vector<Waypoint> waypoints;
-	int currWaypoint;
+	short currWaypoint;
 
 public:
 	WaypointsManager(vector<Location> path);
-	virtual ~WaypointsManager();
+
+	Waypoint* getFirst();
+	Waypoint* getNext();
+
+	~WaypointsManager();
 };
 
 #endif /* WAYPOINTSMANAGER_H_ */
