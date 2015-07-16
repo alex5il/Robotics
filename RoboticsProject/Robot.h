@@ -1,4 +1,3 @@
-
 #ifndef ROBOT_H_
 #define ROBOT_H_
 #include <libplayerc++/playerc++.h>
@@ -18,9 +17,10 @@ public:
 	bool isRightFree();
 	bool isLeftFree();
 	bool isForwardFree();
-	double getYPos();
-	double getXPos();
-	double getYaw();
+	float getYPos();
+	float getXPos();
+	float getYaw();
+	float* getLaserScan();
 
 	virtual ~Robot();
 };

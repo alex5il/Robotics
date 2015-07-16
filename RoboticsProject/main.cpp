@@ -24,13 +24,20 @@ int main() {
 	std::map<Location, Location> came_from;
 	std::map<Location, float> cost_so_far;
 
-	vector<Location> path = astr->runAstar(map->getGraph(), map->getStartLocation(), map->getEndLocation(), came_from, cost_so_far);
+	vector<Location> path = astr->runAstar(map->getGraph(),
+			map->getStartLocation(), map->getEndLocation(), came_from,
+			cost_so_far);
 
 	// print test
-	for (int i=0; i<path.size(); i++) {
-		map->getGraph()->edges[path[i].posY][path[i].posX].cellType = CURRENT_CELL;
+	for (int i = 0; i < path.size(); i++) {
+		map->getGraph()->edges[path[i].posY][path[i].posX].cellType =
+				CURRENT_CELL;
 	}
 
 	map->printMap();
+
+	Robot robot("localhost", 6665);
+	PlnObstacleAvoid plan(&robot);
+//	Manager manager(&robot, &plan, path);
 
 }
