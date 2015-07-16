@@ -17,7 +17,7 @@ public:
 	}
 
 	void action() {
-		_robot->setSpeed(0.0, 0.3);
+		_robot->setSpeed(0.0, angularSpeed);
 	}
 
 	virtual ~TurnRight();

@@ -10,7 +10,8 @@ private:
 	short radius;
 
 public:
-	static const unsigned short waypointRadius = 10;
+	static const unsigned short stdWaypntRadius = 10;
+	static const unsigned short fnlWaypntRadius = 10;
 
 	Waypoint(short x, short y, short radius);
 

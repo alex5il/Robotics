@@ -7,5 +7,7 @@ static const unsigned int LASER_SAMPLES = 666;
 static const unsigned int LASER_RANGE = 4;
 static const float LASER_AREA = 0.36;
 static const unsigned int LASER_RESOLUTION = 240;
+static const float forwardSpeed = 0.3;
+static const float angularSpeed = 0.3;
 
 #endif /* CONSTS_H_ */

@@ -2,11 +2,14 @@
 #define BEHAVIOR_H_
 
 #include <vector>
+#include "../Configurations/Consts.h"
 #include "../Robot.h"
 
 using namespace std;
 
 class Behavior {
+
+private:
 	vector<Behavior*> _behVect;
 
 protected:

@@ -17,7 +17,7 @@ public:
 	}
 
 	void action() {
-		_robot->setSpeed(0.3, 0.0);
+		_robot->setSpeed(forwardSpeed, 0.0);
 	}
 
 	virtual ~MoveForward();

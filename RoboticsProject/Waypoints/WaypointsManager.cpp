@@ -20,14 +20,14 @@ WaypointsManager::WaypointsManager(vector<Location> path) {
 
 			waypoints.push_back(
 					Waypoint(path[i - 1].posX, path[i - 1].posY,
-							Waypoint::waypointRadius));
+							Waypoint::stdWaypntRadius));
 		}
 	}
 
 	// Adding the latest location as a waypoint with radius 0.
 	waypoints.push_back(
 			Waypoint(path[path.size() - 1].posX, path[path.size() - 1].posY,
-					0));
+					Waypoint::fnlWaypntRadius));
 
 	this->currWaypoint = 0;
 }

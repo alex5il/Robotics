@@ -1,16 +1,8 @@
-/*
- * PlnObstacleAvoid.cpp
- *
- *  Created on: Dec 21, 2014
- *      Author: user
- */
-
 #include "PlnObstacleAvoid.h"
 
 PlnObstacleAvoid::PlnObstacleAvoid(Robot* robot) {
 	//Creating Behaviors
 	_beh[0] = new TurnRight(robot);
-
 
 	//Connecting Behaviors
 	_beh[0]->addBeh(_beh[1]);
@@ -21,7 +13,6 @@ PlnObstacleAvoid::PlnObstacleAvoid(Robot* robot) {
 }
 
 PlnObstacleAvoid::~PlnObstacleAvoid() {
-	// TODO Auto-generated destructor stub
-	for(int i=0;i<3;i++)
+	for (int i = 0; i < 3; i++)
 		delete _beh[i];
 }
