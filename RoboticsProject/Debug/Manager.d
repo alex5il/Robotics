@@ -15,10 +15,11 @@ Manager.d: ../Manager.cpp ../Manager.h ../Plans/PlnObstacleAvoid.h \
  /usr/local/include/player-2.0/libplayerc++/playerclient.h \
  /usr/local/include/player-2.0/libplayerc++/playererror.h \
  /usr/local/include/player-2.0/libplayerc++/clientproxy.h \
- ../Plans/../Behaviours/TurnLeft.h ../Plans/Plan.h \
- ../Plans/../Behaviours/Behavior.h ../Plans/../Robot.h ../Robot.h \
- ../SLAM/LocalizationManager.h ../SLAM/Particle.h ../SLAM/../Map/Map.h \
- ../SLAM/../Map/../Robot.h ../SLAM/../Map/../PngUtilities/lodepng.h \
+ ../Plans/../Behaviours/TurnLeft.h ../Plans/../Behaviours/MoveForward.h \
+ ../Plans/Plan.h ../Plans/../Behaviours/Behavior.h ../Plans/../Robot.h \
+ ../Robot.h ../SLAM/LocalizationManager.h ../SLAM/Particle.h \
+ ../SLAM/../Map/Map.h ../SLAM/../Map/../Robot.h \
+ ../SLAM/../Map/../PngUtilities/lodepng.h \
  ../SLAM/../Map/../PngUtilities/pngUtil.h \
  ../SLAM/../Map/../Configurations/Consts.h \
  ../SLAM/../Map/../Configurations/ConfigurationManager.h \
@@ -64,6 +65,8 @@ Manager.d: ../Manager.cpp ../Manager.h ../Plans/PlnObstacleAvoid.h \
 /usr/local/include/player-2.0/libplayerc++/clientproxy.h:
 
 ../Plans/../Behaviours/TurnLeft.h:
+
+../Plans/../Behaviours/MoveForward.h:
 
 ../Plans/Plan.h:
 

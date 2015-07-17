@@ -3,6 +3,7 @@
 
 #include "../Behaviours/TurnRight.h"
 #include "../Behaviours/TurnLeft.h"
+#include "../Behaviours/MoveForward.h"
 #include "Plan.h"
 
 class PlnObstacleAvoid: public Plan {

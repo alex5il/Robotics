@@ -14,8 +14,6 @@ void Manager::run() {
 	float lastYPos = ConfigurationManager::getStartLocationY();
 	float lastYaw = ConfigurationManager::getStartLocationYaw();
 
-	//this->_robot->_pp->SetMotorEnable(true); //Todo: enable this when connecting to the real robot
-
 	if (!(_currBeh->startCond()))
 		return;
 
@@ -37,4 +35,6 @@ void Manager::run() {
 }
 
 Manager::~Manager() {
+	delete _waypMngr;
+	delete _locMngr;
 }
