@@ -10,9 +10,11 @@ Manager::Manager(Robot* robot, Plan* pln, vector<Location> path) {
 void Manager::run() {
 	_robot->Read();
 
-	float lastXPos = _robot->getXPos();
-	float lastYPos = _robot->getYPos();
-	float lastYaw = _robot->getYaw();
+	float lastXPos = ConfigurationManager::getStartLocationX();
+	float lastYPos = ConfigurationManager::getStartLocationY();
+	float lastYaw = ConfigurationManager::getStartLocationYaw();
+
+	//this->_robot->_pp->SetMotorEnable(true); //Todo: enable this when connecting to the real robot
 
 	if (!(_currBeh->startCond()))
 		return;

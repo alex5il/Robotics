@@ -38,6 +38,8 @@ int main() {
 
 	Robot robot("localhost", 6665);
 	PlnObstacleAvoid plan(&robot);
-//	Manager manager(&robot, &plan, path);
+	Manager manager(&robot, &plan, path);
+	manager.run();
 
+	return 0;
 }
