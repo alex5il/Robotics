@@ -7,9 +7,14 @@ LocalizationManager::LocalizationManager() {
 
 void LocalizationManager::init() {
 	for (unsigned int particle = 0; particle < particlesNum; particle++) {
-		float x = rand() % Map::getInstance()->getMapWidth() + 1;
-		float y = rand() % Map::getInstance()->getMapHeight() + 1;
-		float yaw = DTOR(rand() % 360);
+		float x = ConfigurationManager::getStartLocationX() + childRadius
+				- (rand() % (2 * childRadius));
+		float y = ConfigurationManager::getStartLocationY() + childRadius
+				- (rand() % (2 * childRadius));
+		float yaw = fmod(
+				ConfigurationManager::getStartLocationYaw()
+						+ childlYawRange- DTOR(rand() % (2 * childlYawRange)),
+				2 * M_PI);
 
 		Particle newParticle(x, y, yaw);
 		particles.push_back(newParticle);
@@ -55,6 +60,20 @@ void LocalizationManager::update(float delX, float delY, float delYaw,
 			}
 		}
 	}
+}
+
+Particle* LocalizationManager::estimatedLocation() {
+	float maxBelief = 0;
+	Particle* bestParticle = NULL;
+
+	for (unsigned int i = 0; i < particles.size(); i++) {
+		if (particles[i].getBelief() > minBelief) {
+			maxBelief = particles[i].belief;
+			bestParticle = &particles[i];
+		}
+	}
+
+	return bestParticle;
 }
 
 LocalizationManager::~LocalizationManager() {

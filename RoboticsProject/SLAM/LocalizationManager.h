@@ -16,15 +16,13 @@ class LocalizationManager {
 private:
 	vector<Particle> particles;
 
-	static const unsigned int particlesNum = 200;
-	static const float minBelief = 0.4;
-
 	void init();
 
 public:
 	LocalizationManager();
 
 	void update(float delX, float delY, float delYaw, float laserScan[]);
+	Particle* estimatedLocation();
 
 	virtual ~LocalizationManager();
 };
