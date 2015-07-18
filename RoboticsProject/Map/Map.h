@@ -1,7 +1,6 @@
 #ifndef MAP_H_
 #define MAP_H_
 
-
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,7 +16,13 @@
 
 using namespace std;
 
-enum Cell { FREE_CELL = ' ' , OCCUPIED_CELL = '#', UNKNOWN_CELL = '?', CURRENT_CELL = '@', END_GOAL = 'E' };
+enum Cell {
+	FREE_CELL = ' ',
+	OCCUPIED_CELL = '#',
+	UNKNOWN_CELL = '?',
+	CURRENT_CELL = '@',
+	END_GOAL = 'E'
+};
 
 struct Location {
 
@@ -30,23 +35,22 @@ struct Location {
 	int rowGridCap;
 	int colGridCap;
 
-	bool isValid(int xOffset, int yOffset)
-	{
-		return (posY + yOffset) >= 0  && (posX + xOffset) >= 0 && (posY + yOffset) < rowGridCap && (posX + xOffset) < colGridCap;
+	bool isValid(int xOffset, int yOffset) {
+		return (posY + yOffset) >= 0 && (posX + xOffset) >= 0
+				&& (posY + yOffset) < rowGridCap
+				&& (posX + xOffset) < colGridCap;
 	}
 
-	bool operator==(const Location& a) const
-	{
-	    return (posX == a.posX && posY == a.posY);
+	bool operator==(const Location& a) const {
+		return (posX == a.posX && posY == a.posY);
 	}
 
-	bool operator!=(const Location& a) const
-	{
+	bool operator!=(const Location& a) const {
 		return (posX != a.posX || posY != a.posY);
 	}
 
 	bool operator <(const Location &rhs) const {
-	    return (posY < rhs.posY || (posY == rhs.posY && posX < rhs.posX));
+		return (posY < rhs.posY || (posY == rhs.posY && posX < rhs.posX));
 	}
 
 	bool operator >(const Location &lhs) const {
@@ -60,62 +64,52 @@ struct Graph {
 	Location location;
 	vector<Location>::iterator iterator;
 
-	vector< vector<Location> > edges;
+	vector<vector<Location> > edges;
 
-	vector<Location> neighbors(Location current)
-	{
-	  vector<Location> result;
-	  for( int drow = -1; drow <= 1; ++drow )
-	  {
-	    for( int dcol = -1; dcol <= 1; ++dcol )
-	    {
-	    	Location neighbor = edges[current.posY][current.posX];
+	vector<Location> neighbors(Location current) {
+		vector<Location> result;
+		for (int drow = -1; drow <= 1; ++drow) {
+			for (int dcol = -1; dcol <= 1; ++dcol) {
+				Location neighbor = edges[current.posY][current.posX];
 
-
-			if( neighbor.isValid(dcol,drow) )
-			{
-				neighbor = edges[current.posY + drow][current.posX + dcol];
-				result.push_back(neighbor);
+				if (neighbor.isValid(dcol, drow)) {
+					neighbor = edges[current.posY + drow][current.posX + dcol];
+					result.push_back(neighbor);
+				}
 			}
-	    }
-	  }
-	  return result;
+		}
+		return result;
 	}
 
 	// Check between 2 cells if they are in a diagonal path
 	bool isDiagonal(Location a, Location b) {
-		if (edges[a.posY + 1][a.posX + 1] == b ||
-			edges[a.posY - 1][a.posX - 1] == b ||
-			edges[a.posY + 1][a.posX - 1] == b ||
-			edges[a.posY - 1][a.posX + 1] == b) {
+		if (edges[a.posY + 1][a.posX + 1] == b
+				|| edges[a.posY - 1][a.posX - 1] == b
+				|| edges[a.posY + 1][a.posX - 1] == b
+				|| edges[a.posY - 1][a.posX + 1] == b) {
 			return true;
 		}
 		return false;
 	}
 
 	// Calculate cost between a and b locations
-    float Cost(Location a, Location b)
-    {
-    	// If the next cell (b) is occupied return 99(max cost)
-    	if (edges[b.posY][b.posX].cellType == OCCUPIED_CELL)
-    	{
-    		return 99;
-    	}
+	float Cost(Location a, Location b) {
+		// If the next cell (b) is occupied return 99(max cost)
+		if (edges[b.posY][b.posX].cellType == OCCUPIED_CELL) {
+			return 99;
+		}
 
-    	// Check if the path is diagonal (if its is then return sqrt(2))
-    	if(isDiagonal(a, b))
-    	{
-    		return 1.4;
-    	}
+		// Check if the path is diagonal (if its is then return sqrt(2))
+		if (isDiagonal(a, b)) {
+			return 1.4;
+		}
 
-    	// Otherwise its vertical/horizontal - return cost 1
-    	return 1;
+		// Otherwise its vertical/horizontal - return cost 1
+		return 1;
 
-    }
+	}
 
 };
-
-
 
 class Map {
 
@@ -137,8 +131,8 @@ private:
 	std::string mapPath;
 
 	std::vector<unsigned char> originalImage;
-	std::vector<unsigned char > inflatedImage;
-	std::vector<unsigned char > testImage;
+	std::vector<unsigned char> inflatedImage;
+	std::vector<unsigned char> testImage;
 
 	static Map* mapInstance;
 
@@ -169,6 +163,7 @@ public:
 	Graph* getGraph();
 
 	static Map* getInstance();
+	static void deleteInstance();
 };
 
 #endif /* MAP_H_ */

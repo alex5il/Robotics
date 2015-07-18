@@ -14,7 +14,6 @@ Map::Map() {
 
 	// Init basic data of the map
 
-
 	unsigned int height, width;
 
 	// Get the image , map height, map width via the given map path
@@ -24,7 +23,6 @@ Map::Map() {
 	mapHeight = height;
 
 	graph.edges.resize(mapHeight);
-
 
 	//grid.resize(mapHeight);
 
@@ -99,7 +97,7 @@ void Map::printMap2(Graph graph) {
 
 void Map::updateCell(int x, int y, Cell cell) {
 	//grid[x][y] = cell;
-	graph.edges[x][y].cellType= cell;
+	graph.edges[x][y].cellType = cell;
 }
 
 Cell Map::getCell(int x, int y) {
@@ -297,8 +295,6 @@ void Map::createGrid() {
 	inflateImage();
 	createGridWithResolutionFromImage(inflatedImage);
 
-
-
 	graph.edges[startLocation.posY][startLocation.posX] = startLocation;
 	graph.edges[endLocation.posY][endLocation.posX] = endLocation;
 
@@ -327,7 +323,6 @@ Map* Map::getInstance() {
 	return mapInstance;
 }
 
-
 Location Map::getStartLocation() {
 	return startLocation;
 }
@@ -338,6 +333,10 @@ Location Map::getEndLocation() {
 
 Graph* Map::getGraph() {
 	return &graph;
+}
+
+void Map::deleteInstance() {
+	delete mapInstance;
 }
 
 Map::~Map() {

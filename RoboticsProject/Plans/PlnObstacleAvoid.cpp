@@ -11,7 +11,9 @@ PlnObstacleAvoid::PlnObstacleAvoid(Robot* robot) :
 	_beh[0]->addBeh(_beh[1]);
 	_beh[0]->addBeh(_beh[2]);
 	_beh[1]->addBeh(_beh[0]);
+	_beh[1]->addBeh(_beh[2]);
 	_beh[2]->addBeh(_beh[0]);
+	_beh[2]->addBeh(_beh[1]);
 	_start = _beh[0];
 }
 

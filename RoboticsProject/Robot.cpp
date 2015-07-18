@@ -5,6 +5,10 @@ Robot::Robot(char* ip, int port) {
 	posProxy = new Position2dProxy(playerClient);
 	lasProxy = new LaserProxy(playerClient);
 
+	setOdometry(ConfigurationManager::getStartLocationX(),
+			ConfigurationManager::getStartLocationY(),
+			ConfigurationManager::getStartLocationYaw());
+
 	posProxy->SetMotorEnable(true);
 	//For fixing Player's reading BUG
 	for (int i = 0; i < 15; i++)
@@ -20,21 +24,21 @@ void Robot::setSpeed(float xSpeed, float angularSpeed) {
 }
 
 bool Robot::isRightFree() {
-	if ((*lasProxy)[50] > 0.5)
+	if ((*lasProxy)[500] > obstacleDist)
 		return true;
 	else
 		return false;
 }
 
 bool Robot::isLeftFree() {
-	if ((*lasProxy)[50] > 0.5)
+	if ((*lasProxy)[166] > obstacleDist)
 		return true;
 	else
 		return false;
 }
 
 bool Robot::isForwardFree() {
-	if ((*lasProxy)[332] > 0.5)
+	if ((*lasProxy)[332] > obstacleDist)
 		return true;
 	else
 		return false;
@@ -61,6 +65,10 @@ float* Robot::getLaserScan() {
 	}
 
 	return scan;
+}
+
+void Robot::setOdometry(float x, float y, float yaw) {
+	posProxy->SetOdometry(x, y, yaw);
 }
 
 Robot::~Robot() {

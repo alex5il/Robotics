@@ -5,7 +5,6 @@
 #include "../Configurations/Consts.h"
 #include <math.h>
 #include <stdlib.h>
-#include "../Configurations/Consts.h"
 
 class Particle {
 

@@ -8,17 +8,9 @@ class MoveForward: public Behavior {
 public:
 	MoveForward(Robot* robot);
 
-	bool startCond() {
-		return _robot->isForwardFree();
-	}
-
-	bool stopCond() {
-		return !(_robot->isForwardFree());
-	}
-
-	void action() {
-		_robot->setSpeed(forwardSpeed, 0.0);
-	}
+	bool startCond();
+	bool stopCond();
+	void action();
 
 	virtual ~MoveForward();
 };

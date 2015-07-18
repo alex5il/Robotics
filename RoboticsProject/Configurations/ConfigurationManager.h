@@ -39,52 +39,42 @@ private:
 
 public:
 	static string getMapPath() {
-//		return mapPath;
 		return confMng.mapPath;
 	}
 
 	static float getMapResolutionCM() {
-//		return mapResolutionCM;
 		return confMng.mapResolutionCM;
 	}
 
 	static int getGridResolutionCM() {
-//		return gridResolutionCM;
 		return confMng.gridResolutionCM;
 	}
 
 	static int getStartLocationX() {
-//		return xStartLocation;
 		return confMng.xStartLocation;
 	}
 
 	static int getStartLocationY() {
-//		return yStartLocation;
 		return confMng.yStartLocation;
 	}
 
 	static int getStartLocationYaw() {
-//		return yawStartLocation;
 		return confMng.yawStartLocation;
 	}
 
 	static int getGoalX() {
-//		return xGoal;
 		return confMng.xGoal;
 	}
 
 	static int getGoalY() {
-//		return yGoal;
 		return confMng.yGoal;
 	}
 
 	static int getRobotSizeX() {
-//		return xSize;
 		return confMng.xSize;
 	}
 
 	static int getRobotSizeY() {
-//		return ySize;
 		return confMng.ySize;
 	}
 };

@@ -11,15 +11,21 @@ class WaypointsManager {
 
 private:
 	vector<Waypoint> waypoints;
-	short currWaypoint;
+	unsigned short currWaypoint;
+	static WaypointsManager* Instance;
 
+	WaypointsManager();
+	~WaypointsManager();
 public:
-	WaypointsManager(vector<Location> path);
-
+	static WaypointsManager* getInstance();
+	void createWaypoints(vector<Location> path);
 	Waypoint* getFirst();
 	Waypoint* getNext();
-
-	~WaypointsManager();
+	Waypoint* getCurr();
+	bool isWaypointFront(float x, float y, float yaw);
+	bool isWaypointLeft(float x, float y, float yaw);
+	bool isWaypointRight(float x, float y, float yaw);
+	static void deleteInstance();
 };
 
 #endif /* WAYPOINTSMANAGER_H_ */

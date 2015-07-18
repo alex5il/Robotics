@@ -1,6 +1,12 @@
 #include "WaypointsManager.h"
 
-WaypointsManager::WaypointsManager(vector<Location> path) {
+WaypointsManager* WaypointsManager::Instance = NULL;
+
+WaypointsManager::WaypointsManager() {
+	currWaypoint = 0;
+}
+
+void WaypointsManager::createWaypoints(vector<Location> path) {
 	Location lastDelta;
 	Location currDelta;
 
@@ -20,20 +26,23 @@ WaypointsManager::WaypointsManager(vector<Location> path) {
 
 			waypoints.push_back(
 					Waypoint(path[i - 1].posX, path[i - 1].posY,
-							Waypoint::stdWaypntRadius));
+							stdWaypntRadius));
 		}
 	}
 
 	// Adding the latest location as a waypoint with radius 0.
 	waypoints.push_back(
 			Waypoint(path[path.size() - 1].posX, path[path.size() - 1].posY,
-					Waypoint::fnlWaypntRadius));
+					fnlWaypntRadius));
 
-	this->currWaypoint = 0;
+	currWaypoint = 0;
 }
 
 Waypoint* WaypointsManager::getFirst() {
-	this->currWaypoint = 0;
+	currWaypoint = 0;
+
+	if (waypoints.size() == 0)
+		return NULL;
 
 	return &waypoints[0];
 }
@@ -41,11 +50,42 @@ Waypoint* WaypointsManager::getFirst() {
 Waypoint* WaypointsManager::getNext() {
 	if (currWaypoint < (waypoints.size() - 1)) {
 
-		this->currWaypoint++;
+		currWaypoint++;
 		return &waypoints[currWaypoint];
 	}
 
 	return NULL;
+}
+
+Waypoint* WaypointsManager::getCurr() {
+	if (waypoints.size() == 0)
+		return NULL;
+
+	return &waypoints[currWaypoint];
+}
+
+WaypointsManager* WaypointsManager::getInstance() {
+	if (!Instance) {
+		Instance = new WaypointsManager();
+	}
+
+	return Instance;
+}
+
+void WaypointsManager::deleteInstance() {
+	delete Instance;
+}
+
+bool WaypointsManager::isWaypointFront(float x, float y, float yaw) {
+	return abs(getCurr()->robotAlignment(x, y, yaw)) <= waypointAlignment;
+}
+
+bool WaypointsManager::isWaypointLeft(float x, float y, float yaw) {
+	return (getCurr()->robotAlignment(x, y, yaw) < -waypointAlignment);
+}
+
+bool WaypointsManager::isWaypointRight(float x, float y, float yaw) {
+	return (getCurr()->robotAlignment(x, y, yaw) > waypointAlignment);
 }
 
 WaypointsManager::~WaypointsManager() {

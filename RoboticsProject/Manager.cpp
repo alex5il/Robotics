@@ -4,37 +4,54 @@ Manager::Manager(Robot* robot, Plan* pln, vector<Location> path) {
 	_robot = robot;
 	_plan = pln;
 	_currBeh = pln->getStartPoint();
-	_waypMngr = new WaypointsManager(path);
-	_locMngr = new LocalizationManager();
+	_waypMngr = WaypointsManager::getInstance();
+	_waypMngr->createWaypoints(path);
+	_locMngr = LocalizationManager::getInstance();
 }
 void Manager::run() {
+	Particle* estimatedLoc;
+	Waypoint* currWay;
+
 	_robot->Read();
 
 	float lastXPos = ConfigurationManager::getStartLocationX();
 	float lastYPos = ConfigurationManager::getStartLocationY();
 	float lastYaw = ConfigurationManager::getStartLocationYaw();
 
+	currWay = _waypMngr->getFirst();
+
 	if (!(_currBeh->startCond()))
 		return;
 
-	while (_currBeh != NULL) {
-		while (!_currBeh->stopCond()) {
-			_currBeh->action();
+	while (currWay != NULL) {
+		_currBeh->action();
+
+		while (!_currBeh->stopCond() && currWay != NULL) {
 			_robot->Read();
 
 			float deltaX = _robot->getXPos() - lastXPos;
 			float deltaY = _robot->getYPos() - lastYPos;
 			float deltaYaw = _robot->getYaw() - lastYaw;
 
+			// Set odometry according to the SLAM filter.
 			_locMngr->update(deltaX, deltaY, deltaYaw, _robot->getLaserScan());
+			estimatedLoc = _locMngr->estimatedLocation();
+			_robot->setOdometry(estimatedLoc->x, estimatedLoc->y,
+					estimatedLoc->yaw);
+
+			// If waypoint reached - select the next one.
+			if (currWay->withinRadius(_robot->getXPos(), _robot->getYPos()))
+				currWay = _waypMngr->getNext();
 		}
 
-		_currBeh = _currBeh->selectNext();
-		_robot->Read();
+		if (currWay != NULL) {
+			_currBeh = _currBeh->selectNext();
+			_robot->Read();
+		}
 	}
 }
 
 Manager::~Manager() {
-	delete _waypMngr;
-	delete _locMngr;
+	WaypointsManager::deleteInstance();
+	LocalizationManager::deleteInstance();
 }

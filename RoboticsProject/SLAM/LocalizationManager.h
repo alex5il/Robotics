@@ -14,17 +14,18 @@ using namespace std;
 class LocalizationManager {
 
 private:
+	static LocalizationManager* Instance;
 	vector<Particle> particles;
 
 	void init();
+	LocalizationManager();
+	virtual ~LocalizationManager();
 
 public:
-	LocalizationManager();
-
+	static LocalizationManager* getInstance();
 	void update(float delX, float delY, float delYaw, float laserScan[]);
 	Particle* estimatedLocation();
-
-	virtual ~LocalizationManager();
+	static void deleteInstance();
 };
 
 #endif /* LOCALIZATIONMANAGER_H_ */

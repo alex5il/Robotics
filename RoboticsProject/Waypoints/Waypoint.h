@@ -1,6 +1,7 @@
 #ifndef WAYPOINT_H_
 #define WAYPOINT_H_
 
+#include "../Configurations/Consts.h"
 #include "../Map/Map.h"
 #include <math.h>
 
@@ -10,12 +11,10 @@ private:
 	short radius;
 
 public:
-	static const unsigned short stdWaypntRadius = 10;
-	static const unsigned short fnlWaypntRadius = 10;
-
 	Waypoint(short x, short y, short radius);
 
 	bool withinRadius(short x, short y);
+	float robotAlignment(short x, short y, float yaw);
 
 	virtual ~Waypoint();
 };

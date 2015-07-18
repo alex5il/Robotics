@@ -8,17 +8,9 @@ class TurnRight: public Behavior {
 public:
 	TurnRight(Robot* robot);
 
-	bool startCond() {
-		return _robot->isRightFree();
-	}
-
-	bool stopCond() {
-		return _robot->isForwardFree();
-	}
-
-	void action() {
-		_robot->setSpeed(0.0, angularSpeed);
-	}
+	bool startCond();
+	bool stopCond();
+	void action();
 
 	virtual ~TurnRight();
 };

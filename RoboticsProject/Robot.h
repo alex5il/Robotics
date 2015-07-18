@@ -1,6 +1,9 @@
 #ifndef ROBOT_H_
 #define ROBOT_H_
+
 #include <libplayerc++/playerc++.h>
+#include "Configurations/Consts.h"
+#include "Configurations/ConfigurationManager.h"
 
 using namespace PlayerCc;
 class Robot {
@@ -21,6 +24,7 @@ public:
 	float getXPos();
 	float getYaw();
 	float* getLaserScan();
+	void setOdometry(float x, float y, float yaw);
 
 	virtual ~Robot();
 };

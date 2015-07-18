@@ -1,5 +1,7 @@
 #include "LocalizationManager.h"
 
+LocalizationManager* LocalizationManager::Instance = NULL;
+
 LocalizationManager::LocalizationManager() {
 	srand(time(NULL));
 	init();
@@ -67,13 +69,25 @@ Particle* LocalizationManager::estimatedLocation() {
 	Particle* bestParticle = NULL;
 
 	for (unsigned int i = 0; i < particles.size(); i++) {
-		if (particles[i].getBelief() > minBelief) {
+		if (particles[i].getBelief() > maxBelief) {
 			maxBelief = particles[i].belief;
 			bestParticle = &particles[i];
 		}
 	}
 
 	return bestParticle;
+}
+
+LocalizationManager* LocalizationManager::getInstance() {
+	if (!Instance) {
+		Instance = new LocalizationManager();
+	}
+
+	return Instance;
+}
+
+void LocalizationManager::deleteInstance() {
+	delete Instance;
 }
 
 LocalizationManager::~LocalizationManager() {

@@ -6,13 +6,13 @@
 #include "PathFinder/AStar.h"
 #include "Configurations/ConfigurationManager.h"
 #include <iostream>
+#include "Waypoints/WaypointsManager.h"
 
 #include <map>
 
 using namespace std;
 
 int main() {
-
 	//Map test
 
 	Map* map = Map::getInstance();
@@ -41,5 +41,6 @@ int main() {
 	Manager manager(&robot, &plan, path);
 	manager.run();
 
+	Map::deleteInstance();
 	return 0;
 }

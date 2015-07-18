@@ -4,6 +4,7 @@
 #include <vector>
 #include "../Configurations/Consts.h"
 #include "../Robot.h"
+#include "../Waypoints/WaypointsManager.h"
 
 using namespace std;
 
