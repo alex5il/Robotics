@@ -5,21 +5,26 @@ TurnLeft::TurnLeft(Robot* robot) :
 }
 
 bool TurnLeft::startCond() {
-	return ((WaypointsManager::getInstance()->isWaypointLeft(_robot->getXPos(),
-			_robot->getYPos(), _robot->getYaw()) && _robot->isLeftFree())
-			|| (_robot->isLeftFree() && !_robot->isRightFree()));
+//	return ((WaypointsManager::getInstance()->isWaypointLeft(_robot->getXPos(),
+//			_robot->getYPos(), _robot->getYaw()) && _robot->isLeftFree())
+//			|| (_robot->isLeftFree() && !_robot->isRightFree()));
+
+	return (WaypointsManager::getInstance()->isWaypointLeft(_robot->getXPos(),
+			_robot->getYPos(), _robot->getYaw()));
 }
 
 bool TurnLeft::stopCond() {
-	return (_robot->isForwardFree()
-			&& (WaypointsManager::getInstance()->isWaypointFront(
-					_robot->getXPos(), _robot->getYPos(), _robot->getYaw())
-					|| (WaypointsManager::getInstance()->isWaypointLeft(
-							_robot->getXPos(), _robot->getYPos(),
-							_robot->getYaw()) && !_robot->isLeftFree())
-					|| (WaypointsManager::getInstance()->isWaypointRight(
-							_robot->getXPos(), _robot->getYPos(),
-							_robot->getYaw()) && !_robot->isRightFree())));
+//	return (_robot->isForwardFree()
+//			&& (WaypointsManager::getInstance()->isWaypointFront(
+//					_robot->getXPos(), _robot->getYPos(), _robot->getYaw())
+//					|| (WaypointsManager::getInstance()->isWaypointLeft(
+//							_robot->getXPos(), _robot->getYPos(),
+//							_robot->getYaw()) && !_robot->isLeftFree())
+//					|| (WaypointsManager::getInstance()->isWaypointRight(
+//							_robot->getXPos(), _robot->getYPos(),
+//							_robot->getYaw()) && !_robot->isRightFree())));
+
+	return !startCond();
 }
 
 void TurnLeft::action() {

@@ -17,7 +17,9 @@ Robot::Robot(char* ip, int port) {
 }
 
 void Robot::Read() {
-	playerClient->Read();
+	//For fixing Player's reading BUG
+	for (int i = 0; i < 3; i++)
+		playerClient->Read();
 }
 
 void Robot::setSpeed(float xSpeed, float angularSpeed) {
@@ -69,8 +71,11 @@ float* Robot::getLaserScan() {
 }
 
 void Robot::setOdometry(float x, float y, float yaw) {
-	while ((posProxy->GetYPos() != x) || (posProxy->GetYPos() != y)
-			|| (posProxy->GetYaw() != yaw)) {
+	posProxy->SetOdometry(x, y, yaw);
+
+	while (((float) posProxy->GetXPos() != x)
+			|| ((float) posProxy->GetYPos() != y)
+			|| ((float) posProxy->GetYaw() != yaw)) {
 		posProxy->SetOdometry(x, y, yaw);
 		Read();
 	}

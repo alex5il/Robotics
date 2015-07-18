@@ -1,4 +1,5 @@
 #include "Manager.h"
+#include <unistd.h>
 
 Manager::Manager(Robot* robot, Plan* pln, vector<Location> path) {
 	_robot = robot;
@@ -27,9 +28,10 @@ void Manager::run() {
 		_currBeh->action();
 
 		while (!_currBeh->stopCond() && currWay != NULL) {
-			_currBeh->action(); // TODO: remove
+			sleep(1000);
+			_currBeh->action(); // remove
 
-			_robot->setSpeed(0, 0); //TODO: remove
+//			_robot->setSpeed(0, 0); // remove
 			_robot->Read();
 
 			float deltaX = _robot->getXPos() - lastXPos;
@@ -50,6 +52,7 @@ void Manager::run() {
 		}
 
 		if (currWay != NULL) {
+			_robot->setSpeed(0, 0);
 			_currBeh = _currBeh->selectNext();
 			_robot->Read();
 		}

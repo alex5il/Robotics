@@ -10,17 +10,17 @@ static const unsigned int LASER_SAMPLES = 666;
 static const unsigned int LASER_RANGE = 4;
 static const float LASER_AREA = 0.36;
 static const unsigned int LASER_RESOLUTION = 240;
-static const float forwardSpeed = 0.3;
-static const float angularSpeed = 0.3;
+static const float forwardSpeed = 0.2;
+static const float angularSpeed = 0.2;
 static const float obstacleDist = 0.5;
-static const float waypointAlignment = 15;
+static const float waypointAlignment = 20;
 
 // Particles
 static const unsigned int particlesNum = 60;
-static const float minBelief = 0.4;
+static const float minBelief = 0.3;
 
 static const unsigned int childRadius = 4;
-static const unsigned int childlYawRange = 30;
+static const unsigned int childlYawRange = 15;
 static const float beliefFactor = 1.0;
 
 static const float lowYaw = 1.0;

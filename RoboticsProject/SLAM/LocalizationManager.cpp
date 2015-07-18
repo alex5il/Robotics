@@ -16,7 +16,7 @@ void LocalizationManager::init() {
 		float yaw =
 				ConfigurationManager::positiveModulo(
 						DTOR(
-								ConfigurationManager::getStartLocationYaw()) + DTOR(childlYawRange- rand() % (2 * childlYawRange)),
+								ConfigurationManager::getStartLocationYaw()) + DTOR(childlYawRange- (rand() % (2 * childlYawRange))),
 						2 * M_PI);
 
 		Particle newParticle(x, y, yaw);
@@ -35,7 +35,7 @@ void LocalizationManager::update(float delX, float delY, float delYaw,
 	for (unsigned int i = 0; i < particles.size(); i++) {
 		particles[i].update(delX, delY, delYaw, laserScan);
 
-		if (particles[i].getBelief() < minBelief) {
+		if (particles[i].getBelief() < minBelief && particles.size() > 1) {
 			particlesToRemove.push_back(i);
 		}
 	}
@@ -53,7 +53,7 @@ void LocalizationManager::update(float delX, float delY, float delYaw,
 	// If need to create new particles.
 	if (particles.size() < particlesNum) {
 		// How many children to create for each particle.
-		short childrenToCreate = floor(particlesNum / particles.size());
+		short childrenToCreate = floor(particlesNum / (particles.size()));
 
 		// Looping at all the particles from highest belief to lowest and creating new children.
 		for (unsigned int i = 0;
