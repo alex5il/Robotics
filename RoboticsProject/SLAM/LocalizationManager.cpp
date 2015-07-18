@@ -13,16 +13,17 @@ void LocalizationManager::init() {
 				- (rand() % (2 * childRadius));
 		float y = ConfigurationManager::getStartLocationY() + childRadius
 				- (rand() % (2 * childRadius));
-		float yaw = ConfigurationManager::positiveModulo(
-				ConfigurationManager::getStartLocationYaw()
-						+ childlYawRange- DTOR(rand() % (2 * childlYawRange)),
-				2 * M_PI);
+		float yaw =
+				ConfigurationManager::positiveModulo(
+						DTOR(
+								ConfigurationManager::getStartLocationYaw()) + DTOR(childlYawRange- rand() % (2 * childlYawRange)),
+						2 * M_PI);
 
 		Particle newParticle(x, y, yaw);
 		particles.push_back(newParticle);
 
 		cout << "New particle created at: (" << x << ", " << y << ", " << yaw
-				<< ")";
+				<< ")" << "\n";
 	}
 }
 

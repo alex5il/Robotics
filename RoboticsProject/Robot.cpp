@@ -7,9 +7,10 @@ Robot::Robot(char* ip, int port) {
 
 	setOdometry(ConfigurationManager::getStartLocationX(),
 			ConfigurationManager::getStartLocationY(),
-			ConfigurationManager::getStartLocationYaw());
+			DTOR(ConfigurationManager::getStartLocationYaw()));
 
 	posProxy->SetMotorEnable(true);
+
 	//For fixing Player's reading BUG
 	for (int i = 0; i < 15; i++)
 		Read();
@@ -69,6 +70,12 @@ float* Robot::getLaserScan() {
 
 void Robot::setOdometry(float x, float y, float yaw) {
 	posProxy->SetOdometry(x, y, yaw);
+	while (((float) x != (float) posProxy->GetXPos())
+			|| ((float) y != (float) posProxy->GetYPos())
+			|| ((float) yaw != (float) posProxy->GetYaw())) {
+		Read();
+		posProxy->SetOdometry(x, y, yaw);
+	}
 }
 
 Robot::~Robot() {
