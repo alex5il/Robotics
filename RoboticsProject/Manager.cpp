@@ -21,7 +21,7 @@ void Manager::run() {
 	currWay = _waypMngr->getFirst();
 
 	if (!(_currBeh->startCond()))
-		return;
+		_currBeh = _currBeh->selectNext();
 
 	while (currWay != NULL) {
 		_currBeh->action();
