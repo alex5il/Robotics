@@ -14,7 +14,7 @@ Particle::Particle(float x, float y, float yaw) {
 void Particle::update(float delX, float delY, float delYaw, float laserScan[]) {
 	x += delX;
 	y += delY;
-	yaw += delYaw;
+	yaw = ConfigurationManager::positiveModulo(yaw + delYaw, 2 * M_PI);
 
 	float predBelief = belief * probabilityByMove(delX, delY, delYaw);
 	belief = beliefFactor * predBelief * probabilityByMap(laserScan);
@@ -23,7 +23,7 @@ void Particle::update(float delX, float delY, float delYaw, float laserScan[]) {
 Particle Particle::createChild() {
 	return Particle(this->x + childRadius - (rand() % (2 * childRadius)),
 			this->x + childRadius - (rand() % (2 * childRadius)),
-			fmod(
+			ConfigurationManager::positiveModulo(
 					this->yaw
 							+ DTOR(
 									childlYawRange
@@ -69,7 +69,7 @@ float Particle::probabilityByMap(float laserScan[]) {
 	}
 
 	// Check if the particle is not on an occupied cell.
-	if (Map::getInstance()->getGrid()[x][y] == OCCUPIED_CELL) {
+	if (Map::getInstance()->getGraph()->edges[y][x].cellType == OCCUPIED_CELL) {
 		return 0;
 	}
 
@@ -87,7 +87,7 @@ float Particle::probabilityByMap(float laserScan[]) {
 			// If the cell is out of bounds or is occupied - increment the misses.
 			if ((xPos > Map::getInstance()->getMapWidth() || xPos < 0)
 					|| (yPos > Map::getInstance()->getMapHeight() || yPos < 0)
-					|| Map::getInstance()->getGrid()[xPos][yPos]
+					|| Map::getInstance()->getGraph()->edges[yPos][xPos].cellType
 							== OCCUPIED_CELL) {
 				misses++;
 			}
@@ -106,7 +106,8 @@ float Particle::probabilityByMap(float laserScan[]) {
 			// If the cell is out of bounds or is free - increment the misses.
 			if ((xPos > Map::getInstance()->getMapWidth() || xPos < 0)
 					|| (yPos > Map::getInstance()->getMapHeight() || yPos < 0)
-					|| Map::getInstance()->getGrid()[xPos][yPos] == FREE_CELL) {
+					|| Map::getInstance()->getGraph()->edges[yPos][xPos].cellType
+							== FREE_CELL) {
 				misses++;
 			}
 

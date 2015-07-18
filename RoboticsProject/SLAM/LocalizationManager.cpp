@@ -13,7 +13,7 @@ void LocalizationManager::init() {
 				- (rand() % (2 * childRadius));
 		float y = ConfigurationManager::getStartLocationY() + childRadius
 				- (rand() % (2 * childRadius));
-		float yaw = fmod(
+		float yaw = ConfigurationManager::positiveModulo(
 				ConfigurationManager::getStartLocationYaw()
 						+ childlYawRange- DTOR(rand() % (2 * childlYawRange)),
 				2 * M_PI);

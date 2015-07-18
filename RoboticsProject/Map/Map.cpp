@@ -298,7 +298,7 @@ void Map::createGrid() {
 	graph.edges[startLocation.posY][startLocation.posX] = startLocation;
 	graph.edges[endLocation.posY][endLocation.posX] = endLocation;
 
-	printMap();
+//	printMap();
 }
 
 std::vector<std::vector<Cell> > Map::getGrid() {
@@ -318,7 +318,7 @@ Map* Map::getInstance() {
 		return Map::mapInstance;
 	}
 
-	Map* mapInstance = new Map();
+	mapInstance = new Map();
 
 	return mapInstance;
 }

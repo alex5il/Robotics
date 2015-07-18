@@ -11,6 +11,7 @@ Manager::Manager(Robot* robot, Plan* pln, vector<Location> path) {
 void Manager::run() {
 	Particle* estimatedLoc;
 	Waypoint* currWay;
+	short scansNum = 0;
 
 	_robot->Read();
 
@@ -27,6 +28,12 @@ void Manager::run() {
 		_currBeh->action();
 
 		while (!_currBeh->stopCond() && currWay != NULL) {
+			if (scansNum < 30) {
+				scansNum++;
+				break;
+			}
+
+			_robot->setSpeed(0, 0); //TODO: remove
 			_robot->Read();
 
 			float deltaX = _robot->getXPos() - lastXPos;
@@ -42,6 +49,9 @@ void Manager::run() {
 			// If waypoint reached - select the next one.
 			if (currWay->withinRadius(_robot->getXPos(), _robot->getYPos()))
 				currWay = _waypMngr->getNext();
+
+			_currBeh->action(); // TODO: remove
+			scansNum = 0;
 		}
 
 		if (currWay != NULL) {

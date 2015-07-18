@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <math.h>
 
 using namespace std;
 
@@ -76,6 +77,15 @@ public:
 
 	static int getRobotSizeY() {
 		return confMng.ySize;
+	}
+
+	static float positiveModulo(float x, float y) {
+		float ret = fmodf(x, y);
+
+		if (ret < 0)
+			ret += y;
+
+		return ret;
 	}
 };
 

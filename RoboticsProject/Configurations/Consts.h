@@ -2,6 +2,7 @@
 #define CONSTS_H_
 
 #include <libplayercore/playercommon.h>
+#include <math.h>
 
 static const unsigned int COLOR_WHITE = 255;
 static const unsigned int COLOR_BLACK = 0;
