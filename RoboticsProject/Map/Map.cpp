@@ -282,14 +282,8 @@ void Map::inflateImage() {
 
 	// We will inflate each obstacle by half of the robots size
 	// The robot is 30x30 cm so convert to our pixel size and then cut in half
-	xInflation = (int) ((ConfigurationManager::getRobotSizeX() / mapResolution))
-			/ 2
-			+ (int) ((ConfigurationManager::getRobotSizeX() / mapResolution))
-					/ 3;
-	yInflation = (int) ((ConfigurationManager::getRobotSizeY() / mapResolution))
-			/ 2
-			+ (int) ((ConfigurationManager::getRobotSizeY() / mapResolution))
-					/ 3;
+	xInflation = (int) ((ConfigurationManager::getRobotSizeX() / mapResolution)) * (0.5);
+	yInflation = (int) ((ConfigurationManager::getRobotSizeY() / mapResolution)) * (0.5);
 
 	inflatedImage.resize(mapWidth * mapHeight * 4);
 
@@ -347,6 +341,8 @@ void Map::inflateImage() {
 void Map::createGrid(bool inverted) {
 	inflateImage();
 	createGridWithResolutionFromImage(inflatedImage, inverted);
+
+	createImageWithResolutionFromImage(inflatedImage);
 
 	graph.edges[startLocation.posY][startLocation.posX] = startLocation;
 	graph.edges[endLocation.posY][endLocation.posX] = endLocation;

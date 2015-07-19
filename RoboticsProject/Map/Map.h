@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <vector>
+#include <math.h>
 
 #include "../Robot.h"
 
@@ -13,6 +14,7 @@
 
 #include "../Configurations/Consts.h"
 #include "../Configurations/ConfigurationManager.h"
+
 
 using namespace std;
 
@@ -92,8 +94,36 @@ struct Graph {
 		return false;
 	}
 
+	// Add buffer cost depending on how close it is to the OCCUPIED_CELL
+	float bufferCost(Location a, Location b) {
+		int bufferLevel = 5;
+		int closestLevel = 0;
+
+		for (int i = -bufferLevel; i < bufferLevel; i++) {
+			for (int j = -bufferLevel; j < bufferLevel; j++) {
+				if (edges[a.posY + i][a.posX + j].cellType == OCCUPIED_CELL) {
+					if (closestLevel == 0) {
+						closestLevel = std::min(abs(i), abs(j));
+					}
+					else {
+						closestLevel = std::min(closestLevel, abs(j));
+						closestLevel = std::min(closestLevel, abs(i));
+					}
+				}
+			}
+		}
+
+		if (closestLevel != 0) {
+			return bufferLevel * 10 - closestLevel * bufferLevel;
+		} else {
+			return 0;
+		}
+
+	}
+
 	// Calculate cost between a and b locations
 	float Cost(Location a, Location b) {
+
 		// If the next cell (b) is occupied return 99(max cost)
 		if (edges[b.posY][b.posX].cellType == OCCUPIED_CELL) {
 			return 99;
@@ -101,11 +131,11 @@ struct Graph {
 
 		// Check if the path is diagonal (if its is then return sqrt(2))
 		if (isDiagonal(a, b)) {
-			return 1.4;
+			return 1.4 + bufferCost(a,b);
 		}
 
 		// Otherwise its vertical/horizontal - return cost 1
-		return 1;
+		return 1 + bufferCost(a,b);
 
 	}
 

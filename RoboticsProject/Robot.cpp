@@ -18,8 +18,7 @@ Robot::Robot(char* ip, int port) {
 			<< ")\n";
 
 	setLocation(ConfigurationManager::getStartLocationX(),
-			ConfigurationManager::getStartLocationY(),
-			ConfigurationManager::getStartLocationYaw());
+			ConfigurationManager::getStartLocationY(), yaw);
 
 	//For fixing Player's reading BUG
 	for (int i = 0; i < 15; i++)
@@ -42,6 +41,12 @@ void Robot::setLocation(float x, float y, float yaw) {
 	this->xPos = x;
 	this->yPos = y;
 	this->yaw = yaw;
+}
+
+void Robot::updateLocalization(float x, float y, float yaw) {
+	this->xPos = (this->xPos + x) / 2;
+	this->yPos = (this->yPos + y) / 2;
+	this->yaw = (this->yaw + yaw) / 2;
 }
 
 void Robot::setSpeed(float xSpeed, float angularSpeed) {
@@ -70,18 +75,15 @@ bool Robot::isForwardFree() {
 }
 
 float Robot::getXPos() {
-//	return this->xPos;
-	return getXPosProxy();
+	return this->xPos;
 }
 
 float Robot::getYPos() {
-//	return this->yPos;
-	return getYPosProxy();
+	return this->yPos;
 }
 
 float Robot::getYaw() {
-//	return this->yaw;
-	return getYawProxy();
+	return this->yaw;
 }
 
 float* Robot::getLaserScan() {

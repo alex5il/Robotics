@@ -3,7 +3,8 @@
 LocalizationManager* LocalizationManager::Instance = NULL;
 
 LocalizationManager::LocalizationManager() {
-	srand(time(NULL));
+//	srand(time(NULL));
+	srand(time(0));
 	init();
 }
 

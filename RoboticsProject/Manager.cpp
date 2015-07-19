@@ -30,7 +30,7 @@ void Manager::run() {
 		_currBeh->action();
 
 		while (!_currBeh->stopCond() && currWay != NULL) {
-			_currBeh->action(); // remove
+//			_robot->setSpeed(0, 0); // remove
 
 			_robot->Read();
 
@@ -39,29 +39,35 @@ void Manager::run() {
 			float deltaYaw = _robot->getYawProxy() - lastYaw;
 
 			// Set odometry according to the SLAM filter.
-//			_locMngr->update(deltaX, deltaY, deltaYaw, _robot->getLaserScan());
-//			estimatedLoc = _locMngr->estimatedLocation();
-//			cout << "\n\nEstimated location is: " << "(" << estimatedLoc->x
-//					<< ", " << estimatedLoc->y << ", " << estimatedLoc->yaw
-//					<< ")\n";
-//			_robot->setLocation(estimatedLoc->x, estimatedLoc->y,
+			_locMngr->update(deltaX, deltaY, deltaYaw, _robot->getLaserScan());
+			estimatedLoc = _locMngr->estimatedLocation();
+			cout << "\n\nEstimated location is: " << "(" << estimatedLoc->x
+					<< ", " << estimatedLoc->y << ", " << estimatedLoc->yaw
+					<< ")\n";
+//			_robot->updateLocalization(estimatedLoc->x, estimatedLoc->y,
 //					estimatedLoc->yaw);
+			_robot->setLocation(estimatedLoc->x, estimatedLoc->y,
+					estimatedLoc->yaw);
 			_robot->Read();
+
+			lastXPos = _robot->getXPos();
+			lastYPos = _robot->getYPos();
+			lastYaw = _robot->getYaw();
+
 //			_robot->setLocation(_robot->getXPosProxy(), _robot->getYPosProxy(),
 //					_robot->getYaw());
-			cout << "\n\nEstimated location is: " << "("
-					<< _robot->getXPosProxy() << ", " << _robot->getYPosProxy()
-					<< ", " << _robot->getYawProxy() << ")\n";
+//			cout << "\n\nEstimated location is: " << "("
+//					<< _robot->getXPosProxy() << ", " << _robot->getYPosProxy()
+//					<< ", " << _robot->getYawProxy() << ")\n";
 
-//			_robot->setSpeed(0, 0); // remove
-
-			// If waypoint reached - select the next one.
+// If waypoint reached - select the next one.
 			if (currWay->withinRadius(_robot->getXPosProxy(),
 					_robot->getYPosProxy())) {
 				currWay = _waypMngr->getNext();
 				cout << "\n\nWaypoint changed:\n";
 				_waypMngr->getInstance()->printCurrWaypoint();
 			}
+//			_currBeh->action(); // remove
 		}
 
 		if (currWay != NULL) {

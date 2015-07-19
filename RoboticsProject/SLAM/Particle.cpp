@@ -18,6 +18,9 @@ void Particle::update(float delX, float delY, float delYaw, float laserScan[]) {
 
 	float predBelief = belief * probabilityByMove(delX, delY, delYaw);
 	belief = beliefFactor * predBelief * probabilityByMap(laserScan);
+
+	if (belief > 1)
+		belief = 1;
 }
 
 Particle Particle::createChild() {

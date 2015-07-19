@@ -32,6 +32,7 @@ public:
 	float* getLaserScan();
 	void setOdometry(float x, float y, float yaw);
 	void setLocation(float x, float y, float yaw);
+	void updateLocalization(float x, float y, float yaw);
 	float getXPosProxy();
 	float getYPosProxy();
 	float getYawProxy();
