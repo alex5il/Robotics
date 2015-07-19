@@ -12,7 +12,7 @@ static const float LASER_AREA = 0.36;
 static const unsigned int LASER_RESOLUTION = 240;
 static const float forwardSpeed = 0.3;
 static const float angularSpeed = 0.3;
-static const float obstacleDist = 0.5;
+static const float obstacleDist = 0.7;
 
 // Particles
 static const unsigned int particlesNum = 60;
@@ -37,6 +37,6 @@ static const float maxDistanceProb = 0.7;
 // Waypoints
 static const unsigned short stdWaypntRadius = 30;
 static const unsigned short fnlWaypntRadius = 5;
-static const float waypointAlignment = 15;
+static const float waypointAlignment = 12;
 
 #endif /* CONSTS_H_ */
