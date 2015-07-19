@@ -4,8 +4,10 @@
 #include <libplayerc++/playerc++.h>
 #include "Configurations/Consts.h"
 #include "Configurations/ConfigurationManager.h"
+#include "Map/Map.h"
 
 using namespace PlayerCc;
+
 class Robot {
 
 private:
@@ -30,21 +32,9 @@ public:
 	float* getLaserScan();
 	void setOdometry(float x, float y, float yaw);
 	void setLocation(float x, float y, float yaw);
-
-	float getXPosProxy() {
-		playerClient->Read();
-		return ConfigurationManager::MeterToCoord(posProxy->GetXPos());
-	}
-
-	float getYPosProxy() {
-		playerClient->Read();
-		return ConfigurationManager::MeterToCoord(posProxy->GetYPos());
-	}
-
-	float getYawProxy() {
-		playerClient->Read();
-		return posProxy->GetYaw();
-	}
+	float getXPosProxy();
+	float getYPosProxy();
+	float getYawProxy();
 
 	virtual ~Robot();
 };

@@ -16,7 +16,7 @@ int main() {
 	//Map test
 
 	Map* map = Map::getInstance();
-	map->createGrid();
+	map->createGrid(false);
 
 	// A start test
 	AStar* astr = new AStar();
@@ -36,11 +36,31 @@ int main() {
 
 	map->printMap();
 
-/*	Robot robot("localhost", 6665);
+	// SHIT CODE!!!!!===============================
+
+/*	map->createGrid(true);
+
+	//vector<Location> inversePath;
+	for (int i=0; i<path.size(); i++) {
+		path[i].posY = 380 - path[i].posY;
+		//inversePath.push_back(path[i].posY);
+	}
+
+	// print test
+	for (int i = 0; i < path.size(); i++) {
+		map->getGraph()->edges[path[i].posY][path[i].posX].cellType =
+				CURRENT_CELL;
+	}
+
+	map->printMap();*/
+
+
+	Robot robot("localhost", 6665);
 	PlnObstacleAvoid plan(&robot);
 	Manager manager(&robot, &plan, path);
 	manager.run();
 
-	Map::deleteInstance();*/
-	//return 0;
+	Map::deleteInstance();
+
+	return 0;
 }

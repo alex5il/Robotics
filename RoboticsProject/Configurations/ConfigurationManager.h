@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string>
 #include <math.h>
+#include "Consts.h"
 
 using namespace std;
 
@@ -56,6 +57,7 @@ public:
 	}
 
 	static int getStartLocationY() {
+		//return mapHeight - confMng.yStartLocation;
 		return confMng.yStartLocation;
 	}
 
@@ -68,6 +70,7 @@ public:
 	}
 
 	static int getGoalY() {
+		//return mapHeight - confMng.yGoal;
 		return confMng.yGoal;
 	}
 

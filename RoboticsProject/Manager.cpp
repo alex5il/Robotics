@@ -20,6 +20,8 @@ void Manager::run() {
 	float lastYaw = _robot->getYawProxy();
 
 	currWay = _waypMngr->getFirst();
+	cout << "\n\nFirst waypoint:";
+	_waypMngr->getInstance()->printCurrWaypoint();
 
 	if (!(_currBeh->startCond()))
 		_currBeh = _currBeh->selectNext();
@@ -28,9 +30,8 @@ void Manager::run() {
 		_currBeh->action();
 
 		while (!_currBeh->stopCond() && currWay != NULL) {
-//			_currBeh->action(); // remove
+			_currBeh->action(); // remove
 
-//			_robot->setSpeed(0, 0); // remove
 			_robot->Read();
 
 			float deltaX = _robot->getXPosProxy() - lastXPos;
@@ -52,18 +53,24 @@ void Manager::run() {
 					<< _robot->getXPosProxy() << ", " << _robot->getYPosProxy()
 					<< ", " << _robot->getYawProxy() << ")\n";
 
+//			_robot->setSpeed(0, 0); // remove
+
 			// If waypoint reached - select the next one.
 			if (currWay->withinRadius(_robot->getXPosProxy(),
-					_robot->getYPosProxy()))
+					_robot->getYPosProxy())) {
 				currWay = _waypMngr->getNext();
+				cout << "\n\nWaypoint changed:\n";
+				_waypMngr->getInstance()->printCurrWaypoint();
+			}
 		}
 
 		if (currWay != NULL) {
-			_robot->setSpeed(0, 0);
 			_currBeh = _currBeh->selectNext();
 			_robot->Read();
 		}
 	}
+
+	_robot->setSpeed(0, 0);
 }
 
 Manager::~Manager() {

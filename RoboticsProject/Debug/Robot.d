@@ -12,7 +12,11 @@ Robot.d: ../Robot.cpp ../Robot.h \
  /usr/local/include/player-2.0/libplayerc++/playerclient.h \
  /usr/local/include/player-2.0/libplayerc++/playererror.h \
  /usr/local/include/player-2.0/libplayerc++/clientproxy.h \
- ../Configurations/Consts.h ../Configurations/ConfigurationManager.h
+ ../Configurations/Consts.h ../Configurations/ConfigurationManager.h \
+ ../Configurations/Consts.h ../Map/Map.h ../Map/../Robot.h \
+ ../Map/../PngUtilities/lodepng.h ../Map/../PngUtilities/pngUtil.h \
+ ../Map/../Configurations/Consts.h \
+ ../Map/../Configurations/ConfigurationManager.h
 
 ../Robot.h:
 
@@ -45,3 +49,17 @@ Robot.d: ../Robot.cpp ../Robot.h \
 ../Configurations/Consts.h:
 
 ../Configurations/ConfigurationManager.h:
+
+../Configurations/Consts.h:
+
+../Map/Map.h:
+
+../Map/../Robot.h:
+
+../Map/../PngUtilities/lodepng.h:
+
+../Map/../PngUtilities/pngUtil.h:
+
+../Map/../Configurations/Consts.h:
+
+../Map/../Configurations/ConfigurationManager.h:

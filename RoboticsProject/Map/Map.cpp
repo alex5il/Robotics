@@ -180,7 +180,50 @@ void Map::createImageWithResolutionFromImage(std::vector<unsigned char> image) {
 	encodeOneStep("testGrid.png", testImage, mapWidth, mapHeight);
 }
 
-void Map::createGridWithResolutionFromImage(std::vector<unsigned char> image) {
+void Map::createGridWithResolutionFromImageLegacy(
+		std::vector<unsigned char> image, bool inverted) {
+
+	// Get map resolution difference
+	int gridRes = (int) (gridResolution / mapResolution) / 2;
+
+	// We are going to run through the map, in the grid resolution, and create our new grid
+//	for (int y = 0; y < mapHeight; y++) {
+	for (int y = 0; y < mapHeight; y++) {
+		for (int x = 0; x < mapWidth; x++) {
+			int map_pixel;
+			if (inverted) {
+				map_pixel = (mapHeight - y) * mapWidth * 4 + x * 4; // current map pixel
+			} else {
+				map_pixel = y * mapWidth * 4 + x * 4; // current map pixel
+			}
+
+			// Run through the grid "pixel" and map the map accordingly to the grid
+			// e.g. the grid resolution is 4 times larger than that of the map (10 and 2.5)
+			// then for each pixel we check if it should be black or not by comparing the neighbour (3 to each side) pixels
+			// if more than half neighbours are black then the grid pixel is black otherwise its white
+			for (int i = -gridRes; i < gridRes; i++) {
+				for (int j = -gridRes; j < gridRes; j++) {
+					int offset = mapWidth * i * 4 + j * 4;
+
+					if (map_pixel + offset >= 0
+							&& map_pixel + offset + 3 < image.size()) {
+
+						// Get the current pixel and check if its not white, if not then its an occupied cell!
+						if (image[offset] || image[offset + 1]
+								|| image[offset + 2]) {
+							updateCell(y, x, FREE_CELL);
+						} else {
+							updateCell(y, x, OCCUPIED_CELL);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+void Map::createGridWithResolutionFromImage(std::vector<unsigned char> image,
+		bool inverted) {
 
 	// Get map resolution difference
 	int gridRes = (int) (gridResolution / mapResolution) / 2;
@@ -190,9 +233,14 @@ void Map::createGridWithResolutionFromImage(std::vector<unsigned char> image) {
 
 	// We are going to run through the map, in the grid resolution, and create our new grid
 //	for (int y = 0; y < mapHeight; y++) {
-	for (int y = mapHeight - 1; y >= 0; y--) {
+	for (int y = 0; y < mapHeight; y++) {
 		for (int x = 0; x < mapWidth; x++) {
-			int map_pixel = y * mapWidth * 4 + x * 4; // current map pixel
+			int map_pixel;
+			if (inverted) {
+				map_pixel = (mapHeight - y) * mapWidth * 4 + x * 4; // current map pixel
+			} else {
+				map_pixel = y * mapWidth * 4 + x * 4; // current map pixel
+			}
 
 			// Run through the grid "pixel" and map the map accordingly to the grid
 			// e.g. the grid resolution is 4 times larger than that of the map (10 and 2.5)
@@ -234,10 +282,14 @@ void Map::inflateImage() {
 
 	// We will inflate each obstacle by half of the robots size
 	// The robot is 30x30 cm so convert to our pixel size and then cut in half
-	xInflation = (int) ((ConfigurationManager::getRobotSizeX() / mapResolution)
-			/ 2);
-	yInflation = (int) ((ConfigurationManager::getRobotSizeY() / mapResolution)
-			/ 2);
+	xInflation = (int) ((ConfigurationManager::getRobotSizeX() / mapResolution))
+			/ 2
+			+ (int) ((ConfigurationManager::getRobotSizeX() / mapResolution))
+					/ 3;
+	yInflation = (int) ((ConfigurationManager::getRobotSizeY() / mapResolution))
+			/ 2
+			+ (int) ((ConfigurationManager::getRobotSizeY() / mapResolution))
+					/ 3;
 
 	inflatedImage.resize(mapWidth * mapHeight * 4);
 
@@ -292,14 +344,14 @@ void Map::inflateImage() {
 
 // PUBLIC METHODS
 
-void Map::createGrid() {
+void Map::createGrid(bool inverted) {
 	inflateImage();
-	createGridWithResolutionFromImage(inflatedImage);
+	createGridWithResolutionFromImage(inflatedImage, inverted);
 
 	graph.edges[startLocation.posY][startLocation.posX] = startLocation;
 	graph.edges[endLocation.posY][endLocation.posX] = endLocation;
 
-//	printMap();
+	//printMap();
 }
 
 std::vector<std::vector<Cell> > Map::getGrid() {

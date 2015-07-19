@@ -1,7 +1,6 @@
 #ifndef WAYPOINTSMANAGER_H_
 #define WAYPOINTSMANAGER_H_
 
-#include "../Map/Map.h"
 #include "Waypoint.h"
 #include <vector>
 
@@ -25,6 +24,7 @@ public:
 	bool isWaypointFront(float x, float y, float yaw);
 	bool isWaypointLeft(float x, float y, float yaw);
 	bool isWaypointRight(float x, float y, float yaw);
+	void printCurrWaypoint();
 	static void deleteInstance();
 };
 

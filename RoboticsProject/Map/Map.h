@@ -142,7 +142,8 @@ private:
 	void createGridFromImage(std::vector<unsigned char> image);
 	void inflateImage();
 	void createImageWithResolutionFromImage(std::vector<unsigned char> image);
-	void createGridWithResolutionFromImage(std::vector<unsigned char> image);
+	void createGridWithResolutionFromImage(std::vector<unsigned char> image, bool inverted);
+	void createGridWithResolutionFromImageLegacy(std::vector<unsigned char> image, bool inverted);
 
 	Map();
 	virtual ~Map();
@@ -152,7 +153,7 @@ public:
 	void printMap();
 	void printMap2(Graph graph);
 
-	void createGrid();
+	void createGrid(bool inverted);
 	std::vector<std::vector<Cell> > getGrid();
 	int getMapWidth();
 	int getMapHeight();

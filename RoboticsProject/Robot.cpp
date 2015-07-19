@@ -8,7 +8,8 @@ Robot::Robot(char* ip, int port) {
 	float x = ConfigurationManager::CoordToMeter(
 			ConfigurationManager::getStartLocationX());
 	float y = ConfigurationManager::CoordToMeter(
-			ConfigurationManager::getStartLocationY());
+			Map::getInstance()->getMapHeight()
+					- ConfigurationManager::getStartLocationY() + 1);
 	float yaw = DTOR(ConfigurationManager::getStartLocationYaw());
 
 	setOdometry(x, y, yaw);
@@ -106,6 +107,24 @@ void Robot::setOdometry(float x, float y, float yaw) {
 		posProxy->SetOdometry(dX, dY, dYaw);
 		Read();
 	}
+}
+
+float Robot::getXPosProxy() {
+	playerClient->Read();
+	return ConfigurationManager::MeterToCoord(posProxy->GetXPos());
+}
+
+float Robot::getYPosProxy() {
+	playerClient->Read();
+
+	float y = Map::getInstance()->getMapHeight()
+			- ConfigurationManager::MeterToCoord(posProxy->GetYPos()) + 1;
+	return y;
+}
+
+float Robot::getYawProxy() {
+	playerClient->Read();
+	return posProxy->GetYaw();
 }
 
 Robot::~Robot() {

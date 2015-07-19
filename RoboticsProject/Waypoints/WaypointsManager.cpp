@@ -95,5 +95,12 @@ bool WaypointsManager::isWaypointRight(float x, float y, float yaw) {
 	return (getCurr()->robotAlignment(x, y, yaw) > waypointAlignment);
 }
 
+void WaypointsManager::printCurrWaypoint() {
+	std::cout << "Current waypoint is N." << currWaypoint << ": ("
+			<< waypoints[currWaypoint].posX << ", "
+			<< waypoints[currWaypoint].posY << ") rad: "
+			<< waypoints[currWaypoint].getRadius() << "\n";
+}
+
 WaypointsManager::~WaypointsManager() {
 }

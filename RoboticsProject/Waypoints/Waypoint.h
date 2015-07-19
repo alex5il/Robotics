@@ -5,7 +5,7 @@
 #include "../Map/Map.h"
 #include <math.h>
 
-class Waypoint: private Location {
+class Waypoint: public Location {
 
 private:
 	short radius;
