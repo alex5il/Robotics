@@ -383,78 +383,78 @@ done
 Set odometry to: (9.05, 1.9, 0.349066)
 
 
-New waypoint created at: (256, 199) rad: 15
-New waypoint created at: (256, 198) rad: 15
-New waypoint created at: (254, 196) rad: 15
-New waypoint created at: (254, 195) rad: 15
-New waypoint created at: (225, 166) rad: 15
-New waypoint created at: (184, 166) rad: 15
-New waypoint created at: (183, 165) rad: 15
-New waypoint created at: (181, 165) rad: 15
-New waypoint created at: (169, 153) rad: 15
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
-New particle created at: (362, 305, 0.331613)
+New waypoint created at: (256, 199) rad: 20
+New waypoint created at: (256, 198) rad: 20
+New waypoint created at: (254, 196) rad: 20
+New waypoint created at: (254, 195) rad: 20
+New waypoint created at: (225, 166) rad: 20
+New waypoint created at: (184, 166) rad: 20
+New waypoint created at: (183, 165) rad: 20
+New waypoint created at: (181, 165) rad: 20
+New waypoint created at: (169, 153) rad: 20
+New particle created at: (361, 304, 0.296706)
+New particle created at: (361, 306, 0.296706)
+New particle created at: (361, 306, 0.314159)
+New particle created at: (361, 304, 0.401426)
+New particle created at: (361, 304, 0.401426)
+New particle created at: (363, 304, 0.331613)
+New particle created at: (361, 304, 0.331613)
+New particle created at: (363, 306, 0.261799)
+New particle created at: (363, 304, 0.261799)
+New particle created at: (363, 306, 0.296706)
+New particle created at: (361, 304, 0.366519)
+New particle created at: (363, 304, 0.261799)
+New particle created at: (363, 306, 0.401426)
+New particle created at: (361, 306, 0.261799)
+New particle created at: (361, 306, 0.331613)
+New particle created at: (363, 306, 0.261799)
+New particle created at: (363, 306, 0.331613)
+New particle created at: (361, 306, 0.331613)
+New particle created at: (363, 304, 0.331613)
+New particle created at: (363, 306, 0.401426)
+New particle created at: (361, 304, 0.261799)
+New particle created at: (363, 304, 0.366519)
+New particle created at: (363, 306, 0.261799)
+New particle created at: (361, 304, 0.296706)
+New particle created at: (361, 304, 0.401426)
+New particle created at: (361, 306, 0.401426)
+New particle created at: (363, 306, 0.366519)
+New particle created at: (363, 306, 0.401426)
+New particle created at: (363, 306, 0.261799)
+New particle created at: (363, 306, 0.331613)
+New particle created at: (363, 306, 0.401426)
+New particle created at: (363, 304, 0.401426)
+New particle created at: (363, 304, 0.296706)
+New particle created at: (361, 304, 0.401426)
+New particle created at: (361, 306, 0.401426)
+New particle created at: (363, 306, 0.366519)
+New particle created at: (363, 306, 0.366519)
+New particle created at: (361, 306, 0.366519)
+New particle created at: (361, 304, 0.296706)
+New particle created at: (363, 306, 0.401426)
+New particle created at: (363, 306, 0.401426)
+New particle created at: (361, 304, 0.331613)
+New particle created at: (361, 306, 0.331613)
+New particle created at: (361, 304, 0.261799)
+New particle created at: (363, 304, 0.261799)
+New particle created at: (363, 306, 0.261799)
+New particle created at: (361, 304, 0.296706)
+New particle created at: (361, 304, 0.296706)
+New particle created at: (361, 304, 0.296706)
+New particle created at: (363, 304, 0.366519)
+New particle created at: (363, 306, 0.366519)
+New particle created at: (361, 304, 0.296706)
+New particle created at: (361, 304, 0.366519)
+New particle created at: (363, 306, 0.331613)
+New particle created at: (361, 304, 0.331613)
+New particle created at: (363, 306, 0.331613)
+New particle created at: (363, 304, 0.296706)
+New particle created at: (361, 304, 0.331613)
+New particle created at: (361, 304, 0.366519)
+New particle created at: (363, 306, 0.261799)
 
 
-First waypoint:Current waypoint is N.0: (256, 199) rad: 15
+First waypoint:Current waypoint is N.0: (256, 199) rad: 20
 
 
 Theta is 135
@@ -502,7 +502,7 @@ Difference is -115
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (362, 305, 0.451613)
+Estimated location is: (363, 306, 0.451613)
 
 
 Waypoint is at: (256, 199)
@@ -510,28 +510,28 @@ Distance from waypoint is: 149.907
 
 
 Theta is 135
-Robot angle is 25.8755
-Difference is -109.125
+Robot angle is 22.9377
+Difference is -112.062
 
 
 Theta is 135
-Robot angle is 25.8755
-Difference is -109.125
+Robot angle is 22.9377
+Difference is -112.062
 
 
 Theta is 135
-Robot angle is 25.8755
-Difference is -109.125
+Robot angle is 22.9377
+Difference is -112.062
 Stop condition for MoveLeft is 0
 
 
 Theta is 135
-Robot angle is 25.8755
-Difference is -109.125
+Robot angle is 22.9377
+Difference is -112.062
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (362, 305, 0.619066)
+Estimated location is: (362.5, 305.5, 0.600526)
 
 
 Waypoint is at: (256, 199)
@@ -539,28 +539,28 @@ Distance from waypoint is: 149.907
 
 
 Theta is 135
-Robot angle is 35.4699
-Difference is -99.5301
+Robot angle is 28.6727
+Difference is -106.327
 
 
 Theta is 135
-Robot angle is 35.4699
-Difference is -99.5301
+Robot angle is 28.6727
+Difference is -106.327
 
 
 Theta is 135
-Robot angle is 35.4699
-Difference is -99.5301
+Robot angle is 28.6727
+Difference is -106.327
 Stop condition for MoveLeft is 0
 
 
 Theta is 135
-Robot angle is 35.4699
-Difference is -99.5301
+Robot angle is 28.6727
+Difference is -106.327
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (362, 305, 0.799066)
+Estimated location is: (362, 305, 0.968972)
 
 
 Waypoint is at: (256, 199)
@@ -568,28 +568,28 @@ Distance from waypoint is: 149.907
 
 
 Theta is 135
-Robot angle is 45.7831
-Difference is -89.2169
+Robot angle is 42.0954
+Difference is -92.9046
 
 
 Theta is 135
-Robot angle is 45.7831
-Difference is -89.2169
+Robot angle is 42.0954
+Difference is -92.9046
 
 
 Theta is 135
-Robot angle is 45.7831
-Difference is -89.2169
+Robot angle is 42.0954
+Difference is -92.9046
 Stop condition for MoveLeft is 0
 
 
 Theta is 135
-Robot angle is 45.7831
-Difference is -89.2169
+Robot angle is 42.0954
+Difference is -92.9046
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (362, 305, 0.949066)
+Estimated location is: (361.75, 304.75, 1.11352)
 
 
 Waypoint is at: (256, 199)
@@ -597,28 +597,28 @@ Distance from waypoint is: 149.907
 
 
 Theta is 135
-Robot angle is 54.3775
-Difference is -80.6225
+Robot angle is 52.9478
+Difference is -82.0522
 
 
 Theta is 135
-Robot angle is 54.3775
-Difference is -80.6225
+Robot angle is 52.9478
+Difference is -82.0522
 
 
 Theta is 135
-Robot angle is 54.3775
-Difference is -80.6225
+Robot angle is 52.9478
+Difference is -82.0522
 Stop condition for MoveLeft is 0
 
 
 Theta is 135
-Robot angle is 54.3775
-Difference is -80.6225
+Robot angle is 52.9478
+Difference is -82.0522
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (362, 305, 1.15907)
+Estimated location is: (361.75, 304.75, 1.41829)
 
 
 Waypoint is at: (256, 199)
@@ -626,28 +626,28 @@ Distance from waypoint is: 149.907
 
 
 Theta is 135
-Robot angle is 66.4096
-Difference is -68.5904
+Robot angle is 67.1049
+Difference is -67.8951
 
 
 Theta is 135
-Robot angle is 66.4096
-Difference is -68.5904
+Robot angle is 67.1049
+Difference is -67.8951
 
 
 Theta is 135
-Robot angle is 66.4096
-Difference is -68.5904
+Robot angle is 67.1049
+Difference is -67.8951
 Stop condition for MoveLeft is 0
 
 
 Theta is 135
-Robot angle is 66.4096
-Difference is -68.5904
+Robot angle is 67.1049
+Difference is -67.8951
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (362, 305, 1.30907)
+Estimated location is: (361.875, 304.875, 1.48634)
 
 
 Waypoint is at: (256, 199)
@@ -655,28 +655,28 @@ Distance from waypoint is: 149.907
 
 
 Theta is 135
-Robot angle is 75.0039
-Difference is -59.9961
+Robot angle is 76.133
+Difference is -58.867
 
 
 Theta is 135
-Robot angle is 75.0039
-Difference is -59.9961
+Robot angle is 76.133
+Difference is -58.867
 
 
 Theta is 135
-Robot angle is 75.0039
-Difference is -59.9961
+Robot angle is 76.133
+Difference is -58.867
 Stop condition for MoveLeft is 0
 
 
 Theta is 135
-Robot angle is 75.0039
-Difference is -59.9961
+Robot angle is 76.133
+Difference is -58.867
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (362, 305, 1.48907)
+Estimated location is: (362, 305, 1.71645)
 
 
 Waypoint is at: (256, 199)
@@ -684,28 +684,28 @@ Distance from waypoint is: 149.907
 
 
 Theta is 135
-Robot angle is 85.3172
-Difference is -49.6828
+Robot angle is 87.2391
+Difference is -47.7609
 
 
 Theta is 135
-Robot angle is 85.3172
-Difference is -49.6828
+Robot angle is 87.2391
+Difference is -47.7609
 
 
 Theta is 135
-Robot angle is 85.3172
-Difference is -49.6828
+Robot angle is 87.2391
+Difference is -47.7609
 Stop condition for MoveLeft is 0
 
 
 Theta is 135
-Robot angle is 85.3172
-Difference is -49.6828
+Robot angle is 87.2391
+Difference is -47.7609
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (362, 305, 1.63907)
+Estimated location is: (362.062, 305.062, 1.76309)
 
 
 Waypoint is at: (256, 199)
@@ -713,28 +713,28 @@ Distance from waypoint is: 149.907
 
 
 Theta is 135
-Robot angle is 93.9116
-Difference is -41.0884
+Robot angle is 94.1284
+Difference is -40.8716
 
 
 Theta is 135
-Robot angle is 93.9116
-Difference is -41.0884
+Robot angle is 94.1284
+Difference is -40.8716
 
 
 Theta is 135
-Robot angle is 93.9116
-Difference is -41.0884
+Robot angle is 94.1284
+Difference is -40.8716
 Stop condition for MoveLeft is 0
 
 
 Theta is 135
-Robot angle is 93.9116
-Difference is -41.0884
+Robot angle is 94.1284
+Difference is -40.8716
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (362, 305, 1.84907)
+Estimated location is: (362.062, 305.062, 2.03912)
 
 
 Waypoint is at: (256, 199)
@@ -742,28 +742,28 @@ Distance from waypoint is: 149.907
 
 
 Theta is 135
-Robot angle is 105.944
-Difference is -29.0563
+Robot angle is 105.481
+Difference is -29.5193
 
 
 Theta is 135
-Robot angle is 105.944
-Difference is -29.0563
+Robot angle is 105.481
+Difference is -29.5193
 
 
 Theta is 135
-Robot angle is 105.944
-Difference is -29.0563
+Robot angle is 105.481
+Difference is -29.5193
 Stop condition for MoveLeft is 0
 
 
 Theta is 135
-Robot angle is 105.944
-Difference is -29.0563
+Robot angle is 105.481
+Difference is -29.5193
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (362, 305, 1.99907)
+Estimated location is: (362.031, 305.031, 2.12739)
 
 
 Waypoint is at: (256, 199)
@@ -771,28 +771,28 @@ Distance from waypoint is: 149.907
 
 
 Theta is 135
-Robot angle is 114.538
-Difference is -20.462
+Robot angle is 113.686
+Difference is -21.3145
 
 
 Theta is 135
-Robot angle is 114.538
-Difference is -20.462
+Robot angle is 113.686
+Difference is -21.3145
 
 
 Theta is 135
-Robot angle is 114.538
-Difference is -20.462
+Robot angle is 113.686
+Difference is -21.3145
 Stop condition for MoveLeft is 0
 
 
 Theta is 135
-Robot angle is 114.538
-Difference is -20.462
+Robot angle is 113.686
+Difference is -21.3145
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (362, 305, 2.20907)
+Estimated location is: (362, 305, 2.42208)
 
 
 Waypoint is at: (256, 199)
@@ -800,32 +800,32 @@ Distance from waypoint is: 149.907
 
 
 Theta is 135
-Robot angle is 126.57
-Difference is -8.42985
+Robot angle is 126.23
+Difference is -8.76977
 Stop condition for MoveLeft is 1
 
 
 Theta is 135
-Robot angle is 126.57
-Difference is -8.42985
+Robot angle is 126.23
+Difference is -8.76977
 Start condition for MoveLeft is 0
 
 
 Theta is 135
-Robot angle is 126.57
-Difference is -8.42985
+Robot angle is 126.23
+Difference is -8.76977
 Start condition for MoveForward is 1
 Starting moving forward. 
 
 
 Theta is 135
-Robot angle is 126.57
-Difference is -8.42985
+Robot angle is 126.23
+Difference is -8.76977
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (360.403, 303.209, 2.29907)
+Estimated location is: (360.387, 303.193, 2.4482)
 
 
 Waypoint is at: (256, 199)
@@ -833,55 +833,55 @@ Distance from waypoint is: 143.544
 
 
 Theta is 135
-Robot angle is 131.727
-Difference is -3.27322
+Robot angle is 133.251
+Difference is -1.74913
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (356.409, 297.835, 2.29907)
+Estimated location is: (355.595, 296.924, 2.49141)
 
 
 Waypoint is at: (256, 199)
 Distance from waypoint is: 136.473
 
 
-Theta is 135.579
-Robot angle is 131.727
-Difference is -3.85194
+Theta is 135.282
+Robot angle is 137.999
+Difference is 2.71689
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (351.617, 293.357, 2.29907)
+Estimated location is: (348.814, 289.767, 2.31213)
 
 
 Waypoint is at: (256, 199)
 Distance from waypoint is: 128.701
 
 
-Theta is 135.303
-Robot angle is 131.727
-Difference is -3.57637
+Theta is 135.297
+Robot angle is 135.237
+Difference is -0.0597687
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (347.623, 287.088, 2.29907)
+Estimated location is: (342.831, 281.715, 2.32067)
 
 
 Waypoint is at: (256, 199)
 Distance from waypoint is: 122.332
 
 
-Theta is 135.96
-Robot angle is 131.727
-Difference is -4.2334
+Theta is 135.95
+Robot angle is 134.101
+Difference is -1.84866
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (342.033, 282.61, 2.29907)
+Estimated location is: (336.645, 275.897, 2.20942)
 
 
 Waypoint is at: (256, 199)
@@ -889,83 +889,83 @@ Distance from waypoint is: 115.278
 
 
 Theta is 136.017
-Robot angle is 131.727
-Difference is -4.29021
+Robot angle is 130.346
+Difference is -5.67123
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (338.039, 276.341, 2.29907)
+Estimated location is: (332.253, 270.076, 2.30334)
 
 
 Waypoint is at: (256, 199)
 Distance from waypoint is: 108.904
 
 
-Theta is 136.801
-Robot angle is 131.727
-Difference is -5.07439
+Theta is 136.45
+Robot angle is 131.159
+Difference is -5.29153
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (332.448, 271.863, 2.29907)
+Estimated location is: (327.359, 265.82, 2.24344)
 
 
 Waypoint is at: (256, 199)
 Distance from waypoint is: 101.863
 
 
-Theta is 136.548
-Robot angle is 131.727
-Difference is -4.82138
+Theta is 136.948
+Robot angle is 129.849
+Difference is -7.09889
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (328.455, 266.49, 2.29907)
+Estimated location is: (323.463, 261.34, 2.34602)
 
 
 Waypoint is at: (256, 199)
 Distance from waypoint is: 94.0691
 
 
-Theta is 137.06
-Robot angle is 131.727
-Difference is -5.33333
+Theta is 136.66
+Robot angle is 132.133
+Difference is -4.52704
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (323.663, 262.012, 2.29907)
+Estimated location is: (319.219, 257.197, 2.26912)
 
 
 Waypoint is at: (256, 199)
 Distance from waypoint is: 87.046
 
 
-Theta is 136.762
-Robot angle is 131.727
-Difference is -5.03561
+Theta is 137.22
+Robot angle is 131.072
+Difference is -6.14764
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (319.669, 255.742, 2.29907)
+Estimated location is: (315.325, 251.263, 2.35036)
 
 
 Waypoint is at: (256, 199)
 Distance from waypoint is: 79.9812
 
 
-Theta is 138.366
-Robot angle is 131.727
-Difference is -6.63968
+Theta is 137.862
+Robot angle is 132.869
+Difference is -4.99362
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (314.078, 251.264, 2.29907)
+Estimated location is: (309.96, 246.058, 2.26061)
 
 
 Waypoint is at: (256, 199)
@@ -973,27 +973,27 @@ Distance from waypoint is: 73.6614
 
 
 Theta is 138.122
-Robot angle is 131.727
-Difference is -6.39536
+Robot angle is 131.196
+Difference is -6.92598
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (310.085, 244.995, 2.29907)
+Estimated location is: (305.343, 239.79, 2.33969)
 
 
 Waypoint is at: (256, 199)
 Distance from waypoint is: 67.2681
 
 
-Theta is 140.194
-Robot angle is 131.727
-Difference is -8.46765
+Theta is 139.574
+Robot angle is 132.625
+Difference is -6.94878
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (304.494, 240.517, 2.29907)
+Estimated location is: (299.814, 234.78, 2.25419)
 
 
 Waypoint is at: (256, 199)
@@ -1001,27 +1001,27 @@ Distance from waypoint is: 59.6657
 
 
 Theta is 139.497
-Robot angle is 131.727
-Difference is -7.77037
+Robot angle is 130.89
+Difference is -8.60667
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (300.5, 235.144, 2.29907)
+Estimated location is: (295.397, 229.77, 2.3386)
 
 
 Waypoint is at: (256, 199)
 Distance from waypoint is: 52.4976
 
 
-Theta is 140.711
-Robot angle is 131.727
-Difference is -8.98381
+Theta is 141.499
+Robot angle is 132.441
+Difference is -9.05807
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (295.708, 230.666, 2.29907)
+Estimated location is: (290.947, 225.474, 2.25632)
 
 
 Waypoint is at: (256, 199)
@@ -1029,13 +1029,13 @@ Distance from waypoint is: 45.607
 
 
 Theta is 141.52
-Robot angle is 131.727
-Difference is -9.79303
+Robot angle is 130.859
+Difference is -10.6604
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (291.715, 224.397, 2.29907)
+Estimated location is: (287.11, 219.653, 2.34127)
 
 
 Waypoint is at: (256, 199)
@@ -1043,13 +1043,13 @@ Distance from waypoint is: 38.6005
 
 
 Theta is 144.462
-Robot angle is 131.727
-Difference is -12.7355
+Robot angle is 132.502
+Difference is -11.9602
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (286.124, 219.919, 2.29907)
+Estimated location is: (281.903, 214.636, 2.25792)
 
 
 Waypoint is at: (256, 199)
@@ -1057,1034 +1057,731 @@ Distance from waypoint is: 32.45
 
 
 Theta is 146.31
-Robot angle is 131.727
-Difference is -14.5832
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
+Robot angle is 130.936
+Difference is -15.3741
 
 
-Estimated location is: (282.13, 213.65, 2.29907)
+Theta is 146.31
+Robot angle is 130.936
+Difference is -15.3741
 
 
-Waypoint is at: (256, 199)
-Distance from waypoint is: 25.5539
-
-
-Theta is 151.699
-Robot angle is 131.727
-Difference is -19.9725
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
-
-
-Estimated location is: (276.54, 209.172, 2.29907)
-
-
-Waypoint is at: (256, 199)
-Distance from waypoint is: 19.3132
-
-
-Theta is 153.435
-Robot angle is 131.727
-Difference is -21.7082
-
-
-Theta is 153.435
-Robot angle is 131.727
-Difference is -21.7082
-
-
-Theta is 153.435
-Robot angle is 131.727
-Difference is -21.7082
+Theta is 146.31
+Robot angle is 130.936
+Difference is -15.3741
 Start condition for MoveForward is 0
 Stop condition for MoveForward is 1
 
 
-Theta is 153.435
-Robot angle is 131.727
-Difference is -21.7082
+Theta is 146.31
+Robot angle is 130.936
+Difference is -15.3741
 Start condition for MoveLeft is 1
 Starting moving left. 
 
 
-Theta is 153.435
-Robot angle is 131.727
-Difference is -21.7082
+Theta is 146.31
+Robot angle is 130.936
+Difference is -15.3741
 
 
-Theta is 153.435
-Robot angle is 131.727
-Difference is -21.7082
+Theta is 146.31
+Robot angle is 130.936
+Difference is -15.3741
 
 
-Theta is 153.435
-Robot angle is 131.727
-Difference is -21.7082
+Theta is 146.31
+Robot angle is 130.936
+Difference is -15.3741
 Stop condition for MoveLeft is 0
 
 
-Theta is 153.435
-Robot angle is 131.727
-Difference is -21.7082
+Theta is 146.31
+Robot angle is 130.936
+Difference is -15.3741
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (272.546, 204.694, 2.38907)
+Estimated location is: (277.416, 210.291, 2.43154)
 
 
 Waypoint is at: (256, 199)
-Distance from waypoint is: 16.7631
+Distance from waypoint is: 30.5287
 
 
-Theta is 162.646
-Robot angle is 136.883
-Difference is -25.7626
-
-
-Theta is 162.646
-Robot angle is 136.883
-Difference is -25.7626
-
-
-Theta is 162.646
-Robot angle is 136.883
-Difference is -25.7626
-Stop condition for MoveLeft is 0
-
-
-Theta is 162.646
-Robot angle is 136.883
-Difference is -25.7626
-Start condition for MoveLeft is 1
-
-
-Estimated location is: (272.546, 204.694, 2.53907)
-
-
-Waypoint is at: (256, 199)
-Distance from waypoint is: 16.7631
-
-
-Theta is 162.646
-Robot angle is 145.478
-Difference is -17.1682
+Theta is 148.393
+Robot angle is 135.126
+Difference is -13.2661
 Stop condition for MoveLeft is 1
 
 
-Theta is 162.646
-Robot angle is 145.478
-Difference is -17.1682
+Theta is 148.393
+Robot angle is 135.126
+Difference is -13.2661
 Start condition for MoveLeft is 0
 
 
-Theta is 162.646
-Robot angle is 145.478
-Difference is -17.1682
+Theta is 148.393
+Robot angle is 135.126
+Difference is -13.2661
 Start condition for MoveForward is 1
 Starting moving forward. 
 
 
-Theta is 162.646
-Robot angle is 145.478
-Difference is -17.1682
+Theta is 148.393
+Robot angle is 135.126
+Difference is -13.2661
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (271.5, 202.928, 2.62907)
+Estimated location is: (276.562, 209.984, 2.51239)
 
 
 Waypoint is at: (256, 199)
-Distance from waypoint is: 11.4018
+Distance from waypoint is: 24.1868
 
 
-Waypoint changed:
-Current waypoint is N.1: (256, 198) rad: 15
-
-
-Theta is 165.069
-Robot angle is 150.634
-Difference is -14.4342
+Theta is 150.524
+Robot angle is 139.538
+Difference is -10.9861
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (266.271, 201.163, 2.62907)
+Estimated location is: (273.596, 207.238, 2.65587)
+
+
+Waypoint is at: (256, 199)
+Distance from waypoint is: 17.4929
+
+
+Waypoint changed:
+Current waypoint is N.1: (256, 198) rad: 20
+
+
+Theta is 151.189
+Robot angle is 145.854
+Difference is -5.33502
+Start condition for MoveForward is 1
+Stop condition for MoveForward is 0
+
+
+Estimated location is: (266.702, 203.582, 2.54949)
 
 
 Waypoint is at: (256, 198)
-Distance from waypoint is: 7.07107
+Distance from waypoint is: 11.6619
 
 
 Waypoint changed:
-Current waypoint is N.2: (254, 196) rad: 15
+Current waypoint is N.2: (254, 196) rad: 20
 
 
-Theta is 157.38
-Robot angle is 150.634
-Difference is -6.74576
+Theta is 149.534
+Robot angle is 145.965
+Difference is -3.56981
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (262.088, 198.221, 2.62907)
+Estimated location is: (259.839, 198.106, 2.58081)
 
 
 Waypoint is at: (254, 196)
-Distance from waypoint is: 3.16228
+Distance from waypoint is: 7.2111
 
 
 Waypoint changed:
-Current waypoint is N.3: (254, 195) rad: 15
+Current waypoint is N.3: (254, 195) rad: 20
 
 
-Theta is 159.444
-Robot angle is 150.634
-Difference is -8.80957
+Theta is 147.529
+Robot angle is 146.917
+Difference is -0.611816
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (256.859, 195.867, 2.62907)
+Estimated location is: (253.035, 194.103, 2.45587)
 
 
 Waypoint is at: (254, 195)
-Distance from waypoint is: 1.41421
+Distance from waypoint is: 2.23607
 
 
 Waypoint changed:
-Current waypoint is N.4: (225, 166) rad: 15
+Current waypoint is N.4: (225, 166) rad: 20
 
 
-Theta is 136.909
-Robot angle is 150.634
-Difference is 13.7252
+Theta is 136.736
+Robot angle is 143.814
+Difference is 7.07841
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (252.676, 192.924, 2.62907)
+Estimated location is: (249.664, 190.711, 2.52472)
 
 
 Waypoint is at: (225, 166)
-Distance from waypoint is: 34.7131
+Distance from waypoint is: 38.8973
 
 
-Theta is 136.081
-Robot angle is 150.634
-Difference is 14.5535
+Theta is 136.005
+Robot angle is 144.235
+Difference is 8.23
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (247.447, 190.571, 2.62907)
+Estimated location is: (246.306, 188.964, 2.4466)
 
 
 Waypoint is at: (225, 166)
-Distance from waypoint is: 30.4795
+Distance from waypoint is: 33.2415
 
 
-Theta is 132.51
-Robot angle is 150.634
-Difference is 18.1239
+Theta is 135
+Robot angle is 142.207
+Difference is 7.20744
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (243.263, 187.628, 2.62907)
+Estimated location is: (243.183, 186.432, 2.54349)
 
 
 Waypoint is at: (225, 166)
-Distance from waypoint is: 25.807
+Distance from waypoint is: 27.6586
 
 
-Theta is 130.601
-Robot angle is 150.634
-Difference is 20.0331
+Theta is 132.397
+Robot angle is 143.969
+Difference is 11.5719
+Start condition for MoveForward is 1
+Stop condition for MoveForward is 0
 
 
-Theta is 130.601
-Robot angle is 150.634
-Difference is 20.0331
+Estimated location is: (238.834, 183.708, 2.47)
 
 
-Theta is 130.601
-Robot angle is 150.634
-Difference is 20.0331
+Waypoint is at: (225, 166)
+Distance from waypoint is: 22.8035
+
+
+Theta is 130.365
+Robot angle is 142.745
+Difference is 12.3806
+Start condition for MoveForward is 1
+Stop condition for MoveForward is 0
+
+
+Estimated location is: (234.596, 180.122, 2.55751)
+
+
+Waypoint is at: (225, 166)
+Distance from waypoint is: 18.3576
+
+
+Waypoint changed:
+Current waypoint is N.5: (184, 166) rad: 20
+
+
+Theta is 162.525
+Robot angle is 144.64
+Difference is -17.8854
+
+
+Theta is 162.525
+Robot angle is 144.64
+Difference is -17.8854
+
+
+Theta is 162.525
+Robot angle is 144.64
+Difference is -17.8854
 Start condition for MoveForward is 0
 Stop condition for MoveForward is 1
 
 
-Theta is 130.601
-Robot angle is 150.634
-Difference is 20.0331
-Start condition for MoveLeft is 0
-Start condition for MoveRight is 1
-Starting moving right. 
-
-
-Theta is 130.601
-Robot angle is 150.634
-Difference is 20.0331
-
-
-Theta is 130.601
-Robot angle is 150.634
-Difference is 20.0331
-
-
-Theta is 130.601
-Robot angle is 150.634
-Difference is 20.0331
-
-
-Theta is 130.601
-Robot angle is 150.634
-Difference is 20.0331
-Stop condition for MoveRight is 0
-
-
-Estimated location is: (240.126, 186.451, 2.53907)
-
-
-Waypoint is at: (225, 166)
-Distance from waypoint is: 25
-
-
-Theta is 126.87
-Robot angle is 145.478
-Difference is 18.6079
-Stop condition for MoveRight is 1
-
-
-Theta is 126.87
-Robot angle is 145.478
-Difference is 18.6079
-Start condition for MoveForward is 1
-Starting moving forward. 
-
-
-Theta is 126.87
-Robot angle is 145.478
-Difference is 18.6079
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
-
-
-Estimated location is: (238.234, 184.237, 2.47907)
-
-
-Waypoint is at: (225, 166)
-Distance from waypoint is: 19.7231
-
-
-Theta is 125.838
-Robot angle is 142.04
-Difference is 16.2024
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
-
-
-Estimated location is: (233.503, 181.285, 2.47907)
-
-
-Waypoint is at: (225, 166)
-Distance from waypoint is: 14.3178
-
-
-Waypoint changed:
-Current waypoint is N.5: (184, 166) rad: 15
-
-
-Theta is 162.979
-Robot angle is 142.04
-Difference is -20.9395
-
-
-Theta is 162.979
-Robot angle is 142.04
-Difference is -20.9395
-
-
-Theta is 162.979
-Robot angle is 142.04
-Difference is -20.9395
-Start condition for MoveForward is 0
-Stop condition for MoveForward is 1
-
-
-Theta is 162.979
-Robot angle is 142.04
-Difference is -20.9395
+Theta is 162.525
+Robot angle is 144.64
+Difference is -17.8854
 Start condition for MoveLeft is 1
 Starting moving left. 
 
 
-Theta is 162.979
-Robot angle is 142.04
-Difference is -20.9395
+Theta is 162.525
+Robot angle is 144.64
+Difference is -17.8854
 
 
-Theta is 162.979
-Robot angle is 142.04
-Difference is -20.9395
+Theta is 162.525
+Robot angle is 144.64
+Difference is -17.8854
 
 
-Theta is 162.979
-Robot angle is 142.04
-Difference is -20.9395
+Theta is 162.525
+Robot angle is 144.64
+Difference is -17.8854
 Stop condition for MoveLeft is 0
 
 
-Theta is 162.979
-Robot angle is 142.04
-Difference is -20.9395
+Theta is 162.525
+Robot angle is 144.64
+Difference is -17.8854
 Start condition for MoveLeft is 1
 
 
-Estimated location is: (230.665, 179.07, 2.56907)
+Estimated location is: (230.596, 177.544, 2.53232)
 
 
 Waypoint is at: (184, 166)
-Distance from waypoint is: 47.8017
+Distance from waypoint is: 51.923
 
 
-Theta is 164.219
-Robot angle is 147.197
-Difference is -17.0226
+Theta is 164.358
+Robot angle is 144.866
+Difference is -19.4921
+
+
+Theta is 164.358
+Robot angle is 144.866
+Difference is -19.4921
+
+
+Theta is 164.358
+Robot angle is 144.866
+Difference is -19.4921
+Stop condition for MoveLeft is 0
+
+
+Theta is 164.358
+Robot angle is 144.866
+Difference is -19.4921
+Start condition for MoveLeft is 1
+
+
+Estimated location is: (230.651, 177.822, 2.79282)
+
+
+Waypoint is at: (184, 166)
+Distance from waypoint is: 51.923
+
+
+Theta is 164.846
+Robot angle is 152.441
+Difference is -12.4047
 Stop condition for MoveLeft is 1
 
 
-Theta is 164.219
-Robot angle is 147.197
-Difference is -17.0226
+Theta is 164.846
+Robot angle is 152.441
+Difference is -12.4047
 Start condition for MoveLeft is 0
 
 
-Theta is 164.219
-Robot angle is 147.197
-Difference is -17.0226
+Theta is 164.846
+Robot angle is 152.441
+Difference is -12.4047
 Start condition for MoveForward is 1
 Starting moving forward. 
 
 
-Theta is 164.219
-Robot angle is 147.197
-Difference is -17.0226
+Theta is 164.846
+Robot angle is 152.441
+Difference is -12.4047
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (228.573, 177.893, 2.62907)
+Estimated location is: (231.572, 178.998, 2.87147)
 
 
 Waypoint is at: (184, 166)
-Distance from waypoint is: 43.1741
+Distance from waypoint is: 48.7647
+
+
+Theta is 164.846
+Robot angle is 158.482
+Difference is -6.36374
+Start condition for MoveForward is 1
+Stop condition for MoveForward is 0
+
+
+Estimated location is: (228.495, 178.272, 2.98431)
+
+
+Waypoint is at: (184, 166)
+Distance from waypoint is: 42.45
+
+
+Theta is 165.379
+Robot angle is 164.735
+Difference is -0.643707
+Start condition for MoveForward is 1
+Stop condition for MoveForward is 0
+
+
+Estimated location is: (221.555, 176.371, 2.84839)
+
+
+Waypoint is at: (184, 166)
+Distance from waypoint is: 38.0789
+
+
+Theta is 164.982
+Robot angle is 163.968
+Difference is -1.01353
+Start condition for MoveForward is 1
+Stop condition for MoveForward is 0
+
+
+Estimated location is: (215.587, 173.657, 2.86549)
+
+
+Waypoint is at: (184, 166)
+Distance from waypoint is: 32.0156
 
 
 Theta is 165.964
-Robot angle is 150.634
-Difference is -15.3294
+Robot angle is 164.074
+Difference is -1.88953
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (225.436, 174.951, 2.62907)
+Estimated location is: (209.118, 171.698, 2.7411)
 
 
 Waypoint is at: (184, 166)
-Distance from waypoint is: 37.855
+Distance from waypoint is: 26.6833
 
 
-Theta is 168.959
-Robot angle is 150.634
-Difference is -18.3247
+Theta is 166.866
+Robot angle is 160.564
+Difference is -6.302
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (220.207, 173.186, 2.62907)
+Estimated location is: (203.932, 169.725, 2.81761)
 
 
 Waypoint is at: (184, 166)
-Distance from waypoint is: 33.3766
+Distance from waypoint is: 21.3776
 
 
-Theta is 168.996
-Robot angle is 150.634
-Difference is -18.3621
+Theta is 168.69
+Robot angle is 161.001
+Difference is -7.68939
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (216.023, 170.243, 2.62907)
+Estimated location is: (198.578, 168.144, 2.74687)
 
 
 Waypoint is at: (184, 166)
-Distance from waypoint is: 27.1662
-
-
-Theta is 172.875
-Robot angle is 150.634
-Difference is -22.2406
-
-
-Theta is 172.875
-Robot angle is 150.634
-Difference is -22.2406
-
-
-Theta is 172.875
-Robot angle is 150.634
-Difference is -22.2406
-Start condition for MoveForward is 0
-Stop condition for MoveForward is 1
-
-
-Theta is 172.875
-Robot angle is 150.634
-Difference is -22.2406
-Start condition for MoveLeft is 1
-Starting moving left. 
-
-
-Theta is 172.875
-Robot angle is 150.634
-Difference is -22.2406
-
-
-Theta is 172.875
-Robot angle is 150.634
-Difference is -22.2406
-
-
-Theta is 172.875
-Robot angle is 150.634
-Difference is -22.2406
-Stop condition for MoveLeft is 0
-
-
-Theta is 172.875
-Robot angle is 150.634
-Difference is -22.2406
-Start condition for MoveLeft is 1
-
-
-Estimated location is: (211.84, 168.478, 2.68907)
-
-
-Waypoint is at: (184, 166)
-Distance from waypoint is: 27.074
-
-
-Theta is 175.764
-Robot angle is 154.072
-Difference is -21.6915
-
-
-Theta is 175.764
-Robot angle is 154.072
-Difference is -21.6915
-
-
-Theta is 175.764
-Robot angle is 154.072
-Difference is -21.6915
-Stop condition for MoveLeft is 0
-
-
-Theta is 175.764
-Robot angle is 154.072
-Difference is -21.6915
-Start condition for MoveLeft is 1
-
-
-Estimated location is: (211.84, 168.478, 2.83907)
-
-
-Waypoint is at: (184, 166)
-Distance from waypoint is: 27.074
-
-
-Theta is 175.764
-Robot angle is 162.667
-Difference is -13.0971
-Stop condition for MoveLeft is 1
-
-
-Theta is 175.764
-Robot angle is 162.667
-Difference is -13.0971
-Start condition for MoveLeft is 0
-
-
-Theta is 175.764
-Robot angle is 162.667
-Difference is -13.0971
-Start condition for MoveForward is 1
-Starting moving forward. 
-
-
-Theta is 175.764
-Robot angle is 162.667
-Difference is -13.0971
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
-
-
-Estimated location is: (210.667, 168.225, 2.92907)
-
-
-Waypoint is at: (184, 166)
-Distance from waypoint is: 23.0217
-
-
-Theta is 175.601
-Robot angle is 167.823
-Difference is -7.77817
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
-
-
-Estimated location is: (205.975, 166.959, 2.92907)
-
-
-Waypoint is at: (184, 166)
-Distance from waypoint is: 17
-
-
-Theta is 180
-Robot angle is 167.823
-Difference is -12.1769
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
-
-
-Estimated location is: (200.11, 165.947, 2.92907)
-
-
-Waypoint is at: (184, 166)
-Distance from waypoint is: 13.0384
+Distance from waypoint is: 16.1245
 
 
 Waypoint changed:
-Current waypoint is N.6: (183, 165) rad: 15
+Current waypoint is N.6: (183, 165) rad: 20
 
 
-Theta is 180
-Robot angle is 167.823
-Difference is -12.1769
+Theta is 169.216
+Robot angle is 159.192
+Difference is -10.0232
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (195.418, 164.681, 2.92907)
+Estimated location is: (194.115, 166.374, 2.84732)
 
 
 Waypoint is at: (183, 165)
-Distance from waypoint is: 8.06226
-
-
-Waypoint changed:
-Current waypoint is N.7: (181, 165) rad: 15
-
-
-Theta is 184.086
-Robot angle is 167.823
-Difference is -16.2625
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
-
-
-Estimated location is: (189.553, 163.669, 2.92907)
-
-
-Waypoint is at: (181, 165)
-Distance from waypoint is: 6.32456
-
-
-Waypoint changed:
-Current waypoint is N.8: (169, 153) rad: 15
-
-
-Theta is 153.435
-Robot angle is 167.823
-Difference is 14.3882
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
-
-
-Estimated location is: (186.034, 162.403, 2.92907)
-
-
-Waypoint is at: (169, 153)
-Distance from waypoint is: 15
-
-
-Waypoint changed:
-Current waypoint is N.9: (169, 138) rad: 4
-
-
-Theta is 125.311
-Robot angle is 167.823
-Difference is 42.5119
-
-
-Theta is 125.311
-Robot angle is 167.823
-Difference is 42.5119
-
-
-Theta is 125.311
-Robot angle is 167.823
-Difference is 42.5119
-Start condition for MoveForward is 0
-Stop condition for MoveForward is 1
-
-
-Theta is 125.311
-Robot angle is 167.823
-Difference is 42.5119
-Start condition for MoveLeft is 0
-Start condition for MoveRight is 1
-Starting moving right. 
-
-
-Theta is 125.311
-Robot angle is 167.823
-Difference is 42.5119
-
-
-Theta is 125.311
-Robot angle is 167.823
-Difference is 42.5119
-
-
-Theta is 125.311
-Robot angle is 167.823
-Difference is 42.5119
-
-
-Theta is 125.311
-Robot angle is 167.823
-Difference is 42.5119
-Stop condition for MoveRight is 0
-
-
-Estimated location is: (181.342, 161.897, 2.83907)
-
-
-Waypoint is at: (169, 138)
-Distance from waypoint is: 25.9422
-
-
-Theta is 117.553
-Robot angle is 162.667
-Difference is 45.1137
-
-
-Theta is 117.553
-Robot angle is 162.667
-Difference is 45.1137
-
-
-Theta is 117.553
-Robot angle is 162.667
-Difference is 45.1137
-
-
-Theta is 117.553
-Robot angle is 162.667
-Difference is 45.1137
-Stop condition for MoveRight is 0
-
-
-Estimated location is: (181.342, 161.897, 2.68907)
-
-
-Waypoint is at: (169, 138)
-Distance from waypoint is: 25.9422
-
-
-Theta is 117.553
-Robot angle is 154.072
-Difference is 36.5193
-
-
-Theta is 117.553
-Robot angle is 154.072
-Difference is 36.5193
-
-
-Theta is 117.553
-Robot angle is 154.072
-Difference is 36.5193
-
-
-Theta is 117.553
-Robot angle is 154.072
-Difference is 36.5193
-Stop condition for MoveRight is 0
-
-
-Estimated location is: (181.342, 161.897, 2.59907)
-
-
-Waypoint is at: (169, 138)
-Distance from waypoint is: 25.9422
-
-
-Theta is 117.553
-Robot angle is 148.916
-Difference is 31.3627
-
-
-Theta is 117.553
-Robot angle is 148.916
-Difference is 31.3627
-
-
-Theta is 117.553
-Robot angle is 148.916
-Difference is 31.3627
-
-
-Theta is 117.553
-Robot angle is 148.916
-Difference is 31.3627
-Stop condition for MoveRight is 0
-
-
-Estimated location is: (181.342, 161.897, 2.44907)
-
-
-Waypoint is at: (169, 138)
-Distance from waypoint is: 25.9422
-
-
-Theta is 117.553
-Robot angle is 140.321
-Difference is 22.7683
-
-
-Theta is 117.553
-Robot angle is 140.321
-Difference is 22.7683
-
-
-Theta is 117.553
-Robot angle is 140.321
-Difference is 22.7683
-
-
-Theta is 117.553
-Robot angle is 140.321
-Difference is 22.7683
-Stop condition for MoveRight is 0
-
-
-Estimated location is: (181.342, 161.897, 2.32907)
-
-
-Waypoint is at: (169, 138)
-Distance from waypoint is: 25.9422
-
-
-Theta is 117.553
-Robot angle is 133.446
-Difference is 15.8928
-Stop condition for MoveRight is 1
-
-
-Theta is 117.553
-Robot angle is 133.446
-Difference is 15.8928
-Start condition for MoveForward is 1
-Starting moving forward. 
-
-
-Theta is 117.553
-Robot angle is 133.446
-Difference is 15.8928
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
-
-
-Estimated location is: (180.599, 160.013, 2.23907)
-
-
-Waypoint is at: (169, 138)
-Distance from waypoint is: 22.4722
-
-
-Theta is 116.565
-Robot angle is 128.289
-Difference is 11.724
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
-
-
-Estimated location is: (176.881, 156.246, 2.23907)
-
-
-Waypoint is at: (169, 138)
-Distance from waypoint is: 17.088
-
-
-Theta is 111.251
-Robot angle is 128.289
-Difference is 17.0385
-Start condition for MoveForward is 1
-Stop condition for MoveForward is 0
-
-
-Estimated location is: (173.907, 151.536, 2.23907)
-
-
-Waypoint is at: (169, 138)
 Distance from waypoint is: 12.1655
 
 
-Theta is 107.103
-Robot angle is 128.289
-Difference is 21.1863
+Waypoint changed:
+Current waypoint is N.7: (181, 165) rad: 20
 
 
-Theta is 107.103
-Robot angle is 128.289
-Difference is 21.1863
+Theta is 170.538
+Robot angle is 161.166
+Difference is -9.3717
+Start condition for MoveForward is 1
+Stop condition for MoveForward is 0
 
 
-Theta is 107.103
-Robot angle is 128.289
-Difference is 21.1863
+Estimated location is: (188.927, 164.807, 2.7737)
+
+
+Waypoint is at: (181, 165)
+Distance from waypoint is: 10
+
+
+Waypoint changed:
+Current waypoint is N.8: (169, 153) rad: 20
+
+
+Theta is 151.557
+Robot angle is 160.044
+Difference is 8.48645
+Start condition for MoveForward is 1
+Stop condition for MoveForward is 0
+
+
+Estimated location is: (184.269, 162.95, 2.85929)
+
+
+Waypoint is at: (169, 153)
+Distance from waypoint is: 19.4165
+
+
+Waypoint changed:
+Current waypoint is N.9: (169, 138) rad: 8
+
+
+Theta is 127.569
+Robot angle is 161.934
+Difference is 34.3658
+
+
+Theta is 127.569
+Robot angle is 161.934
+Difference is 34.3658
+
+
+Theta is 127.569
+Robot angle is 161.934
+Difference is 34.3658
 Start condition for MoveForward is 0
 Stop condition for MoveForward is 1
 
 
-Theta is 107.103
-Robot angle is 128.289
-Difference is 21.1863
+Theta is 127.569
+Robot angle is 161.934
+Difference is 34.3658
 Start condition for MoveLeft is 0
 Start condition for MoveRight is 1
 Starting moving right. 
 
 
-Theta is 107.103
-Robot angle is 128.289
-Difference is 21.1863
+Theta is 127.569
+Robot angle is 161.934
+Difference is 34.3658
 
 
-Theta is 107.103
-Robot angle is 128.289
-Difference is 21.1863
+Theta is 127.569
+Robot angle is 161.934
+Difference is 34.3658
 
 
-Theta is 107.103
-Robot angle is 128.289
-Difference is 21.1863
+Theta is 127.569
+Robot angle is 161.934
+Difference is 34.3658
 
 
-Theta is 107.103
-Robot angle is 128.289
-Difference is 21.1863
+Theta is 127.569
+Robot angle is 161.934
+Difference is 34.3658
 Stop condition for MoveRight is 0
 
 
-Estimated location is: (171.676, 149.652, 2.14907)
+Estimated location is: (181.07, 162.072, 2.68225)
 
 
 Waypoint is at: (169, 138)
-Distance from waypoint is: 11.1803
+Distance from waypoint is: 29.6816
 
 
-Theta is 100.305
-Robot angle is 123.132
-Difference is 22.8276
+Theta is 122.619
+Robot angle is 157.808
+Difference is 35.1889
 
 
-Theta is 100.305
-Robot angle is 123.132
-Difference is 22.8276
+Theta is 122.619
+Robot angle is 157.808
+Difference is 35.1889
 
 
-Theta is 100.305
-Robot angle is 123.132
-Difference is 22.8276
+Theta is 122.619
+Robot angle is 157.808
+Difference is 35.1889
 
 
-Theta is 100.305
-Robot angle is 123.132
-Difference is 22.8276
+Theta is 122.619
+Robot angle is 157.808
+Difference is 35.1889
 Stop condition for MoveRight is 0
 
 
-Estimated location is: (171.676, 149.652, 1.99907)
+Estimated location is: (181.902, 162.515, 2.56686)
 
 
 Waypoint is at: (169, 138)
-Distance from waypoint is: 11.1803
+Distance from waypoint is: 29.6816
 
 
-Theta is 100.305
-Robot angle is 114.538
-Difference is 14.2332
+Theta is 120.256
+Robot angle is 152.439
+Difference is 32.1828
+
+
+Theta is 120.256
+Robot angle is 152.439
+Difference is 32.1828
+
+
+Theta is 120.256
+Robot angle is 152.439
+Difference is 32.1828
+
+
+Theta is 120.256
+Robot angle is 152.439
+Difference is 32.1828
+Stop condition for MoveRight is 0
+
+
+Estimated location is: (184.334, 163.396, 2.28555)
+
+
+Waypoint is at: (169, 138)
+Distance from waypoint is: 29.6816
+
+
+Theta is 119.249
+Robot angle is 141.696
+Difference is 22.4469
+
+
+Theta is 119.249
+Robot angle is 141.696
+Difference is 22.4469
+
+
+Theta is 119.249
+Robot angle is 141.696
+Difference is 22.4469
+
+
+Theta is 119.249
+Robot angle is 141.696
+Difference is 22.4469
+Stop condition for MoveRight is 0
+
+
+Estimated location is: (186.349, 164.056, 2.18137)
+
+
+Waypoint is at: (169, 138)
+Distance from waypoint is: 29.6816
+
+
+Theta is 122.619
+Robot angle is 133.34
+Difference is 10.7203
 Stop condition for MoveRight is 1
 
 
-Theta is 100.305
-Robot angle is 114.538
-Difference is 14.2332
+Theta is 122.619
+Robot angle is 133.34
+Difference is 10.7203
 Start condition for MoveForward is 1
 Starting moving forward. 
 
 
-Theta is 100.305
-Robot angle is 114.538
-Difference is 14.2332
+Theta is 122.619
+Robot angle is 133.34
+Difference is 10.7203
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (170.812, 147.413, 1.93907)
+Estimated location is: (186.405, 163.334, 2.02341)
 
 
 Waypoint is at: (169, 138)
-Distance from waypoint is: 7
+Distance from waypoint is: 25.5539
 
 
-Theta is 96.3402
-Robot angle is 111.1
-Difference is 14.7601
+Theta is 122.619
+Robot angle is 124.636
+Difference is 2.01692
 Start condition for MoveForward is 1
 Stop condition for MoveForward is 0
 
 
-Estimated location is: (169.516, 141.816, 1.93907)
+Estimated location is: (182.851, 158.043, 2.15698)
 
 
 Waypoint is at: (169, 138)
-Distance from waypoint is: 2.82843
+Distance from waypoint is: 20.5913
+
+
+Theta is 124.287
+Robot angle is 124.111
+Difference is -0.17598
+Start condition for MoveForward is 1
+Stop condition for MoveForward is 0
+
+
+Estimated location is: (177.038, 151.701, 2.16009)
+
+
+Waypoint is at: (169, 138)
+Distance from waypoint is: 14.7648
+
+
+Theta is 121.43
+Robot angle is 123.937
+Difference is 2.50777
+Start condition for MoveForward is 1
+Stop condition for MoveForward is 0
+
+
+Estimated location is: (171.887, 145.178, 2.30585)
+
+
+Waypoint is at: (169, 138)
+Distance from waypoint is: 10.4403
+
+
+Theta is 120.256
+Robot angle is 128.026
+Difference is 7.76996
+Start condition for MoveForward is 1
+Stop condition for MoveForward is 0
+
+
+Estimated location is: (167.412, 140.414, 2.24062)
+
+
+Waypoint is at: (169, 138)
+Distance from waypoint is: 6.08276
 
 
 Waypoint changed:
-Current waypoint is N.9: (169, 138) rad: 4
+Current waypoint is N.9: (169, 138) rad: 8
 
 
-Theta is 90
-Robot angle is 111.1
-Difference is 21.1003
+Theta is 105.945
+Robot angle is 128.202
+Difference is 22.2568
 
 
-Theta is 90
-Robot angle is 111.1
-Difference is 21.1003
+Theta is 105.945
+Robot angle is 128.202
+Difference is 22.2568
 
 
-Theta is 90
-Robot angle is 111.1
-Difference is 21.1003
+Theta is 105.945
+Robot angle is 128.202
+Difference is 22.2568
 Start condition for MoveForward is 0
 Stop condition for MoveForward is 1
 RoboticsProject: position2dproxy.cc:61: virtual void PlayerCc::Position2dProxy::Unsubscribe(): Assertion `__null!=mDevice' failed.

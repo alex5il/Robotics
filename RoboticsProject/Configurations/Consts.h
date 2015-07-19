@@ -18,9 +18,9 @@ static const float obstacleDist = 0.7;
 static const unsigned int particlesNum = 60;
 static const float minBelief = 0.3;
 
-static const int childRadius = 0;
-static const float childlYawRange = 1;
-static const float beliefFactor = 1.2;
+static const int childRadius = 1;
+static const float childlYawRange = 5;
+static const float beliefFactor = 1.0;
 
 static const float lowYaw = 1.0;
 static const float lowYawProb = 1.0;
@@ -35,8 +35,8 @@ static const float highDistanceProb = 0.85;
 static const float maxDistanceProb = 0.7;
 
 // Waypoints
-static const unsigned short stdWaypntRadius = 15;
-static const unsigned short fnlWaypntRadius = 4;
-static const float waypointAlignment = 20;
+static const unsigned short stdWaypntRadius = 20;
+static const unsigned short fnlWaypntRadius = 8;
+static const float waypointAlignment = 15;
 
 #endif /* CONSTS_H_ */

@@ -44,10 +44,10 @@ void Manager::run() {
 			cout << "\n\nEstimated location is: " << "(" << estimatedLoc->x
 					<< ", " << estimatedLoc->y << ", " << estimatedLoc->yaw
 					<< ")\n";
-//			_robot->updateLocalization(estimatedLoc->x, estimatedLoc->y,
-//					estimatedLoc->yaw);
-			_robot->setLocation(estimatedLoc->x, estimatedLoc->y,
+			_robot->updateLocalization(estimatedLoc->x, estimatedLoc->y,
 					estimatedLoc->yaw);
+//			_robot->setLocation(estimatedLoc->x, estimatedLoc->y,
+//					estimatedLoc->yaw);
 			_robot->Read();
 
 			lastXPos = _robot->getXPos();
