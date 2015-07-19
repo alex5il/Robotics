@@ -38,22 +38,21 @@ int main() {
 
 	// SHIT CODE!!!!!===============================
 
-/*	map->createGrid(true);
+	/*	map->createGrid(true);
 
-	//vector<Location> inversePath;
-	for (int i=0; i<path.size(); i++) {
-		path[i].posY = 380 - path[i].posY;
-		//inversePath.push_back(path[i].posY);
-	}
+	 //vector<Location> inversePath;
+	 for (int i=0; i<path.size(); i++) {
+	 path[i].posY = 380 - path[i].posY;
+	 //inversePath.push_back(path[i].posY);
+	 }
 
-	// print test
-	for (int i = 0; i < path.size(); i++) {
-		map->getGraph()->edges[path[i].posY][path[i].posX].cellType =
-				CURRENT_CELL;
-	}
+	 // print test
+	 for (int i = 0; i < path.size(); i++) {
+	 map->getGraph()->edges[path[i].posY][path[i].posX].cellType =
+	 CURRENT_CELL;
+	 }
 
-	map->printMap();*/
-
+	 map->printMap();*/
 
 	Robot robot("localhost", 6665);
 	PlnObstacleAvoid plan(&robot);

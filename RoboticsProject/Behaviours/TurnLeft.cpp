@@ -23,17 +23,21 @@ bool TurnLeft::startCond() {
 bool TurnLeft::stopCond() {
 	bool stopCond;
 
-	stopCond = (_robot->isForwardFree()
-			&& (WaypointsManager::getInstance()->isWaypointFront(
-					_robot->getXPos(), _robot->getYPos(), _robot->getYaw())
-					|| (WaypointsManager::getInstance()->isWaypointLeft(
-							_robot->getXPos(), _robot->getYPos(),
-							_robot->getYaw()) && !_robot->isLeftFree())
-					|| (WaypointsManager::getInstance()->isWaypointRight(
-							_robot->getXPos(), _robot->getYPos(),
-							_robot->getYaw()) && !_robot->isRightFree())));
+//	stopCond = (_robot->isForwardFree()
+//			&& (WaypointsManager::getInstance()->isWaypointFront(
+//					_robot->getXPos(), _robot->getYPos(), _robot->getYaw())
+//					|| (WaypointsManager::getInstance()->isWaypointLeft(
+//							_robot->getXPos(), _robot->getYPos(),
+//							_robot->getYaw()) && !_robot->isLeftFree())
+//					|| (WaypointsManager::getInstance()->isWaypointRight(
+//							_robot->getXPos(), _robot->getYPos(),
+//							_robot->getYaw()) && !_robot->isRightFree())));
 
 //	stopCond = !startCond();
+
+	stopCond = (_robot->isForwardFree()
+			&& WaypointsManager::getInstance()->isWaypointFront(
+					_robot->getXPos(), _robot->getYPos(), _robot->getYaw()));
 
 	std::cout << "Stop condition for MoveLeft is " << stopCond << "\n";
 
