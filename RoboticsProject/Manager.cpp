@@ -15,9 +15,9 @@ void Manager::run() {
 
 	_robot->Read();
 
-	float lastXPos = ConfigurationManager::getStartLocationX();
-	float lastYPos = ConfigurationManager::getStartLocationY();
-	float lastYaw = DTOR(ConfigurationManager::getStartLocationYaw());
+	float lastXPos = _robot->getXPosProxy();
+	float lastYPos = _robot->getYPosProxy();
+	float lastYaw = _robot->getYawProxy();
 
 	currWay = _waypMngr->getFirst();
 
@@ -28,26 +28,33 @@ void Manager::run() {
 		_currBeh->action();
 
 		while (!_currBeh->stopCond() && currWay != NULL) {
-			sleep(1000);
-			_currBeh->action(); // remove
+//			_currBeh->action(); // remove
 
 //			_robot->setSpeed(0, 0); // remove
 			_robot->Read();
 
-			float deltaX = _robot->getXPos() - lastXPos;
-			float deltaY = _robot->getYPos() - lastYPos;
-			float deltaYaw = _robot->getYaw() - lastYaw;
+			float deltaX = _robot->getXPosProxy() - lastXPos;
+			float deltaY = _robot->getYPosProxy() - lastYPos;
+			float deltaYaw = _robot->getYawProxy() - lastYaw;
 
 			// Set odometry according to the SLAM filter.
-			_locMngr->update(deltaX, deltaY, deltaYaw, _robot->getLaserScan());
-			estimatedLoc = _locMngr->estimatedLocation();
+//			_locMngr->update(deltaX, deltaY, deltaYaw, _robot->getLaserScan());
+//			estimatedLoc = _locMngr->estimatedLocation();
+//			cout << "\n\nEstimated location is: " << "(" << estimatedLoc->x
+//					<< ", " << estimatedLoc->y << ", " << estimatedLoc->yaw
+//					<< ")\n";
+//			_robot->setLocation(estimatedLoc->x, estimatedLoc->y,
+//					estimatedLoc->yaw);
 			_robot->Read();
-			_robot->setOdometry(estimatedLoc->x, estimatedLoc->y,
-					estimatedLoc->yaw);
-			_robot->Read();
+//			_robot->setLocation(_robot->getXPosProxy(), _robot->getYPosProxy(),
+//					_robot->getYaw());
+			cout << "\n\nEstimated location is: " << "("
+					<< _robot->getXPosProxy() << ", " << _robot->getYPosProxy()
+					<< ", " << _robot->getYawProxy() << ")\n";
 
 			// If waypoint reached - select the next one.
-			if (currWay->withinRadius(_robot->getXPos(), _robot->getYPos()))
+			if (currWay->withinRadius(_robot->getXPosProxy(),
+					_robot->getYPosProxy()))
 				currWay = _waypMngr->getNext();
 		}
 

@@ -15,6 +15,9 @@ public:
 
 	bool withinRadius(short x, short y);
 	float robotAlignment(short x, short y, float yaw);
+	short getRadius() {
+		return radius;
+	}
 
 	virtual ~Waypoint();
 };

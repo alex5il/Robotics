@@ -36,11 +36,11 @@ int main() {
 
 	map->printMap();
 
-	Robot robot("localhost", 6665);
+/*	Robot robot("localhost", 6665);
 	PlnObstacleAvoid plan(&robot);
 	Manager manager(&robot, &plan, path);
 	manager.run();
 
-	Map::deleteInstance();
-	return 0;
+	Map::deleteInstance();*/
+	//return 0;
 }

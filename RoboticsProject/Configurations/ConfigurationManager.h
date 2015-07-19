@@ -87,6 +87,14 @@ public:
 
 		return ret;
 	}
+
+	static float CoordToMeter(float x) {
+		return x / 100 * 2.5;
+	}
+
+	static float MeterToCoord(float x) {
+		return x / 2.5 * 100;
+	}
 };
 
 #endif /* CONFIGURATIONMANAGER_H_ */

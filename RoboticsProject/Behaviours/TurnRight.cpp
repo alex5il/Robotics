@@ -5,12 +5,21 @@ TurnRight::TurnRight(Robot* robot) :
 }
 
 bool TurnRight::startCond() {
+	bool startCond;
+
 //	return true;
-	return (WaypointsManager::getInstance()->isWaypointRight(_robot->getXPos(),
-			_robot->getYPos(), _robot->getYaw()));
+
+	startCond = (WaypointsManager::getInstance()->isWaypointRight(
+			_robot->getXPos(), _robot->getYPos(), _robot->getYaw()));
+
+	std::cout << "Start condition for MoveRight is " << startCond << "\n";
+
+	return startCond;
 }
 
 bool TurnRight::stopCond() {
+	bool stopCond;
+
 //	return (_robot->isForwardFree()
 //			&& (WaypointsManager::getInstance()->isWaypointFront(
 //					_robot->getXPos(), _robot->getYPos(), _robot->getYaw())
@@ -21,10 +30,15 @@ bool TurnRight::stopCond() {
 //							_robot->getXPos(), _robot->getYPos(),
 //							_robot->getYaw()) && !_robot->isRightFree())));
 
-	return (!startCond());
+	stopCond = !startCond();
+
+	std::cout << "Stop condition for MoveRight is " << stopCond << "\n";
+
+	return stopCond;
 }
 
 void TurnRight::action() {
+	std::cout << "Starting moving right. " << "\n";
 	_robot->setSpeed(0.0, -angularSpeed);
 }
 

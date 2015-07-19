@@ -13,6 +13,8 @@ void WaypointsManager::createWaypoints(vector<Location> path) {
 	lastDelta.posX = path[1].posX - path[0].posX;
 	lastDelta.posY = path[1].posY - path[0].posY;
 
+	std::cout << "\n\n";
+
 	// Checking for every location of the path if the delta
 	// (yaw of the robot advancement) is different from the previous delta.
 	for (unsigned int i = 2; i < path.size() - 1; i++) {
@@ -26,6 +28,9 @@ void WaypointsManager::createWaypoints(vector<Location> path) {
 			waypoints.push_back(
 					Waypoint(path[i - 1].posX, path[i - 1].posY,
 							stdWaypntRadius));
+			std::cout << "New waypoint created at: (" << path[i - 1].posX
+					<< ", " << path[i - 1].posY << ") " << "rad: "
+					<< stdWaypntRadius << "\n";
 
 			lastDelta.posX = currDelta.posX;
 			lastDelta.posY = currDelta.posY;

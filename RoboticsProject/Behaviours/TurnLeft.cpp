@@ -5,15 +5,23 @@ TurnLeft::TurnLeft(Robot* robot) :
 }
 
 bool TurnLeft::startCond() {
+	bool startCond;
+
 //	return ((WaypointsManager::getInstance()->isWaypointLeft(_robot->getXPos(),
 //			_robot->getYPos(), _robot->getYaw()) && _robot->isLeftFree())
 //			|| (_robot->isLeftFree() && !_robot->isRightFree()));
 
-	return (WaypointsManager::getInstance()->isWaypointLeft(_robot->getXPos(),
-			_robot->getYPos(), _robot->getYaw()));
+	startCond = (WaypointsManager::getInstance()->isWaypointLeft(
+			_robot->getXPos(), _robot->getYPos(), _robot->getYaw()));
+
+	std::cout << "Start condition for MoveLeft is " << startCond << "\n";
+
+	return startCond;
 }
 
 bool TurnLeft::stopCond() {
+	bool stopCond;
+
 //	return (_robot->isForwardFree()
 //			&& (WaypointsManager::getInstance()->isWaypointFront(
 //					_robot->getXPos(), _robot->getYPos(), _robot->getYaw())
@@ -24,10 +32,15 @@ bool TurnLeft::stopCond() {
 //							_robot->getXPos(), _robot->getYPos(),
 //							_robot->getYaw()) && !_robot->isRightFree())));
 
+	stopCond = !startCond();
+
+	std::cout << "Stop condition for MoveLeft is " << stopCond << "\n";
+
 	return !startCond();
 }
 
 void TurnLeft::action() {
+	std::cout << "Starting moving left. " << "\n";
 	_robot->setSpeed(0.0, angularSpeed);
 }
 

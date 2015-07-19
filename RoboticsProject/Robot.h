@@ -14,6 +14,10 @@ private:
 	LaserProxy* lasProxy;
 
 public:
+	float xPos;
+	float yPos;
+	float yaw;
+
 	Robot(char* ip, int port);
 	void Read();
 	void setSpeed(float xSpeed, float angularSpeed);
@@ -25,6 +29,22 @@ public:
 	float getYaw();
 	float* getLaserScan();
 	void setOdometry(float x, float y, float yaw);
+	void setLocation(float x, float y, float yaw);
+
+	float getXPosProxy() {
+		playerClient->Read();
+		return ConfigurationManager::MeterToCoord(posProxy->GetXPos());
+	}
+
+	float getYPosProxy() {
+		playerClient->Read();
+		return ConfigurationManager::MeterToCoord(posProxy->GetYPos());
+	}
+
+	float getYawProxy() {
+		playerClient->Read();
+		return posProxy->GetYaw();
+	}
 
 	virtual ~Robot();
 };

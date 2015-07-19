@@ -5,21 +5,42 @@ Robot::Robot(char* ip, int port) {
 	posProxy = new Position2dProxy(playerClient);
 	lasProxy = new LaserProxy(playerClient);
 
-	setOdometry(ConfigurationManager::getStartLocationX(),
+	float x = ConfigurationManager::CoordToMeter(
+			ConfigurationManager::getStartLocationX());
+	float y = ConfigurationManager::CoordToMeter(
+			ConfigurationManager::getStartLocationY());
+	float yaw = DTOR(ConfigurationManager::getStartLocationYaw());
+
+	setOdometry(x, y, yaw);
+
+	cout << "Set odometry to: " << "(" << x << ", " << y << ", " << yaw
+			<< ")\n";
+
+	setLocation(ConfigurationManager::getStartLocationX(),
 			ConfigurationManager::getStartLocationY(),
-			DTOR(ConfigurationManager::getStartLocationYaw()));
+			ConfigurationManager::getStartLocationYaw());
+
+	//For fixing Player's reading BUG
+	for (int i = 0; i < 15; i++)
+		playerClient->Read();
 
 	posProxy->SetMotorEnable(true);
 
 	//For fixing Player's reading BUG
 	for (int i = 0; i < 15; i++)
-		Read();
+		playerClient->Read();
 }
 
 void Robot::Read() {
 	//For fixing Player's reading BUG
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 1; i++)
 		playerClient->Read();
+}
+
+void Robot::setLocation(float x, float y, float yaw) {
+	this->xPos = x;
+	this->yPos = y;
+	this->yaw = yaw;
 }
 
 void Robot::setSpeed(float xSpeed, float angularSpeed) {
@@ -48,15 +69,18 @@ bool Robot::isForwardFree() {
 }
 
 float Robot::getXPos() {
-	return posProxy->GetXPos();
+//	return this->xPos;
+	return getXPosProxy();
 }
 
 float Robot::getYPos() {
-	return posProxy->GetYPos();
+//	return this->yPos;
+	return getYPosProxy();
 }
 
 float Robot::getYaw() {
-	return posProxy->GetYaw();
+//	return this->yaw;
+	return getYawProxy();
 }
 
 float* Robot::getLaserScan() {
@@ -71,12 +95,15 @@ float* Robot::getLaserScan() {
 }
 
 void Robot::setOdometry(float x, float y, float yaw) {
-	posProxy->SetOdometry(x, y, yaw);
+	double dX = x;
+	double dY = y;
+	double dYaw = yaw;
 
-	while (((float) posProxy->GetXPos() != x)
-			|| ((float) posProxy->GetYPos() != y)
-			|| ((float) posProxy->GetYaw() != yaw)) {
-		posProxy->SetOdometry(x, y, yaw);
+	posProxy->GetPose();
+
+	while ((posProxy->GetXPos() != dX) || (posProxy->GetYPos() != dY)
+			|| (posProxy->GetYaw() != dYaw)) {
+		posProxy->SetOdometry(dX, dY, dYaw);
 		Read();
 	}
 }

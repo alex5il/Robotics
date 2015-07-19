@@ -189,7 +189,8 @@ void Map::createGridWithResolutionFromImage(std::vector<unsigned char> image) {
 	int counter = 0;
 
 	// We are going to run through the map, in the grid resolution, and create our new grid
-	for (int y = 0; y < mapHeight; y++) {
+//	for (int y = 0; y < mapHeight; y++) {
+	for (int y = mapHeight - 1; y >= 0; y--) {
 		for (int x = 0; x < mapWidth; x++) {
 			int map_pixel = y * mapWidth * 4 + x * 4; // current map pixel
 

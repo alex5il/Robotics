@@ -5,6 +5,8 @@ MoveForward::MoveForward(Robot* robot) :
 }
 
 bool MoveForward::startCond() {
+	bool startCond;
+
 //	return (_robot->isForwardFree()
 //			&& (WaypointsManager::getInstance()->isWaypointFront(
 //					_robot->getXPos(), _robot->getYPos(), _robot->getYaw())
@@ -15,16 +17,30 @@ bool MoveForward::startCond() {
 //							_robot->getXPos(), _robot->getYPos(),
 //							_robot->getYaw()) && !_robot->isRightFree())));
 
-	return (_robot->isForwardFree()
-			&& WaypointsManager::getInstance()->isWaypointFront(
-					_robot->getXPos(), _robot->getYPos(), _robot->getYaw()));
+//	startCond = (_robot->isForwardFree()
+//			&& WaypointsManager::getInstance()->isWaypointFront(
+//					_robot->getXPos(), _robot->getYPos(), _robot->getYaw()));
+
+		startCond = (WaypointsManager::getInstance()->isWaypointFront(
+			_robot->getXPos(), _robot->getYPos(), _robot->getYaw()));
+
+	std::cout << "Start condition for MoveForward is " << startCond << "\n";
+
+	return startCond;
 }
 
 bool MoveForward::stopCond() {
-	return !startCond();
+	bool stopCond;
+
+	stopCond = !startCond();
+
+	std::cout << "Stop condition for MoveForward is " << stopCond << "\n";
+
+	return stopCond;
 }
 
 void MoveForward::action() {
+	std::cout << "Starting moving forward. " << "\n";
 	_robot->setSpeed(forwardSpeed, 0.0);
 }
 

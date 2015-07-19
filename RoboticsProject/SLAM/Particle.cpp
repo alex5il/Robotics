@@ -21,21 +21,24 @@ void Particle::update(float delX, float delY, float delYaw, float laserScan[]) {
 }
 
 Particle Particle::createChild() {
-	return Particle(this->x + childRadius - (rand() % (2 * childRadius)),
-			this->x + childRadius - (rand() % (2 * childRadius)),
+	Particle newParticle(this->x - childRadius + (rand() & (2 * childRadius)),
+			this->y - childRadius + (rand() & (2 * childRadius)),
 			ConfigurationManager::positiveModulo(
-					this->yaw
-							+ DTOR(
-									childlYawRange
-											- rand() % (2 * childlYawRange)),
+					this->yaw - DTOR(childlYawRange)
+							+ DTOR(fmodf((float ) rand(), 2 * childlYawRange)),
 					2 * M_PI));
+
+	std::cout << "New particle created at: (" << newParticle.x << ", "
+			<< newParticle.y << ", " << newParticle.yaw << ") " << "\n";
+
+	return newParticle;
 }
 
 float Particle::probabilityByMove(float delX, float delY, float delYaw) {
 	float distance = sqrt(pow(delX, 2) + pow(delY, 2));
 	float yawProb, distProb;
 
-	// Calculating yaw probability.
+// Calculating yaw probability.
 	if (abs(delYaw) <= lowYaw) {
 		yawProb = lowYawProb;
 	} else if (abs(delYaw) <= highYaw) {
@@ -44,7 +47,7 @@ float Particle::probabilityByMove(float delX, float delY, float delYaw) {
 		yawProb = maxYawProb;
 	}
 
-	// Calculating distance probability.
+// Calculating distance probability.
 	if (distance <= lowDistance) {
 		distProb = lowDistanceProb;
 	} else if (distance <= highDistance) {
@@ -53,7 +56,7 @@ float Particle::probabilityByMove(float delX, float delY, float delYaw) {
 		distProb = maxDistanceProb;
 	}
 
-	// The final probability.
+// The final probability.
 	return yawProb * distProb;
 }
 
@@ -61,19 +64,19 @@ float Particle::probabilityByMap(float laserScan[]) {
 	float misses = 0;
 	float total = 0;
 
-	// If the particle is outside of the map - return 0 probability.
+// If the particle is outside of the map - return 0 probability.
 	if ((this->x > Map::getInstance()->getMapWidth() || this->x < 0)
 			|| (this->y > Map::getInstance()->getMapHeight() || this->y < 0)) {
 
 		return 0;
 	}
 
-	// Check if the particle is not on an occupied cell.
+// Check if the particle is not on an occupied cell.
 	if (Map::getInstance()->getGraph()->edges[y][x].cellType == OCCUPIED_CELL) {
 		return 0;
 	}
 
-	// Check every laser scan.
+// Check every laser scan.
 	for (unsigned int i = 0; i < LASER_SAMPLES; i++) {
 
 		float laserAngle = (i * LASER_AREA) - 360 + LASER_RESOLUTION;
