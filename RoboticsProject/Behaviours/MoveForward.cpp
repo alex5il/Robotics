@@ -7,19 +7,19 @@ MoveForward::MoveForward(Robot* robot) :
 bool MoveForward::startCond() {
 	bool startCond;
 
-//	startCond = (_robot->isForwardFree()
-//			&& (WaypointsManager::getInstance()->isWaypointFront(
-//					_robot->getXPos(), _robot->getYPos(), _robot->getYaw())
-//					|| (WaypointsManager::getInstance()->isWaypointLeft(
-//							_robot->getXPos(), _robot->getYPos(),
-//							_robot->getYaw()) && !_robot->isLeftFree())
-//					|| (WaypointsManager::getInstance()->isWaypointRight(
-//							_robot->getXPos(), _robot->getYPos(),
-//							_robot->getYaw()) && !_robot->isRightFree())));
-
 	startCond = (_robot->isForwardFree()
-			&& WaypointsManager::getInstance()->isWaypointFront(
-					_robot->getXPos(), _robot->getYPos(), _robot->getYaw()));
+			&& (WaypointsManager::getInstance()->isWaypointFront(
+					_robot->getXPos(), _robot->getYPos(), _robot->getYaw())
+					|| (WaypointsManager::getInstance()->isWaypointLeft(
+							_robot->getXPos(), _robot->getYPos(),
+							_robot->getYaw()) && !_robot->isLeftFree())
+					|| (WaypointsManager::getInstance()->isWaypointRight(
+							_robot->getXPos(), _robot->getYPos(),
+							_robot->getYaw()) && !_robot->isRightFree())));
+
+//	startCond = (_robot->isForwardFree()
+//			&& WaypointsManager::getInstance()->isWaypointFront(
+//					_robot->getXPos(), _robot->getYPos(), _robot->getYaw()));
 
 	std::cout << "Start condition for MoveForward is " << startCond << "\n";
 

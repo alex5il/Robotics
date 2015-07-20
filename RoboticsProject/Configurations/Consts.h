@@ -18,8 +18,8 @@ static const float obstacleDist = 0.7;
 static const unsigned int particlesNum = 60;
 static const float minBelief = 0.3;
 
-static const int childRadius = 1;
-static const float childlYawRange = 5;
+static const int childRadius = 0;
+static const float childlYawRange = 1;
 static const float beliefFactor = 1.0;
 
 static const float lowYaw = 1.0;

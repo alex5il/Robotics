@@ -44,9 +44,9 @@ void Robot::setLocation(float x, float y, float yaw) {
 }
 
 void Robot::updateLocalization(float x, float y, float yaw) {
-	this->xPos = (this->xPos + x) / 2;
-	this->yPos = (this->yPos + y) / 2;
-	this->yaw = (this->yaw + yaw) / 2;
+	this->xPos = (this->getXPosProxy() + x) / 2;
+	this->yPos = (this->getYPosProxy() + y) / 2;
+	this->yaw = (this->getYawProxy() + yaw) / 2;
 }
 
 void Robot::setSpeed(float xSpeed, float angularSpeed) {
